@@ -1,13 +1,13 @@
 import { AppProps } from 'next/app'
-import { ZeitProvider, CssBaseline } from '@zeit-ui/react'
+import { GeistProvider, CssBaseline } from '@geist-ui/react'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ZeitProvider>
+      <GeistProvider>
         <CssBaseline />
         <Component {...pageProps} />
-      </ZeitProvider>
+      </GeistProvider>
     </>
   )
 }
