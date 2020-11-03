@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "thinceller <thinceller@gmail.com>",
   "dependencies": {
+    "@geist-ui/react": "2.1.0-canary.2",
     "@zeit-ui/react": "1.8.1",
     "next": "10.0.0",
     "react": "17.0.1",
