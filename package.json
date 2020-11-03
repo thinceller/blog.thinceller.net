@@ -37,6 +37,7 @@
     "build": "next build",
     "dev": "next",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   }
 }
