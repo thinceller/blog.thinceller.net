@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "thinceller <thinceller@gmail.com>",
   "dependencies": {
-    "@geist-ui/react": "2.1.0-canary.2",
     "next": "10.0.5",
     "nextra": "^0.3.2",
     "nextra-theme-blog": "^0.1.3",
