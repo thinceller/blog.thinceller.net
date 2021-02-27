@@ -2815,10 +2815,10 @@ nextra-theme-blog@^0.1.3:
     prism-react-renderer "^1.1.1"
     tailwindcss "^1.8.10"
 
-nextra@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/nextra/-/nextra-0.3.2.tgz#a13098d05be46b14383eac874f08a6062cab825b"
-  integrity sha512-Mf7s0YTmf/ZZXOL/X1mjs7hY/W05PoeZsxDt/2NNMH+BZsMcy3qjhqdZyNDNFb7VDJrCirPYw67znZS0P+2gHw==
+nextra@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/nextra/-/nextra-0.4.1.tgz#e3c3c9ac8bd64b255a2e43c6b03a1cce433f4f6e"
+  integrity sha512-rdhNLU55XQjyjH2C95nILMyJT0iOU3/SxZAJRGi/IDb1SJ85BnIeup5P9qPVp40PxxLSOE63dligQVPE2sg1Og==
   dependencies:
     "@mdx-js/loader" "^2.0.0-next.8"
     gray-matter "^4.0.2"
