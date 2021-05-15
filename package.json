@@ -17,15 +17,10 @@
     "eslint": "7.25.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-react": "7.23.2",
-    "husky": "5.2.0",
+    "husky": "6.0.0",
     "lint-staged": "11.0.0",
     "prettier": "2.2.1",
     "typescript": "4.2.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "license": "MIT",
   "lint-staged": {
@@ -39,6 +34,7 @@
     "dev": "next",
     "export": "next export",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "prepare": "husky install"
   }
 }
