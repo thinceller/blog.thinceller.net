@@ -7,10 +7,10 @@ import type {
 import Head from 'next/head';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next//router';
-import { Box } from '@chakra-ui/layout';
 
 import { getAllPosts, getPostBySlug } from '../../lib/post';
 import { markdownToHtml } from '../../lib/markdownToHtml';
+import { Layout } from '../../components/Layout';
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params.slug as string;
@@ -57,12 +57,12 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
   }
 
   return (
-    <Box>
+    <Layout>
       <Head>
         <title>{post.title} | thinceller blog</title>
       </Head>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </Box>
+    </Layout>
   );
 };
 
