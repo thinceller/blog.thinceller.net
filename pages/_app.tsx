@@ -1,14 +1,11 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <title>thinceller</title>
-      </Head>
+    <ChakraProvider resetCSS>
       <Component {...pageProps} />
-    </>
+    </ChakraProvider>
   );
 }
 
