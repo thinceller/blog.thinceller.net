@@ -1,20 +1,38 @@
 import Head from 'next/head';
-import type { NextPage } from 'next';
-import { Box } from '@chakra-ui/react';
+import type { InferGetStaticPropsType, NextPage } from 'next';
+import Link from 'next/link';
+import { Box, Link as CLink } from '@chakra-ui/react';
 
-import { Header } from '../components/Header';
+import { getAllPosts } from '../lib/post';
+import { Layout } from '../components/Layout';
+import { BLOG_NAME } from '../lib/constants';
 
-const Index: NextPage = () => {
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts(['title', 'description', 'date', 'slug']);
+
+  return {
+    props: {
+      allPosts,
+    },
+  };
+};
+
+type IndexPageProps = InferGetStaticPropsType<typeof getStaticProps>;
+
+const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
   return (
-    <Box height="100vh">
+    <Layout>
       <Head>
-        <title>thinceller blog</title>
+        <title>{BLOG_NAME}</title>
       </Head>
-      <Header />
-      <Box as="main" maxW="1200px" mx="auto" p={6}>
-        thinceller
-      </Box>
-    </Box>
+      {allPosts.map((post) => (
+        <Box key={post.slug}>
+          <Link href={`/posts/${post.slug}`} passHref>
+            <CLink>{post.title}</CLink>
+          </Link>
+        </Box>
+      ))}
+    </Layout>
   );
 };
 
