@@ -11,6 +11,8 @@ import { useRouter } from 'next//router';
 import { getAllPosts, getPostBySlug } from '../../lib/post';
 import { markdownToHtml } from '../../lib/markdownToHtml';
 import { Layout } from '../../components/Layout';
+import { PostBody } from '../../components/PostBody';
+import { BLOG_NAME } from '../../lib/constants';
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params.slug as string;
@@ -59,9 +61,11 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
   return (
     <Layout>
       <Head>
-        <title>{post.title} | thinceller blog</title>
+        <title>
+          {post.title} | {BLOG_NAME}
+        </title>
       </Head>
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      <PostBody content={post.content} />
     </Layout>
   );
 };

@@ -5,6 +5,7 @@ import { Box, Link as CLink } from '@chakra-ui/react';
 
 import { getAllPosts } from '../lib/post';
 import { Layout } from '../components/Layout';
+import { BLOG_NAME } from '../lib/constants';
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts(['title', 'description', 'date', 'slug']);
@@ -22,7 +23,7 @@ const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
   return (
     <Layout>
       <Head>
-        <title>thinceller blog</title>
+        <title>{BLOG_NAME}</title>
       </Head>
       {allPosts.map((post) => (
         <Box key={post.slug}>
