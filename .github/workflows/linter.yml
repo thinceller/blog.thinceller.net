@@ -11,5 +11,6 @@ jobs:
       - name: eslint
         uses: reviewdog/action-eslint@v1
         with:
+          github_token: ${{ github.token }}
           reporter: github-pr-review # Change reporter.
           fail_on_error: true
