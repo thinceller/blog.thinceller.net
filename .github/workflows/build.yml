@@ -1,0 +1,16 @@
+name: next build
+
+on: [pull_request]
+
+jobs:
+  build:
+    name: next build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'yarn'
+      - run: yarn --frozen-lockfile
+      - run: yarn build
