@@ -1,3 +1,4 @@
+/* font sizes */
 .markdown {
   font-size: var(--chakra-fontSizes-lg);
   line-height: var(--chakra-lineHeights-tall);
@@ -25,4 +26,29 @@
   margin-top: var(--chakra-sizes-8);
   margin-bottom: var(--chakra-sizes-4);
   line-height: var(--chakra-lineHeights-short);
+}
+
+/* list styles */
+.markdown ul,
+.markdown ol {
+  list-style: circle inside;
+}
+
+.markdown a {
+  color: var(--chakra-colors-blue-500);
+  text-decoration: none;
+}
+
+.markdown blockquote {
+  border-left: 8px solid var(--chakra-colors-gray-300);
+  padding: var(--chakra-sizes-4);
+  margin-left: 0;
+  margin-right: 0;
+  background-color: var(--chakra-colors-gray-200);
+  font-style: italic;
+}
+
+.markdown blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
 }

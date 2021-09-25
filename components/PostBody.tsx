@@ -1,6 +1,6 @@
 import type { VFC } from 'react';
 
-import styles from './PostBody.module.css';
+import styles from '../styles/markdown.module.css';
 
 type PostBodyProps = {
   content: string;
