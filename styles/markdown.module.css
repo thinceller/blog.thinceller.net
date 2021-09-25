@@ -17,7 +17,9 @@
   font-weight: var(--chakra-fontWeights-bold);
   margin-top: var(--chakra-sizes-12);
   margin-bottom: var(--chakra-sizes-4);
+  padding-bottom: var(--chakra-sizes-1);
   line-height: var(--chakra-lineHeights-short);
+  border-bottom: var(--chakra-sizes-1) solid var(--chakra-colors-gray-300);
 }
 
 .markdown h3 {
@@ -39,8 +41,17 @@
   text-decoration: none;
 }
 
+/* only for inline code */
+/* .markdown code {
+  font-family: var(--chakra-fonts-mono);
+  font-size: var(--chakra-fontSizes-sm);
+  background-color: var(--chakra-colors-gray-200);
+  padding: var(--chakra-sizes-1) var(--chakra-sizes-2);
+  border-radius: var(--chakra-radii-sm);
+} */
+
 .markdown blockquote {
-  border-left: 8px solid var(--chakra-colors-gray-300);
+  border-left: var(--chakra-sizes-2) solid var(--chakra-colors-gray-300);
   padding: var(--chakra-sizes-4);
   margin-left: 0;
   margin-right: 0;

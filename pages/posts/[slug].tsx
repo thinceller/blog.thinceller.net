@@ -13,6 +13,7 @@ import { markdownToHtml } from '../../lib/markdownToHtml';
 import { Layout } from '../../components/Layout';
 import { PostBody } from '../../components/PostBody';
 import { BLOG_NAME } from '../../lib/constants';
+import { PostTitle } from '../../components/PostTitle';
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const slug = ctx.params.slug as string;
@@ -65,6 +66,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
           {post.title} | {BLOG_NAME}
         </title>
       </Head>
+      <PostTitle title={post.title} date={post.date} />
       <PostBody content={post.content} />
     </Layout>
   );
