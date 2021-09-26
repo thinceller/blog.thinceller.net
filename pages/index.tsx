@@ -1,7 +1,14 @@
 import Head from 'next/head';
 import type { InferGetStaticPropsType, NextPage } from 'next';
 import Link from 'next/link';
-import { Box, Divider, Heading, Link as CLink, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Link as CLink,
+  Stack,
+  StackDivider,
+  Text,
+} from '@chakra-ui/react';
 
 import { getAllPosts } from '../lib/post';
 import { Layout } from '../components/Layout';
@@ -26,22 +33,23 @@ const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
       <Head>
         <title>{BLOG_NAME}</title>
       </Head>
-      {allPosts.map((post, i) => (
-        <>
-          <Box key={post.slug} as="article">
-            <Heading size="lg" sx={{ my: 2 }}>
-              <Link href={`/posts/${post.slug}`} passHref>
-                <CLink color="blue.500">{post.title}</CLink>
-              </Link>
-            </Heading>
-            <Box>
-              <DateFormatter date={post.date} />
+      <Stack divider={<StackDivider />} spacing={6}>
+        {allPosts.map((post, i) => (
+          <>
+            <Box key={post.slug} as="article">
+              <Heading size="lg" sx={{ my: 2 }}>
+                <Link href={`/posts/${post.slug}`} passHref>
+                  <CLink color="blue.500">{post.title}</CLink>
+                </Link>
+              </Heading>
+              <Box>
+                <DateFormatter date={post.date} />
+              </Box>
+              <Text noOfLines={2}>{post.description}</Text>
             </Box>
-            <Text noOfLines={2}>{post.description}</Text>
-          </Box>
-          {i !== allPosts.length - 1 && <Divider my={6} />}
-        </>
-      ))}
+          </>
+        ))}
+      </Stack>
     </Layout>
   );
 };
