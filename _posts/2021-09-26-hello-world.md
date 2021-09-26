@@ -1,6 +1,9 @@
 ---
 title: ブログはじめました
-description:
+description: |
+  ブログはじめました。
+  ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 date: '2021-09-25T19:27:34+0000'
 ---
 
