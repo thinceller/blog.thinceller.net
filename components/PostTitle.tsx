@@ -8,7 +8,7 @@ export const PostTitle: VFC<{ title: string; date: string }> = ({
 }) => {
   return (
     <Box>
-      <Heading as="h1" size="lg" sx={{ mb: 4 }}>
+      <Heading as="h1" size="lg" sx={{ mt: 2, mb: 4 }}>
         {title}
       </Heading>
       <Text mb="4">{format(parseISO(date), 'yyyy-MM-dd')} 公開</Text>
