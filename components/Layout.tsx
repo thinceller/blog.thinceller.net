@@ -11,7 +11,7 @@ export const Layout: VFC<LayoutProps> = ({ children }) => {
   return (
     <Box height="100vh">
       <Header />
-      <Box as="main" maxW="1200px" mx="auto" p={6}>
+      <Box as="main" maxW="800px" mx="auto" p={6}>
         {children}
       </Box>
     </Box>
