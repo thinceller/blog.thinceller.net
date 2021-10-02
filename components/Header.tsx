@@ -20,7 +20,11 @@ export const Header: VFC = () => {
             </Link>
           </Heading>
         </Box>
-        <Box>hoge</Box>
+        <Box>
+          <Link href="/about" passHref>
+            <CLink color="blue.500">About</CLink>
+          </Link>
+        </Box>
       </HStack>
     </Box>
   );
