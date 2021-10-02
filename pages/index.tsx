@@ -37,7 +37,7 @@ const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
         {allPosts.map((post, i) => (
           <>
             <Box key={post.slug} as="article">
-              <Heading size="lg" sx={{ my: 2 }}>
+              <Heading size="md" sx={{ my: 2 }}>
                 <Link href={`/posts/${post.slug}`} passHref>
                   <CLink color="blue.500">{post.title}</CLink>
                 </Link>
