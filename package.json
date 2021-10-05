@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "thinceller <thinceller@gmail.com>",
   "dependencies": {
-    "@chakra-ui/react": "1.6.8",
+    "@chakra-ui/react": "1.6.9",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
