@@ -14,6 +14,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         titleTemplate={`%s | ${BLOG_NAME}`}
         defaultTitle={BLOG_NAME}
         description="A blog about software development, programming, and life."
+        twitter={{
+          handle: '@thinceller_dev',
+          site: '@thinceller_dev',
+          cardType: 'summary_large_image',
+        }}
         openGraph={{
           type: 'website',
           locale: 'ja_JP',
