@@ -4,15 +4,15 @@ import type {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import Head from 'next/head';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next//router';
+import { NextSeo } from 'next-seo';
 
 import { getAllPosts, getPostBySlug } from '../../lib/post';
 import { markdownToHtml } from '../../lib/markdownToHtml';
 import { Layout } from '../../components/Layout';
 import { PostBody } from '../../components/PostBody';
-import { BLOG_NAME } from '../../lib/constants';
+import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { PostTitle } from '../../components/PostTitle';
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
@@ -60,15 +60,33 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
   }
 
   return (
-    <Layout>
-      <Head>
-        <title>
-          {post.title} | {BLOG_NAME}
-        </title>
-      </Head>
-      <PostTitle title={post.title} date={post.date} />
-      <PostBody content={post.content} />
-    </Layout>
+    <>
+      <NextSeo
+        title={post.title}
+        description={post.description}
+        openGraph={{
+          type: 'article',
+          url: `${BLOG_URL}/posts/${post.slug}`,
+          images: [
+            {
+              url: `${OG_IMAGE_URL}/${encodeURIComponent(
+                post.title
+              )}.png?md=1&fontSize=75px`,
+            },
+          ],
+          article: {
+            publishedTime: post.date,
+            modifiedTime: post.date,
+            authors: [BLOG_AUTHOR],
+            tags: post.tags ?? [],
+          },
+        }}
+      />
+      <Layout>
+        <PostTitle title={post.title} date={post.date} />
+        <PostBody content={post.content} />
+      </Layout>
+    </>
   );
 };
 
