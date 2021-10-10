@@ -67,6 +67,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
         openGraph={{
           type: 'article',
           url: `${BLOG_URL}/posts/${post.slug}`,
+          title: post.title,
           images: [
             {
               url: `${OG_IMAGE_URL}/${encodeURIComponent(
