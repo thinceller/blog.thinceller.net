@@ -24,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           locale: 'ja_JP',
           url: BLOG_URL,
           site_name: BLOG_NAME,
+          title: BLOG_NAME,
           images: [
             {
               url: `${OG_IMAGE_URL}/.png?md=1&fontSize=100px`,
