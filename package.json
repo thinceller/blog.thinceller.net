@@ -10,7 +10,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.15",
-    "date-fns": "2.24.0",
+    "date-fns": "2.25.0",
     "framer-motion": "4.1.17",
     "gray-matter": "4.0.3",
     "markdown-it": "12.2.0",
