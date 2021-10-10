@@ -14,7 +14,7 @@ import { Layout } from '../components/Layout';
 import { DateFormatter } from '../components/DateFormatter';
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'description', 'date', 'slug']);
+  const allPosts = getAllPosts(['title', 'description', 'slug']);
 
   return {
     props: {
@@ -37,7 +37,7 @@ const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
               </Link>
             </Heading>
             <Box>
-              <DateFormatter date={post.date} />
+              <DateFormatter date={post.publishedTime} />
             </Box>
             <Text noOfLines={2}>{post.description}</Text>
           </Box>

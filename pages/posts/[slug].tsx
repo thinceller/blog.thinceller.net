@@ -1,6 +1,6 @@
 import type {
   GetStaticPaths,
-  GetStaticProps,
+  GetStaticPropsContext,
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
@@ -15,14 +15,14 @@ import { PostBody } from '../../components/PostBody';
 import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { PostTitle } from '../../components/PostTitle';
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps = async (ctx: GetStaticPropsContext) => {
   const slug = ctx.params.slug as string;
   const post = getPostBySlug(slug, [
     'title',
     'description',
     'slug',
     'content',
-    'date',
+    'publishedTime',
   ]);
   const content = markdownToHtml(post.content);
 
@@ -76,15 +76,15 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
             },
           ],
           article: {
-            publishedTime: post.date,
-            modifiedTime: post.date,
+            publishedTime: post.publishedTime,
+            modifiedTime: post.publishedTime,
             authors: [BLOG_AUTHOR],
-            tags: post.tags ?? [],
+            // tags: post.tags ?? [],
           },
         }}
       />
       <Layout>
-        <PostTitle title={post.title} date={post.date} />
+        <PostTitle title={post.title} date={post.publishedTime} />
         <PostBody content={post.content} />
       </Layout>
     </>
