@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/markdown-it": "12.2.3",
-    "@types/node": "16.0.0",
+    "@types/node": "16.11.6",
     "@types/react": "17.0.33",
     "chalk": "4.1.2",
     "enquirer": "2.3.6",
