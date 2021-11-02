@@ -11,7 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.15",
     "date-fns": "2.25.0",
-    "framer-motion": "4.1.17",
+    "framer-motion": "5.0.2",
     "gray-matter": "4.0.3",
     "markdown-it": "12.2.0",
     "markdown-it-prism": "2.2.1",
