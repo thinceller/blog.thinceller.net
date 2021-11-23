@@ -15,7 +15,7 @@ const frontMatterSchema = z.object({
   description: z.string(),
   date: z.string(),
   publishedTime: z.string(),
-  modifiedTime: z.string(),
+  modifiedTime: z.string().optional(),
 });
 
 type frontMatterType = z.infer<typeof frontMatterSchema>;
