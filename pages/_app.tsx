@@ -1,11 +1,13 @@
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { DefaultSeo } from 'next-seo';
+import { MDXProvider } from '@mdx-js/react';
 import { theme } from '../lib/chakraTheme';
 import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
+import { MDXComponents } from '../components/MDXComponent';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'prismjs/themes/prism.css';
+import { Layout } from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -33,7 +35,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <ChakraProvider resetCSS theme={theme}>
-        <Component {...pageProps} />
+        <MDXProvider components={MDXComponents}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MDXProvider>
       </ChakraProvider>
     </>
   );
