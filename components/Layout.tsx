@@ -13,7 +13,7 @@ export const Layout: VFC<LayoutProps> = ({ children }) => {
     <Stack minH="100vh">
       <Header />
       <Box as="main" flex={1}>
-        <Box maxW="800px" mx="auto" px={6}>
+        <Box maxW="848px" mx="auto" px={6}>
           {children}
         </Box>
       </Box>

@@ -8,7 +8,7 @@ export const Header: VFC = () => {
       <HStack
         h={16}
         px={6}
-        maxW="800px"
+        maxW="848px"
         m="auto"
         align="center"
         justifyContent="space-between"
