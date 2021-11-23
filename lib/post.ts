@@ -31,8 +31,8 @@ type Field =
  * @returns Object of the post data
  */
 export function getPostBySlug<T extends Field>(slug: string, fields: T[] = []) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDir, `${realSlug}.md`);
+  const realSlug = slug.replace(/\.mdx$/, '');
+  const fullPath = join(postsDir, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
