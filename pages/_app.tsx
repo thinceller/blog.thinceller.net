@@ -7,6 +7,7 @@ import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
 import { MDXComponents } from '../components/MDXComponent';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { Layout } from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -35,7 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       />
       <ChakraProvider resetCSS theme={theme}>
         <MDXProvider components={MDXComponents}>
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </MDXProvider>
       </ChakraProvider>
     </>

@@ -14,7 +14,6 @@ import { getPostBySlug } from '../../lib/mdx';
 import { getAllPosts } from '../../lib/post';
 import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { PostTitle } from '../../components/PostTitle';
-import { Layout } from '../../components/Layout';
 import { prismStyle } from '../../styles/style';
 
 export const getStaticPaths: GetStaticPaths = () => {
@@ -80,16 +79,14 @@ const PostPage: NextPage<PostPageProps> = (props) => {
           },
         }}
       />
-      <Layout>
-        <Global styles={prismStyle} />
-        <PostTitle
-          title={props.frontMatter.title}
-          date={props.frontMatter.publishedTime}
-        />
-        <Box lineHeight="tall">
-          <MDXRemote {...props.mdxSource} />
-        </Box>
-      </Layout>
+      <Global styles={prismStyle} />
+      <PostTitle
+        title={props.frontMatter.title}
+        date={props.frontMatter.publishedTime}
+      />
+      <Box lineHeight="tall">
+        <MDXRemote {...props.mdxSource} />
+      </Box>
     </>
   );
 };
