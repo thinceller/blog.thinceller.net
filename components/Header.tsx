@@ -6,7 +6,7 @@ export const Header: VFC = () => {
   return (
     <Box as="header" borderBottom="1px" borderBottomColor="gray.200">
       <HStack
-        h={20}
+        h={16}
         px={6}
         maxW="800px"
         m="auto"
@@ -14,7 +14,7 @@ export const Header: VFC = () => {
         justifyContent="space-between"
       >
         <Box>
-          <Heading>
+          <Heading fontSize="2xl">
             <Link href="/" passHref>
               <CLink style={{ textDecoration: 'none' }}>thinceller blog</CLink>
             </Link>

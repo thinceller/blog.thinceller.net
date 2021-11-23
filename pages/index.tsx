@@ -28,9 +28,9 @@ type IndexPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
   return (
     <Layout>
-      <Stack divider={<StackDivider />} spacing={6}>
+      <Stack divider={<StackDivider />}>
         {allPosts.map((post) => (
-          <Box key={post.slug} as="article">
+          <Box key={post.slug} as="article" my={6}>
             <Heading size="md" sx={{ my: 2 }}>
               <Link href={`/posts/${post.slug}`} passHref>
                 <CLink color="blue.500">{post.title}</CLink>
