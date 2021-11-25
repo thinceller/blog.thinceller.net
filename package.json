@@ -17,6 +17,7 @@
     "gray-matter": "4.0.3",
     "next": "12.0.4",
     "next-mdx-remote": "3.0.8",
+    "next-remote-watch": "1.0.0",
     "next-seo": "4.28.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -52,6 +53,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
+    "dev:watch": "next-remote-watch ./_posts",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
