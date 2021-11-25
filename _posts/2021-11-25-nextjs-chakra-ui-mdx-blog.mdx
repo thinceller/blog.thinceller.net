@@ -1,0 +1,83 @@
+---
+title: Next.js + Chakra UI + MDX でブログを作った
+description: |
+date: '2021-11-25T00:49:09+09:00'
+publishedTime: '2021-11-25T00:49:09+09:00'
+modifiedTime: '2021-11-25T00:49:09+09:00'
+tags:
+---
+
+技術系のアウトプットをするとき、基本的には [自分の Scrapbox](https://scrapbox.io/thinceller) に雑に書いて満足することが多いです。
+
+自分にとっては情報や思考を整理しながら書き進められる Scrapbox はとても心地よいのですが、
+人に見られる前提の文章を書くことを避けがちな自分を矯正するためにも、まずはハードルの低い個人ブログで記事を書く癖をつけようと思いました。
+
+Gatsby や Hugo などの静的サイトジェネレータを利用してもいいのですが、自分が好きな Next.js をベースにしてブログを作ってみることにしました。
+
+## 技術スタック
+
+今回利用した技術は以下の通りです。
+
+- Next.js
+- Chakra UI
+- MDX
+
+それぞれの技術について軽く説明していきます。
+
+### Next.js
+
+React のフレームワークとして今やファーストチョイスになることも多くなってきた（かもしれない） [Next.js](https://nextjs.org/) です。
+
+特に何も考えることなくパフォーマンス最適化を受けることができるのが個人ユースでも手軽に感じています。
+
+公式が提供している多くの example も痒い所に手が届きますし、
+このブログも `with-mdx-remote` の example がベースになっています（というのは結果論で、自分で構築していたら example とほぼ同じになりました）。
+
+[Examples | Next.js](https://nextjs.org/examples)
+
+### Chakra UI
+
+[Chakra UI](https://chakra-ui.com/) は「コンポーネントの一貫性を保つ」ことを念頭にデザインされたコンポーネントライブラリです。
+
+詳細な設計原則の説明は [公式のドキュメント](https://chakra-ui.com/docs/principles)に譲りますが、
+洗練された API に型安全にアクセスできるので一貫したスタイルを持つことがかなり容易になっているように感じます。
+
+個人的に好みなのは `<Stack>` や `<Center>` などのレイアウト系のコンポーネントが充実している点です。
+`<Stack>` は flexbox を抽象化したようなコンポーネントで、子要素を均等に並べたり子要素の間のスペースや divider を手軽に定義することができ、
+`<Center>` は子要素を単純に中央寄せさせるコンポーネントです。
+CSS をほぼ書くことなくこういったレイアウトを実現できるのはとても便利です。
+
+後述する MDX から変換されるコンポーネントに Chakra UI を適用することで、
+ブログコンテンツ内、あるいはブログコンテンツ部分とその他の部分のスタイルの一貫性を保つことができています。
+
+### MDX
+
+当初は素の Markdown で記事を書き、markdown-it か remark のようなライブラリで HTML に変換して `dangerouslySetInnerHTML` を使う方式を取る予定でした。
+しかし、ブログコンテンツ内で `next/link` や `next/image` を使おうとしたときに少々手間がかかりそうでした。
+
+[Markdown のサイト内リンクを Next.js の Link にしたい](https://zenn.dev/thiragi/articles/ce13a4be4110c0) でも述べられていますが、
+解決手段としては MDX を使うか `remark-react` や `rehype-react` を利用する方法があります。
+
+MDX は最近 [beta 版が公開された React の公式ドキュメント](https://beta.reactjs.org/)でも利用されており、個人的にも興味があった技術なので今回採用してみることにしました。
+
+Next.js で MDX を利用する方法はいくつかあります。
+
+- `@mdx-js/loader`（MDX のための Webpack loader）
+- `@mdx-js/mdx`（MDX をコンパイルできるライブラリ）
+- `@next/mdx`（Next.js 公式の `@mdx-js/loader` の薄いラッパー）
+- `next-mdx-enhanced`（hashicorp 社製の `@mdx-js/loader` のラッパー）
+- `next-mdx-remote`（hashicorp 社製の `@mdx-js/mdx` のラッパー）
+- `mdx-bundler`（esbuild を使って MDX をコンパイル・バンドルするライブラリ）
+
+これらのライブラリの比較は [Comparison of MDX integration strategies with Next.js - DEV Community 👩‍💻👨‍💻](https://dev.to/tylerlwsmith/quick-comparison-of-mdx-integration-strategies-with-next-js-1kcm)
+などの記事が参考になります。
+
+このうちのいくつかを試してみましたが、最終的に `next-mdx-remote` を利用することにしました。
+
+`next-mdx-remote` は非常にシンプルなライブラリとなっており、MDX をシリアライズして `getStaticProps` からコンポーネントに渡しやすい API を提供してくれます。
+一方でただのコンパイラであるために React Component の import を解決することはできませんが、代わりにパフォーマンス的に良好であるらしいので記事が増えてきてもデプロイ時間で悩むことはなさそうです。
+
+## まとめ
+
+Next.js、Chakra UI や MDX を使うことで、ほぼスクラッチでありながらそれなりに整ったブログを簡単につくることができました。
+最小限の実装だけを行って本記事を書いているので、今後は様々な機能を追加していきつつそれを記事にできたらなと思います。
