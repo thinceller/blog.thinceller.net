@@ -59,7 +59,7 @@ enquirer
       const date = new Date();
       await fs
         .writeFile(
-          `${postsDirName}/${format(date, 'yyyy-MM-dd')}-${res.slug}.md`,
+          `${postsDirName}/${format(date, 'yyyy-MM-dd')}-${res.slug}.mdx`,
           postTemplate(res.title, date)
         )
         .then(() => {
@@ -80,7 +80,5 @@ publishedTime: '${formatISO(date)}'
 modifiedTime: '${formatISO(date)}'
 tags:
 ---
-
-# ${title}
 `;
 }
