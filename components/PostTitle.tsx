@@ -1,6 +1,6 @@
 import { VFC } from 'react';
 import { Box, Heading, Text } from '@chakra-ui/layout';
-import { format, parseISO } from 'date-fns';
+import { formatDate } from '../lib/date';
 
 export const PostTitle: VFC<{ title: string; date: string }> = ({
   title,
@@ -11,7 +11,7 @@ export const PostTitle: VFC<{ title: string; date: string }> = ({
       <Heading as="h1" size="lg" sx={{ mb: 4 }}>
         {title}
       </Heading>
-      <Text>{format(parseISO(date), 'yyyy-MM-dd')} 公開</Text>
+      <Text>{formatDate(date)} 公開</Text>
     </Box>
   );
 };
