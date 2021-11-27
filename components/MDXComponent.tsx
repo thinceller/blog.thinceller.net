@@ -10,6 +10,7 @@ import {
   chakra,
 } from '@chakra-ui/react';
 import { MDXProviderComponentsProp } from '@mdx-js/react';
+import { Tweet, TweetProps } from 'react-twitter-widgets';
 
 export const MDXComponents: MDXProviderComponentsProp = {
   a: (p: JSX.IntrinsicElements['a']) => {
@@ -79,4 +80,5 @@ export const MDXComponents: MDXProviderComponentsProp = {
   ul: (p: JSX.IntrinsicElements['ul']) => (
     <UnorderedList mb={4} ml={8} {...p} />
   ),
+  Tweet: (p: TweetProps) => <Tweet {...p} />,
 };
