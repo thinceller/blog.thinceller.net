@@ -15,7 +15,11 @@ export const Footer: VFC = () => {
       >
         <Text>&copy; {new Date().getFullYear()} thinceller</Text>
         <HStack>
-          <Link href="https://twitter.com/thinceller_dev" isExternal>
+          <Link
+            href="https://twitter.com/thinceller_dev"
+            isExternal
+            aria-label="Twitter link"
+          >
             <Icon
               as={FontAwesomeIcon}
               icon={faTwitter}
@@ -23,7 +27,11 @@ export const Footer: VFC = () => {
               size="lg"
             />
           </Link>
-          <Link href="https://github.com/thinceller" isExternal>
+          <Link
+            href="https://github.com/thinceller"
+            isExternal
+            aria-label="GitHub link"
+          >
             <Icon
               as={FontAwesomeIcon}
               icon={faGithub}
