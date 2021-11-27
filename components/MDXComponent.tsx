@@ -20,12 +20,12 @@ export const MDXComponents: MDXProviderComponentsProp = {
     if (isInternalLink) {
       return (
         <NextLink href={href} passHref>
-          <Link color="blue.500" {...rest} />
+          <Link color="blue.600" {...rest} />
         </NextLink>
       );
     }
 
-    return <Link color="blue.500" isExternal {...p} />;
+    return <Link color="blue.600" isExternal {...p} />;
   },
   blockquote: (p: JSX.IntrinsicElements['blockquote']) => (
     <chakra.blockquote
