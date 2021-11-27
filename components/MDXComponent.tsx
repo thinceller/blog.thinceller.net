@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { MDXProviderComponentsProp } from '@mdx-js/react';
 import { Tweet, TweetProps } from 'react-twitter-widgets';
+import { ChakraNextImage, ChakraNextImageProps } from './ChakraNextImage';
 
 export const MDXComponents: MDXProviderComponentsProp = {
   a: (p: JSX.IntrinsicElements['a']) => {
@@ -81,4 +82,23 @@ export const MDXComponents: MDXProviderComponentsProp = {
     <UnorderedList mb={4} ml={8} {...p} />
   ),
   Tweet: (p: TweetProps) => <Tweet {...p} />,
+  Image: (p: ChakraNextImageProps) => {
+    let href: string;
+    if (typeof p.src === 'string') {
+      href = p.src;
+    } else if ('src' in p.src) {
+      href = p.src.src;
+    } else if (p.src.default) {
+      href = p.src.default.src;
+    } else {
+      throw new Error('Can not access to href');
+    }
+    return (
+      <chakra.p mb={4}>
+        <Link href={href} title={p.alt} isExternal>
+          <ChakraNextImage {...p} />
+        </Link>
+      </chakra.p>
+    );
+  },
 };
