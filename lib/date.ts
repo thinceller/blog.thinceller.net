@@ -1,7 +1,18 @@
-import { format, parseISO } from 'date-fns';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
+const tz = 'Asia/Tokyo';
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault(tz);
+
+/**
+ * @param dateString ISO8601 date string
+ * @returns formatted date string (e.g. 2020-01-01)
+ */
 export const formatDate = (dateString: string): string => {
-  const date = parseISO(dateString);
+  const date = dayjs(dateString).tz();
 
-  return format(date, 'yyyy-MM-dd');
+  return date.format('YYYY-MM-DD');
 };
