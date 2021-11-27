@@ -1,13 +1,16 @@
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { DefaultSeo } from 'next-seo';
+import { Global } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
 import { theme } from '../lib/chakraTheme';
 import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
 import { MDXComponents } from '../components/MDXComponent';
+import { Layout } from '../components/Layout';
+import { globalStyles } from '../styles/global';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { Layout } from '../components/Layout';
+import 'focus-visible/dist/focus-visible';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -37,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ChakraProvider resetCSS theme={theme}>
         <MDXProvider components={MDXComponents}>
           <Layout>
+            <Global styles={globalStyles} />
             <Component {...pageProps} />
           </Layout>
         </MDXProvider>
