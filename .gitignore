@@ -2,3 +2,7 @@
 node_modules/
 
 yarn-error.log
+
+# ビルド時に自動生成されるファイル
+public/robots.txt
+public/sitemap.xml
