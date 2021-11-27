@@ -14,7 +14,7 @@ import { getPostBySlug } from '../../lib/mdx';
 import { getAllPosts } from '../../lib/post';
 import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { PostTitle } from '../../components/PostTitle';
-import { prismStyle } from '../../styles/style';
+import { prismStyle } from '../../styles/prism';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts(['slug']);
