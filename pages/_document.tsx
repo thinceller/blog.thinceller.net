@@ -20,7 +20,7 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=optional"
             rel="stylesheet"
           />
         </Head>
