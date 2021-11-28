@@ -38,9 +38,9 @@ export const getStaticProps = async (ctx: GetStaticPropsContext) => {
 
   return {
     props: {
+      slug,
       mdxSource: post.mdxSource,
       frontMatter: {
-        slug,
         ...post.frontMatter,
       },
     },
@@ -52,7 +52,7 @@ type PostPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 const PostPage: NextPage<PostPageProps> = (props) => {
   const router = useRouter();
 
-  if (!router.isFallback && !props.frontMatter.slug) {
+  if (!router.isFallback && !props.slug) {
     return <ErrorPage statusCode={404} />;
   }
 
@@ -63,7 +63,7 @@ const PostPage: NextPage<PostPageProps> = (props) => {
         description={props.frontMatter.description}
         openGraph={{
           type: 'article',
-          url: `${BLOG_URL}/posts/${props.frontMatter.slug}`,
+          url: `${BLOG_URL}/posts/${props.slug}`,
           title: props.frontMatter.title,
           images: [
             {
@@ -76,7 +76,7 @@ const PostPage: NextPage<PostPageProps> = (props) => {
             publishedTime: props.frontMatter.publishedTime,
             modifiedTime: props.frontMatter.modifiedTime,
             authors: [BLOG_AUTHOR],
-            // tags: post.tags ?? [],
+            tags: props.frontMatter.tags,
           },
         }}
       />

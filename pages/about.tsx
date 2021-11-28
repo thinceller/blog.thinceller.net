@@ -1,29 +1,10 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import NextImage from 'next/image';
-import { chakra, Center, Heading, VStack, Text } from '@chakra-ui/react';
+import { NextSeo } from 'next-seo';
+import { Center, Heading, VStack, Text } from '@chakra-ui/react';
 import { BLOG_NAME } from '../lib/constants';
 import AvatarImage from '../public/images/avatar.jpg';
-import { NextSeo } from 'next-seo';
-
-const ChakraNextImage = chakra(NextImage, {
-  shouldForwardProp: (prop) =>
-    [
-      'src',
-      'width',
-      'height',
-      'layout',
-      'loader',
-      'quality',
-      'priority',
-      'loading',
-      'lazyBoundary',
-      'placeholder',
-      'blurDataURL',
-      'unoptimized',
-      'alt',
-    ].includes(prop),
-});
+import { ChakraNextImage } from '../components/ChakraNextImage';
 
 const About: NextPage = () => {
   return (
