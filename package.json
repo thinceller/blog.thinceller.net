@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/markdown-it": "12.2.3",
     "@types/mdx-js__react": "1.5.5",
-    "@types/node": "16.11.12",
+    "@types/node": "16.11.14",
     "@types/react": "17.0.37",
     "chalk": "4.1.2",
     "date-fns": "2.27.0",
