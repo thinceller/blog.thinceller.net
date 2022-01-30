@@ -10,7 +10,7 @@ export const Footer: VFC = () => {
         direction="row"
         justify="space-between"
         mx="auto"
-        maxW="848px"
+        maxW="800px"
         p={6}
       >
         <Text>&copy; {new Date().getFullYear()} thinceller</Text>

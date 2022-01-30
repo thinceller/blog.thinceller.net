@@ -1,31 +1,15 @@
 import type { VFC } from 'react';
 import Link from 'next/link';
-import { Box, Heading, HStack, Link as CLink } from '@chakra-ui/react';
+import { Center, Heading, Link as CLink } from '@chakra-ui/react';
 
 export const Header: VFC = () => {
   return (
-    <Box as="header" borderBottom="1px" borderBottomColor="gray.200">
-      <HStack
-        h={16}
-        px={6}
-        maxW="848px"
-        m="auto"
-        align="center"
-        justifyContent="space-between"
-      >
-        <Box>
-          <Heading fontSize="2xl">
-            <Link href="/" passHref>
-              <CLink style={{ textDecoration: 'none' }}>thinceller blog</CLink>
-            </Link>
-          </Heading>
-        </Box>
-        <Box>
-          <Link href="/about" passHref>
-            <CLink color="blue.600">About</CLink>
-          </Link>
-        </Box>
-      </HStack>
-    </Box>
+    <Center as="header" h={20} pt={6}>
+      <Heading fontSize="2xl">
+        <Link href="/" passHref prefetch={false}>
+          <CLink style={{ textDecoration: 'none' }}>thinceller blog</CLink>
+        </Link>
+      </Heading>
+    </Center>
   );
 };

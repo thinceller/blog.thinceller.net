@@ -21,7 +21,7 @@ export const MDXComponents: MDXProviderComponentsProp = {
 
     if (isInternalLink) {
       return (
-        <NextLink href={href} passHref>
+        <NextLink href={href} passHref prefetch={false}>
           <Link color="blue.600" {...rest} />
         </NextLink>
       );
@@ -36,7 +36,7 @@ export const MDXComponents: MDXProviderComponentsProp = {
       borderLeftWidth="8px"
       borderLeftStyle="solid"
       p={4}
-      mb={4}
+      mb={6}
       sx={{
         '& > p': {
           marginBottom: 0,
@@ -74,12 +74,12 @@ export const MDXComponents: MDXProviderComponentsProp = {
     <Heading as="h6" fontSize="xs" mb={4} {...p} />
   ),
   li: (p: JSX.IntrinsicElements['li']) => <chakra.li {...p} />,
-  ol: (p: JSX.IntrinsicElements['ol']) => <OrderedList mb={4} ml={8} {...p} />,
+  ol: (p: JSX.IntrinsicElements['ol']) => <OrderedList mb={6} ml={8} {...p} />,
   p: (p: JSX.IntrinsicElements['p']) => (
-    <Text as="p" fontSize="md" mb={4} {...p} />
+    <Text as="p" fontSize="md" mb={6} {...p} />
   ),
   ul: (p: JSX.IntrinsicElements['ul']) => (
-    <UnorderedList mb={4} ml={8} {...p} />
+    <UnorderedList mb={6} ml={8} {...p} />
   ),
   Tweet: (p: TweetProps) => <Tweet {...p} />,
   Image: (p: ChakraNextImageProps) => {
@@ -94,7 +94,7 @@ export const MDXComponents: MDXProviderComponentsProp = {
       throw new Error('Can not access to href');
     }
     return (
-      <chakra.p mb={4}>
+      <chakra.p m={6}>
         <Link href={href} title={p.alt} isExternal>
           <ChakraNextImage {...p} />
         </Link>
