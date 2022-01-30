@@ -90,7 +90,7 @@ const PostPage: NextPage<PostPageProps> = (props) => {
       <Box lineHeight="tall">
         <MDXRemote {...props.mdxSource} />
       </Box>
-      <Box mt={10} mb={4}>
+      <Box mt={10} mb={10}>
         <PostFooter />
       </Box>
     </>

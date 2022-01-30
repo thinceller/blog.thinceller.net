@@ -7,8 +7,9 @@ export const Navigation: VFC = () => {
     <Box>
       <HStack
         as="nav"
-        maxW="848px"
+        maxW="800px"
         mx="auto"
+        px={8}
         justifyContent="flex-end"
         spacing={6}
       >

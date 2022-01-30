@@ -15,7 +15,7 @@ export const Layout: VFC<LayoutProps> = ({ children }) => {
       <Header />
       <Navigation />
       <Box as="main" flex={1}>
-        <Box maxW="848px" mx="auto" px={6}>
+        <Box maxW="800px" mx="auto" px={6}>
           {children}
         </Box>
       </Box>
