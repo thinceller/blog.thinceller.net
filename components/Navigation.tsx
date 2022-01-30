@@ -14,12 +14,12 @@ export const Navigation: VFC = () => {
         spacing={6}
       >
         <Box>
-          <Link href="/" passHref>
+          <Link href="/" passHref prefetch={false}>
             <CLink color="blue.600">Home</CLink>
           </Link>
         </Box>
         <Box>
-          <Link href="/about" passHref>
+          <Link href="/about" passHref prefetch={false}>
             <CLink color="blue.600">About</CLink>
           </Link>
         </Box>

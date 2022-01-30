@@ -21,7 +21,7 @@ export const MDXComponents: MDXProviderComponentsProp = {
 
     if (isInternalLink) {
       return (
-        <NextLink href={href} passHref>
+        <NextLink href={href} passHref prefetch={false}>
           <Link color="blue.600" {...rest} />
         </NextLink>
       );
