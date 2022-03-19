@@ -63,5 +63,10 @@
     "lint": "next lint",
     "prepare": "husky install",
     "new-post": "node scripts/new-post.mjs"
+  },
+  "nextBundleAnalysis": {
+    "budget": 358400,
+    "budgetPercentIncreaseRed": 20,
+    "showDetails": true
   }
 }
