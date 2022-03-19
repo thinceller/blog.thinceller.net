@@ -14,7 +14,7 @@
     "@mdx-js/react": "1.6.22",
     "dayjs": "1.10.7",
     "focus-visible": "5.2.0",
-    "framer-motion": "5.4.5",
+    "framer-motion": "5.6.0",
     "gray-matter": "4.0.3",
     "next": "12.1.0",
     "next-mdx-remote": "3.0.8",
