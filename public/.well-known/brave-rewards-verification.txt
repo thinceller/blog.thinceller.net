@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: thinceller.net
+Token: c3e37078d4d0e3d7ded66c24a611f76f3cb9bfd0ac50b3903df868f131528480
