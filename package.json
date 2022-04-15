@@ -12,7 +12,7 @@
     "@fortawesome/react-fontawesome": "0.1.16",
     "@mapbox/rehype-prism": "0.8.0",
     "@mdx-js/react": "1.6.22",
-    "dayjs": "1.10.7",
+    "dayjs": "1.11.1",
     "focus-visible": "5.2.0",
     "framer-motion": "5.6.0",
     "gray-matter": "4.0.3",
