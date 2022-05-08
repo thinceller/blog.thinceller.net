@@ -1,0 +1,103 @@
+---
+title: Conventional Commits をする CLI git-cc を Rust で作った
+description: |
+  最近 Rust を勉強しているに書いたように、プライベートの時間を使って Rust の勉強をしています。
+  今回、Conventional Commits を作成する CLI を Rust で作成しました。
+date: '2022-05-08T16:26:10Z'
+publishedTime: '2022-05-08T16:26:10Z'
+modifiedTime: '2022-05-08T16:26:10Z'
+tags:
+  - Rust
+---
+
+[最近 Rust を勉強している](2022-01-30-learning-rust)に書いたように、プライベートの時間を使って Rust の勉強をしています。
+今回、Conventional Commits を作成する CLI を Rust で作成しました。
+
+[thinceller/git-cc: A command line tool to create commit messages following the Conventional Commits specs](https://github.com/thinceller/git-cc)
+
+## Conventional Commits
+
+Conventional Commits はコミットメッセージの仕様です。
+「人間と機械が読みやすい」ことをコンセプトにした仕様で、SemVer と連携しつつ様々な自動化を容易にすることが可能になります。
+例えば、後方互換性のある新しい API を追加するコミットのメッセージは `feat: add new api` のようになり、`type` にあたる `feat` を読み取ることでマイナーバージョンアップを行います。
+仕様の詳細は下記のページが参考になります。
+
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+[Angular のコミットメッセージガイドライン](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)にインスパイアされたものらしく、Web フロントエンドや Node.js 系のコミュニティでよく使われているのを見かけます。
+最近だと Deno の開発でも使用されていますね。
+
+業務においてチームとしてきっちりルールを決めて運用したような経験はないですが、個人的にこの仕様に則ったコミットメッセージを書くことが多いです。
+コミットメッセージの一行目を見るだけで
+
+- どのような種類の変更であるか
+- どのような変更であるか
+
+が一定のルールで記述されるので、Conventional Commits に則ってメッセージを作成することで理解しやすいコミットを自然と作成できることがメリットだと感じています（逆に、適切なコミットメッセージをつけられるようなコミットの粒度を意識するように矯正できるとも言えるかもしれません）。
+
+普段は VSCode の Conventional Commits 拡張機能（[Conventional Commits - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)）を使ってコミットすることが多かったのですが、ターミナル上で git コマンドと一緒に動かせるものを探した結果自分で作ってみることにしました。
+
+## git-cc
+
+CLI は以下のような方針で作成しました。
+
+- `git-xxx` という CLI にする
+- Rust で作る
+- インタラクティブな UI をもつ
+
+git には `git-subcommand` という実行可能ファイルを PATH に追加しておくと `git subcommand` で実行できる仕組みがあります。
+`git add` したのちに `git xxx` でコミットできるような統一感がほしいなーと思い、`git-cc` という CLI を作ることにしました。
+（`cc` は conventional commits あるいは commit conventionally の略です）
+
+使用言語は現在勉強している Rust にしました。
+[書き捨てるための Rust - Qiita](https://qiita.com/dalance/items/6f0da880501511237d61)という記事を読んで、とりあえず動くものを書いてみてリファクタリングしながら Rust への理解をより深めていこうと思いました。
+CLI を作るための crate も充実していたのでさほど困ることも多くなかったです。
+と言いつつ、v0.1.0 の時点では最低限の実装しかしていないため、インタラクティブなプロンプトを提供してくれる [dialoguer](https://github.com/mitsuhiko/dialoguer) にのみ依存しています。
+使用していた VSCode 拡張機能と似たような使い勝手にしたかったので、質問に一つ一つ回答していけば自然と Conventional Commits なコミットメッセージができあがるようにしました。
+
+## 利用方法
+
+### インストール
+
+2022 年 5 月 9 日時点では `cargo install` によるインストールのみ対応しています。
+
+```bash
+$ cargo install git-cc
+```
+
+### 使い方
+
+インデックスにファイルがある状態で `git-cc` または `git cc` を呼び出すだけです。
+
+```bash
+$ git add hoge.txt
+
+$ git-cc
+# or
+$ git cc
+```
+
+### デモ
+
+<a href="https://gyazo.com/21cee43830a10e38df9ee16f25fe9d0c">
+  <video
+    alt="Video from Gyazo"
+    width="1000"
+    autoplay
+    muted
+    loop
+    playsinline
+    controls
+  >
+    <source
+      src="https://i.gyazo.com/21cee43830a10e38df9ee16f25fe9d0c.mp4"
+      type="video/mp4"
+    />
+  </video>
+</a>
+
+## まとめ
+
+[The Book のコマンドラインプログラムのパート](https://doc.rust-jp.rs/book-ja/ch12-00-an-io-project.html)や [Command Line Applications in Rust](https://rust-cli.github.io/book/index.html) を読みながら実装をすることで詰まることなく簡単な CLI の作成ができました。
+core API や crate のドキュメントが充実していてかつ統一的で見やすいことも Rust の利点だと感じました（Go でも似たような経験はできますね）。
+自分でも使い倒しながらブラッシュアップしていきます。
