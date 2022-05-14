@@ -9,11 +9,11 @@ import {
   Divider,
   chakra,
 } from '@chakra-ui/react';
-import { MDXProviderComponentsProp } from '@mdx-js/react';
+import { type MDXComponents } from 'mdx/types';
 import { Tweet, TweetProps } from 'react-twitter-widgets';
 import { ChakraNextImage, ChakraNextImageProps } from './ChakraNextImage';
 
-export const MDXComponents: MDXProviderComponentsProp = {
+export const CustomMDXComponents: MDXComponents = {
   a: (p: JSX.IntrinsicElements['a']) => {
     const { href, ...rest } = p;
     const isInternalLink =
