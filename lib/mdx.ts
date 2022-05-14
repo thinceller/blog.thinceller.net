@@ -6,7 +6,7 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import { z } from 'zod';
 
-import remarkCodeTitles from 'remark-code-titles';
+import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from '@mapbox/rehype-prism';
 import rehypeSlug from 'rehype-slug';
 
@@ -33,8 +33,7 @@ export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {
   const { data, content } = matter(fileContent);
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [remarkCodeTitles],
-      rehypePlugins: [rehypePrism, rehypeSlug],
+      rehypePlugins: [rehypeCodeTitles, rehypePrism, rehypeSlug],
     },
   });
   const frontMatter = frontMatterSchema.parse(data);
