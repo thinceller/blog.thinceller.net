@@ -5,7 +5,7 @@ import { Global } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
 import { theme } from '../lib/chakraTheme';
 import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
-import { MDXComponents } from '../components/MDXComponent';
+import { CustomMDXComponents } from '../components/MDXComponent';
 import { Layout } from '../components/Layout';
 import { globalStyles } from '../styles/global';
 
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <ChakraProvider resetCSS theme={theme}>
-        <MDXProvider components={MDXComponents}>
+        <MDXProvider components={CustomMDXComponents}>
           <Layout>
             <Global styles={globalStyles} />
             <Component {...pageProps} />

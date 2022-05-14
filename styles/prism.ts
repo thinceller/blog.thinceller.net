@@ -172,7 +172,7 @@ export const prismStyle = css`
     border-radius: 0.3em;
   }
 
-  .remark-code-title {
+  .rehype-code-title {
     margin: 0;
     padding: 0 1em;
     background: #2d3748;

@@ -23,13 +23,13 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-twitter-widgets": "1.10.0",
+    "rehype-code-titles": "1.0.3",
     "rehype-slug": "5.0.1",
-    "remark-code-titles": "0.1.2",
     "zod": "3.16.0"
   },
   "devDependencies": {
     "@types/markdown-it": "12.2.3",
-    "@types/mdx-js__react": "1.5.5",
+    "@types/mdx": "2.0.1",
     "@types/node": "16.11.35",
     "@types/react": "18.0.9",
     "chalk": "5.0.1",
