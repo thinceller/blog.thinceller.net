@@ -23,6 +23,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-twitter-widgets": "1.10.0",
+    "rehype-autolink-headings": "6.1.1",
     "rehype-code-titles": "1.0.3",
     "rehype-slug": "5.0.1",
     "zod": "3.16.0"

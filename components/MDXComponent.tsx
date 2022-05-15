@@ -56,22 +56,22 @@ export const CustomMDXComponents: MDXComponents = {
   ),
   hr: () => <Divider />,
   h1: (p: JSX.IntrinsicElements['h1']) => (
-    <Heading as="h1" fontSize="2xl" mt={12} mb={4} {...p} />
+    <Heading as="h1" fontSize="2xl" mt={12} mb={4} position="relative" {...p} />
   ),
   h2: (p: JSX.IntrinsicElements['h2']) => (
-    <Heading as="h2" fontSize="xl" mt={12} mb={4} {...p} />
+    <Heading as="h2" fontSize="xl" mt={12} mb={4} position="relative" {...p} />
   ),
   h3: (p: JSX.IntrinsicElements['h3']) => (
-    <Heading as="h3" fontSize="lg" mt={8} mb={4} {...p} />
+    <Heading as="h3" fontSize="lg" mt={8} mb={4} position="relative" {...p} />
   ),
   h4: (p: JSX.IntrinsicElements['h4']) => (
-    <Heading as="h4" fontSize="md" mb={4} {...p} />
+    <Heading as="h4" fontSize="md" mb={4} position="relative" {...p} />
   ),
   h5: (p: JSX.IntrinsicElements['h5']) => (
-    <Heading as="h5" fontSize="sm" mb={4} {...p} />
+    <Heading as="h5" fontSize="sm" mb={4} position="relative" {...p} />
   ),
   h6: (p: JSX.IntrinsicElements['h6']) => (
-    <Heading as="h6" fontSize="xs" mb={4} {...p} />
+    <Heading as="h6" fontSize="xs" mb={4} position="relative" {...p} />
   ),
   li: (p: JSX.IntrinsicElements['li']) => <chakra.li {...p} />,
   ol: (p: JSX.IntrinsicElements['ol']) => <OrderedList mb={6} ml={8} {...p} />,
