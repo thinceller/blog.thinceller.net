@@ -2,6 +2,15 @@ import { css } from '@emotion/react';
 
 export const globalStyles = css`
   /**
+   * inline code styles
+   */
+  :not(pre) > code {
+    background-color: #edf2f7;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+  }
+
+  /**
    * This will hide the focus indicator if the element receives focus    via the mouse,
    * but it will still show up on keyboard focus.
    */

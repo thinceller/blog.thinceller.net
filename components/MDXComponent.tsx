@@ -45,15 +45,6 @@ export const CustomMDXComponents: MDXComponents = {
       {...p}
     />
   ),
-  inlineCode: (p: JSX.IntrinsicElements['code']) => (
-    <chakra.code
-      fontSize="sm"
-      backgroundColor="gray.100"
-      px="0.4em"
-      py="0.2em"
-      {...p}
-    />
-  ),
   hr: () => <Divider />,
   h1: (p: JSX.IntrinsicElements['h1']) => (
     <Heading as="h1" fontSize="2xl" mt={12} mb={4} position="relative" {...p} />
