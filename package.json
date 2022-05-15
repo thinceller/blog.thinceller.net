@@ -28,6 +28,7 @@
     "zod": "3.16.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "12.1.6",
     "@types/markdown-it": "12.2.3",
     "@types/mdx": "2.0.1",
     "@types/node": "16.11.35",
@@ -56,6 +57,7 @@
   },
   "scripts": {
     "build": "next build && next-sitemap",
+    "build:analyze": "ANALYZE=true next build",
     "dev": "next",
     "dev:watch": "next-remote-watch ./_posts",
     "export": "next export",
