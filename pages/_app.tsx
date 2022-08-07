@@ -10,7 +10,6 @@ import { Layout } from '../components/Layout';
 import { globalStyles } from '../styles/global';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'focus-visible/dist/focus-visible';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
