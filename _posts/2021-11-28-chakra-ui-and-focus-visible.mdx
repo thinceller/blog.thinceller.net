@@ -5,11 +5,26 @@ description: |
   しかし、実際に利用しているうちに気になる点がありました。
 date: '2021-11-28T04:28:27+09:00'
 publishedTime: '2021-11-28T04:28:27+09:00'
-modifiedTime: '2021-11-28T04:28:27+09:00'
+modifiedTime: '2022-08-11T17:00:00+09:00'
 tags:
   - Chakra UI
   - CSS
   - accessibility
+---
+
+## 追記: Safari でも focus-visible がサポートされるようになりました
+
+2022 年 3 月にリリースされた Safari 15.4 にて `focus-visible` 疑似クラスがサポートされるようになりました。
+
+[Safari 15.4 Release Notes | Apple Developer Documentation](https://developer.apple.com/documentation/safari-release-notes/safari-15_4-release-notes)
+
+Chakra UI においても、v2.2.0 から要素へのフォーカス時のスタイルにデフォルトで `focus-visible` を使うようになっています。
+
+[chakra-ui/CHANGELOG.md at @chakra-ui/react@2.2.0 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/blob/%40chakra-ui/react%402.2.0/packages/react/CHANGELOG.md)
+[refactor: remove annoying focus outline by segunadebayo · Pull Request #6153 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/pull/6153)
+
+本記事で紹介している polyfill も必要なくなったので、現在はこのブログにおいても polyfill を削除しています。
+
 ---
 
 このブログでも使用している Chakra UI には多くのコンポーネントがあり、WAI-ARIA 仕様に対応しているなどアクセシビリティが考慮されています。
