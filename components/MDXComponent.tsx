@@ -8,10 +8,21 @@ import {
   Link,
   Divider,
   chakra,
+  AlertProps,
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  Box,
+  AlertIcon,
 } from '@chakra-ui/react';
 import { type MDXComponents } from 'mdx/types';
 import { Tweet, TweetProps } from 'react-twitter-widgets';
 import { ChakraNextImage, ChakraNextImageProps } from './ChakraNextImage';
+
+type MyAlertProps = AlertProps & {
+  title?: string;
+  description: string;
+};
 
 export const CustomMDXComponents: MDXComponents = {
   a: (p: JSX.IntrinsicElements['a']) => {
@@ -45,7 +56,7 @@ export const CustomMDXComponents: MDXComponents = {
       {...p}
     />
   ),
-  hr: () => <Divider />,
+  hr: () => <Divider mt={10} mb={10} />,
   h1: (p: JSX.IntrinsicElements['h1']) => (
     <Heading as="h1" fontSize="2xl" mt={12} mb={4} position="relative" {...p} />
   ),
@@ -90,6 +101,17 @@ export const CustomMDXComponents: MDXComponents = {
           <ChakraNextImage {...p} />
         </Link>
       </chakra.p>
+    );
+  },
+  Alert: ({ title, description, ...p }: MyAlertProps) => {
+    return (
+      <Alert {...p} mb={6}>
+        <AlertIcon />
+        <Box>
+          {title && <AlertTitle>{title}</AlertTitle>}
+          <AlertDescription>{description}</AlertDescription>
+        </Box>
+      </Alert>
     );
   },
 };
