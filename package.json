@@ -36,7 +36,7 @@
     "chalk": "5.0.1",
     "date-fns": "2.29.1",
     "enquirer": "2.3.6",
-    "eslint": "8.21.0",
+    "eslint": "8.22.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "8.5.0",
     "husky": "8.0.1",
