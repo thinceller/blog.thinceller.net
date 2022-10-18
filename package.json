@@ -30,7 +30,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "12.1.6",
     "@types/markdown-it": "12.2.3",
-    "@types/mdx": "2.0.2",
+    "@types/mdx": "2.0.3",
     "@types/node": "16.11.48",
     "@types/react": "18.0.21",
     "chalk": "5.0.1",
