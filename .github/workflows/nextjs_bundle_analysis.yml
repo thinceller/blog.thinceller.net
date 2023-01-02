@@ -18,10 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
       - name: Set up node
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version-file: '.tool-versions'
+          cache: 'pnpm'
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
