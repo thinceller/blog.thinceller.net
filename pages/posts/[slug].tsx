@@ -16,6 +16,7 @@ import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { PostTitle } from '../../components/PostTitle';
 import { prismStyle } from '../../styles/prism';
 import { PostFooter } from '../../components/PostFooter';
+import { CustomMDXComponents } from '../../components/MDXComponent';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts(['slug']);
@@ -88,7 +89,7 @@ const PostPage: NextPage<PostPageProps> = (props) => {
         />
       </Box>
       <Box lineHeight="tall">
-        <MDXRemote {...props.mdxSource} />
+        <MDXRemote {...props.mdxSource} components={CustomMDXComponents} />
       </Box>
       <Box mt={10} mb={10}>
         <PostFooter />
