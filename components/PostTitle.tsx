@@ -1,5 +1,5 @@
 import { VFC } from 'react';
-import { Heading, Text } from '@chakra-ui/layout';
+import { Heading, Text } from '@chakra-ui/react';
 import { formatDate } from '../lib/date';
 
 export const PostTitle: VFC<{ title: string; date: string }> = ({
