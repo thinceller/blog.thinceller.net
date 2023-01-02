@@ -18,13 +18,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
       - name: Set up node
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version-file: '.tool-versions'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        # currently, bahmutov/npm-install has no support for pnpm
+        # https://github.com/bahmutov/npm-install/issues/133
+        # uses: bahmutov/npm-install@v1
+        run: pnpm install --frozen-lockfile
 
       - name: Restore next build
         uses: actions/cache@v3
