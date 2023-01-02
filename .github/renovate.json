@@ -12,6 +12,7 @@
   },
   "patch": {
     "stabilityDays": 2,
-    "automerge": true
+    "automerge": true,
+    "labels": ["automerge: enabled"]
   }
 }
