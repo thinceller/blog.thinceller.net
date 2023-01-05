@@ -38,7 +38,7 @@
     "enquirer": "2.3.6",
     "eslint": "8.30.0",
     "eslint-config-next": "12.3.4",
-    "eslint-config-prettier": "8.5.0",
+    "eslint-config-prettier": "8.6.0",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
     "next-sitemap": "2.5.28",
