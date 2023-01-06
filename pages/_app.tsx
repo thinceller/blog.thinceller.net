@@ -5,6 +5,7 @@ import { Global } from '@emotion/react';
 import { Analytics } from '@vercel/analytics/react';
 import { theme } from '../lib/chakraTheme';
 import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
+import { GoogleAnalytics } from '../lib/gtag';
 import { Layout } from '../components/Layout';
 import { globalStyles } from '../styles/global';
 
@@ -41,6 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Layout>
       </ChakraProvider>
+      <GoogleAnalytics />
       <Analytics />
     </>
   );
