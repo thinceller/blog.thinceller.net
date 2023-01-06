@@ -11,6 +11,7 @@ specifiers:
   '@mapbox/rehype-prism': 0.8.0
   '@mdx-js/react': 2.2.1
   '@next/bundle-analyzer': 12.3.4
+  '@types/gtag.js': 0.0.12
   '@types/markdown-it': 12.2.3
   '@types/mdx': 2.0.3
   '@types/node': 18.11.18
@@ -71,6 +72,7 @@ dependencies:
 
 devDependencies:
   '@next/bundle-analyzer': 12.3.4
+  '@types/gtag.js': 0.0.12
   '@types/markdown-it': 12.2.3
   '@types/mdx': 2.0.3
   '@types/node': 18.11.18
@@ -1726,6 +1728,10 @@ packages:
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
     dev: false
+
+  /@types/gtag.js/0.0.12:
+    resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==}
+    dev: true
 
   /@types/hast/2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
