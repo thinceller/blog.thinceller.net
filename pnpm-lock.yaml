@@ -42,7 +42,7 @@ specifiers:
   rehype-code-titles: 1.1.0
   rehype-slug: 5.1.0
   typescript: 4.9.5
-  zod: 3.20.3
+  zod: 3.20.5
 
 dependencies:
   '@chakra-ui/react': 2.4.9_7vs4lv4lkbqfon3hxx255auwpq
@@ -68,7 +68,7 @@ dependencies:
   rehype-autolink-headings: 6.1.1
   rehype-code-titles: 1.1.0
   rehype-slug: 5.1.0
-  zod: 3.20.3
+  zod: 3.20.5
 
 devDependencies:
   '@next/bundle-analyzer': 12.3.4
@@ -7197,8 +7197,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod/3.20.3:
-    resolution: {integrity: sha512-+MLeeUcLTlnzVo5xDn9+LVN9oX4esvgZ7qfZczBN+YVUvZBafIrPPVyG2WdjMWU2Qkb2ZAh2M8lpqf1wIoGqJQ==}
+  /zod/3.20.5:
+    resolution: {integrity: sha512-BTAAliwfoB9dWf2hC+TXlyWKk/YTqRGZjHQR0WLC2A2pzierWo7KuQ1ebjS4SNaFaxg/lDItzl9/QTgLjcHbgw==}
     dev: false
 
   /zwitch/2.0.2:
