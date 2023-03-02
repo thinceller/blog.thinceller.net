@@ -16,7 +16,7 @@ specifiers:
   '@types/mdx': 2.0.3
   '@types/node': 18.11.18
   '@types/react': 18.0.28
-  '@vercel/analytics': 0.1.10
+  '@vercel/analytics': 0.1.11
   chalk: 5.2.0
   date-fns: 2.29.3
   dayjs: 1.11.7
@@ -54,7 +54,7 @@ dependencies:
   '@fortawesome/react-fontawesome': 0.2.0_z27bm67dtmuyyvss23ckjdrcuy
   '@mapbox/rehype-prism': 0.8.0
   '@mdx-js/react': 2.2.1_react@18.2.0
-  '@vercel/analytics': 0.1.10_react@18.2.0
+  '@vercel/analytics': 0.1.11_react@18.2.0
   dayjs: 1.11.7
   framer-motion: 8.0.4_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
@@ -1868,8 +1868,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/analytics/0.1.10_react@18.2.0:
-    resolution: {integrity: sha512-jjJ8GzcPnQp0cMxpfYoUycMRBtDiaIeyVjZPiEPe99Dj1PdjMzAFYEASiV/hpNsXHkpcNYCveDFh6jnmh0YSDQ==}
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
     peerDependencies:
       react: ^16.8||^17||^18
     dependencies:
