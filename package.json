@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "12.3.4",
+    "@textlint/textlint-plugin-markdown": "13.3.2",
     "@types/gtag.js": "0.0.12",
     "@types/markdown-it": "12.2.3",
     "@types/mdx": "2.0.4",
