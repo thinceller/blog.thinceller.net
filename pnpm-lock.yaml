@@ -33,7 +33,7 @@ specifiers:
   next-remote-watch: 2.0.0
   next-seo: 5.15.0
   next-sitemap: 2.5.28
-  ora: 6.1.2
+  ora: 6.3.0
   prettier: 2.8.7
   react: 18.2.0
   react-dom: 18.2.0
@@ -86,7 +86,7 @@ devDependencies:
   husky: 8.0.3
   lint-staged: 13.1.4_enquirer@2.3.6
   next-sitemap: 2.5.28_next@12.3.4
-  ora: 6.1.2
+  ora: 6.3.0
   prettier: 2.8.7
   typescript: 4.9.5
 
@@ -5363,17 +5363,17 @@ packages:
       word-wrap: 1.2.3
     dev: true
 
-  /ora/6.1.2:
-    resolution: {integrity: sha512-EJQ3NiP5Xo94wJXIzAyOtSb0QEIAUu7m8t6UZ9krbz0vAJqr92JpcK/lEXg91q6B9pEGqrykkd2EQplnifDSBw==}
+  /ora/6.3.0:
+    resolution: {integrity: sha512-1/D8uRFY0ay2kgBpmAwmSA404w4OoPVhHMqRqtjvrcK/dnzcEZxMJ+V4DUbyICu8IIVRclHcOf5wlD1tMY4GUQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
-      bl: 5.0.0
       chalk: 5.2.0
       cli-cursor: 4.0.0
       cli-spinners: 2.6.1
       is-interactive: 2.0.0
       is-unicode-supported: 1.1.0
       log-symbols: 5.1.0
+      stdin-discarder: 0.1.0
       strip-ansi: 7.0.1
       wcwidth: 1.0.1
     dev: true
@@ -6336,6 +6336,13 @@ packages:
     resolution: {integrity: sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==}
     engines: {node: '>= 0.6'}
     dev: false
+
+  /stdin-discarder/0.1.0:
+    resolution: {integrity: sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      bl: 5.0.0
+    dev: true
 
   /string-argv/0.3.1:
     resolution: {integrity: sha512-a1uQGz7IyVy9YwhqjZIZu1c8JO8dNIe20xBmSS6qu9kv++k3JGzCVmprbNN5Kn+BgzD5E7YYwg1CcjuJMRNsvg==}
