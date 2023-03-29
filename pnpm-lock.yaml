@@ -13,7 +13,7 @@ specifiers:
   '@next/bundle-analyzer': 12.3.4
   '@types/gtag.js': 0.0.12
   '@types/markdown-it': 12.2.3
-  '@types/mdx': 2.0.3
+  '@types/mdx': 2.0.4
   '@types/node': 18.14.6
   '@types/react': 18.0.29
   '@vercel/analytics': 0.1.11
@@ -74,7 +74,7 @@ devDependencies:
   '@next/bundle-analyzer': 12.3.4
   '@types/gtag.js': 0.0.12
   '@types/markdown-it': 12.2.3
-  '@types/mdx': 2.0.3
+  '@types/mdx': 2.0.4
   '@types/node': 18.14.6
   '@types/react': 18.0.29
   chalk: 5.2.0
@@ -1431,7 +1431,7 @@ packages:
     resolution: {integrity: sha512-hZ3ex7exYLJn6FfReq8yTvA6TE53uW9UHJQM9IlSauOuS55J9y8RtA7W+dzp6Yrzr00/U1sd7q+Wf61q6SfiTQ==}
     dependencies:
       '@types/estree-jsx': 1.0.0
-      '@types/mdx': 2.0.3
+      '@types/mdx': 2.0.4
       estree-util-build-jsx: 2.0.0
       estree-util-is-identifier-name: 2.0.0
       estree-util-to-js: 1.1.0
@@ -1456,7 +1456,7 @@ packages:
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@types/mdx': 2.0.3
+      '@types/mdx': 2.0.4
       '@types/react': 18.0.29
       react: 18.2.0
     dev: false
@@ -1769,8 +1769,8 @@ packages:
   /@types/mdurl/1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
 
-  /@types/mdx/2.0.3:
-    resolution: {integrity: sha512-IgHxcT3RC8LzFLhKwP3gbMPeaK7BM9eBH46OdapPA7yvuIUJ8H6zHZV53J8hGZcTSnt95jANt+rTBNUUc22ACQ==}
+  /@types/mdx/2.0.4:
+    resolution: {integrity: sha512-qCYrNdpKwN6YO6FVnx+ulfqifKlE3lQGsNhvDaW9Oxzyob/cRLBJWow8GHBBD4NxQ7BVvtsATgLsX0vZAWmtrg==}
 
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
