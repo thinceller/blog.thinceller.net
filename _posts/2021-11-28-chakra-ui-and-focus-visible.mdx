@@ -14,30 +14,30 @@ tags:
 
 ## 追記: Safari でも focus-visible がサポートされるようになりました
 
-2022 年 3 月にリリースされた Safari 15.4 にて `focus-visible` 疑似クラスがサポートされるようになりました。
+2022年3月にリリースされたSafari 15.4にて `focus-visible` 疑似クラスがサポートされるようになりました。
 
 [Safari 15.4 Release Notes | Apple Developer Documentation](https://developer.apple.com/documentation/safari-release-notes/safari-15_4-release-notes)
 
-Chakra UI においても、v2.2.0 から要素へのフォーカス時のスタイルにデフォルトで `focus-visible` を使うようになっています。
+Chakra UIにおいても、v2.2.0から要素へのフォーカス時のスタイルにデフォルトで `focus-visible` を使うようになっています。
 
 [chakra-ui/CHANGELOG.md at @chakra-ui/react@2.2.0 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/blob/%40chakra-ui/react%402.2.0/packages/react/CHANGELOG.md)
 [refactor: remove annoying focus outline by segunadebayo · Pull Request #6153 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/pull/6153)
 
-本記事で紹介している polyfill も必要なくなったので、現在はこのブログにおいても polyfill を削除しています。
+本記事で紹介しているpolyfillも必要なくなったので、現在はこのブログにおいてもpolyfillを削除しています。
 
 ---
 
-このブログでも使用している Chakra UI には多くのコンポーネントがあり、WAI-ARIA 仕様に対応しているなどアクセシビリティが考慮されています。
-しかし、実際に利用しているうちに気になる点がありました。
+このブログでも使用しているChakra UIには多くのコンポーネントがあり、WAI-ARIA仕様に対応しているなどアクセシビリティが考慮されています。
+しかし、実際に利用していると気になる点がありました。
 
 ## Chakra UI の Link コンポーネントの挙動
 
-Chakra UI の `<Link>` コンポーネントは chakra によって拡張されたただの `<a>` タグです。
+Chakra UIの `<Link>` コンポーネントはchakraによって拡張されたただの `<a>` タグです。
 
 [Link - Chakra UI](https://chakra-ui.com/docs/navigation/link)
 
-Next.js での internal なページ遷移で利用する場合は `next/link` と併用する必要があります。
-以下のコードでは、internal なページのときのみ `next/link` で `<Link>` をラップし、外部のページのときは素の `<Link>` を使用する例です。
+Next.jsでのinternalなページ遷移で利用する場合は `next/link` と併用する必要があります。
+以下のコードでは、internalなページのときのみ `next/link` で `<Link>` をラップし、外部のページのときは素の `<Link>` を使用する例です。
 
 ```tsx:MyLink.tsx
 import NextLink from 'next/link';
@@ -60,7 +60,7 @@ const MyLink = (props: JSX.IntrinsicElements['a']) => {
 ```
 
 このコンポーネント自体は問題なく動作するのですが、
-ヘッダーのような複数ページに渡って表示される場所に置いてクリックすると focus 時の青いアウトラインがページ遷移後も表示されたまま残ってしまいます。
+ヘッダーのような複数ページに渡って表示される場所に置いてクリックするとfocus時の青いアウトラインがページ遷移後も表示されたまま残ってしまいます。
 
 <Image
   src="/images/chakra-ui-link.png"
@@ -69,25 +69,25 @@ const MyLink = (props: JSX.IntrinsicElements['a']) => {
   alt="Chakra UI のリンク"
 />
 
-この問題は Chakra UI の Issue として取り上げられています。
+この問題はChakra UIのIssueとして取り上げられています。
 
 [Blue outline borders around all clickable components ugly · Issue #708 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/issues/708)
 
-コメントによれば、Chakra UI は WAI-ARIA 規格に厳密に従うことを目標にしており、focus 時のアウトラインをデフォルトで無効にすることはない、ということです。
-デフォルトで有効になっていること自体は納得できるのですが、Tab キーなどのキーボード操作ではないマウスクリックでもアウトラインが表示されるのは少し気になります。
+コメントによれば、Chakra UIはWAI-ARIA規格に厳密に従うことを目標にしており、focus時のアウトラインをデフォルトで無効にすることはない、ということです。
+デフォルトで有効になっていること自体は納得できるのですが、Tabキーなどのキーボード操作ではないマウスクリックでもアウトラインが表示されるのは少し気になります。
 
 ## \_focus props を変更してアウトラインを無効化する
 
-先ほどの Issue ではいくつかの回避策が提示されています。
-そのうちのひとつは、Chakra UI が設定している focus のスタイルを上書きする方法です。
+先ほどのIssueではいくつかの回避策が提示されています。
+そのうちのひとつは、Chakra UIが設定しているfocusのスタイルを上書きする方法です。
 
-個別の `<Link>` コンポーネントを修正する場合は、`_focus` props にスタイルを追加します。
+個別の `<Link>` コンポーネントを修正する場合は、`_focus` propsにスタイルを追加します。
 
 ```tsx
 <Link _focus={{ outline: 'none', boxShadow: 'none' }}>Link</Link>
 ```
 
-また、`<Link>` コンポーネント全体でアウトラインを無効化したい場合、theme を拡張することでデフォルトの挙動を変更することが可能です。
+また、`<Link>` コンポーネント全体でアウトラインを無効化したい場合、themeを拡張することでデフォルトの挙動を変更可能です。
 
 ```tsx:chakraTheme.ts
 import { extendTheme } from '@chakra-ui/react';
@@ -108,17 +108,17 @@ const theme = extendTheme({
 
 これで `<Link>` クリック時にアウトラインが表示されることはなくなりました。
 
-しかし、この方法はキーボード操作による focus でもアウトラインが表示されなくなります。
+しかし、この方法はキーボード操作によるfocusでもアウトラインが表示されなくなります。
 できれば避けたい気持ちがありますね。
 
 ## focus-visible 疑似クラスを使う
 
-同 Issue で多くリアクションを集めていたのは、`focus-visible` 疑似クラスを用いた回避方法でした。
+同Issueで多くリアクションを集めていたのは、`focus-visible` 疑似クラスを用いた回避方法でした。
 以下の記事にまとまっています。
 
 [Accessibility on-demand with Chakra-ui and focus-visible | by Keegan Famouss | Medium](https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9)
 
-MDN のページには、
+MDNのページには以下のように記載されています。
 
 > :focus-visible 擬似クラスは、要素が :focus 擬似クラスに一致している時で、ユーザーエージェントが要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
 >
@@ -126,17 +126,17 @@ MDN のページには、
 >
 > [:focus-visible - CSS: カスケーディングスタイルシート | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/:focus-visible)
 
-とあり、今回の「マウスクリック時はアウトラインを無効化してキーボード操作にはスタイルを適用させたい」というユースケースに合致しています。
+今回の「マウスクリック時はアウトラインを無効化してキーボード操作にはスタイルを適用させたい」というユースケースに合致しています。
 
-残念ながら、2021 年 11 月現在 `focus-visible` 疑似クラスは Safari が対応していないので、モダンブラウザすべてで使うためには polyfill を使う必要があります。
+残念ながら、2021年11月現在 `focus-visible` 疑似クラスはSafariが対応していないので、モダンブラウザすべてで使うためにはpolyfillを使う必要があります。
 
 以下、[focus-visible - npm](https://www.npmjs.com/package/focus-visible) を使った設定手順です。
 
 1. `npm install focus-visible` or `yarn add focus-visible`
 2. `import 'focus-visible/dist/focus-visible'` を配置する
-3. `focus-visible` CSS をアプリケーションに適用する
+3. `focus-visible` CSSをアプリケーションに適用する
 
-Next.js + Chakra UI での設定例は以下のようになります。
+Next.js + Chakra UIでの設定例は以下のようになります。
 
 ```tsx:_app.tsx
 import { ChakraProvider } from '@chakra-ui/react';
@@ -162,11 +162,11 @@ function MyApp({ pageProps }) {
 ```
 
 上記の設定はこのブログサイトにすでに適用されています。
-試してみたい場合はこのブログサイトのヘッダーのリンクをクリックしたり Tab キーを押したりしてみてください。
+試してみたい場合はこのブログサイトのヘッダーのリンクをクリックしたりTabキーを押したりしてみてください。
 
 ## まとめ
 
-Chakra UI はアクセシビリティに配慮された使い勝手のいいコンポーネントライブラリですが、
-デフォルトの挙動が気に入らない場合はスタイルをオーバーライドして変更することが可能です。
+Chakra UIはアクセシビリティに配慮された使い勝手のいいコンポーネントライブラリですが、
+デフォルトの挙動が気に入らない場合はスタイルをオーバーライドして変更可能です。
 
-最新の CSS を活用することでアクセシビリティを維持したまま意図する挙動を実現することもできるので、polyfill が必要なくなるように Safari での実装が待たれます。
+最新のCSSを活用することでアクセシビリティを維持したまま意図する挙動を実現できるので、polyfillが必要なくなるようにSafariでの実装が待たれます。
