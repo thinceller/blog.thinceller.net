@@ -10,6 +10,7 @@ module.exports = {
       'sentence-length': {
         max: 200,
       },
+      'ja-no-mixed-period': false,
     },
     'preset-ja-spacing': true,
     'spellcheck-tech-word': true,
