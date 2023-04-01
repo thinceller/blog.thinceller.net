@@ -20,3 +20,16 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - name: run eslint
         run: pnpm lint
+  textlint:
+    name: textlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - name: run textlint
+        run: pnpm lint:post

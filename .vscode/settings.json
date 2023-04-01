@@ -1,0 +1,4 @@
+{
+  "textlint.autoFixOnSave": true,
+  "textlint.languages": ["mdx"]
+}
