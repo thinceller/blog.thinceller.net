@@ -42,7 +42,7 @@ specifiers:
   rehype-autolink-headings: 6.1.1
   rehype-code-titles: 1.2.0
   rehype-slug: 5.1.0
-  textlint: 13.3.1
+  textlint: 13.3.2
   textlint-rule-preset-ja-spacing: 2.3.0
   textlint-rule-preset-ja-technical-writing: 7.0.0
   textlint-rule-spellcheck-tech-word: 5.0.0
@@ -94,10 +94,10 @@ devDependencies:
   next-sitemap: 2.5.28_next@12.3.4
   ora: 6.1.2
   prettier: 2.8.7
-  textlint: 13.3.1
+  textlint: 13.3.2
   textlint-rule-preset-ja-spacing: 2.3.0
-  textlint-rule-preset-ja-technical-writing: 7.0.0_textlint@13.3.1
-  textlint-rule-spellcheck-tech-word: 5.0.0_textlint@13.3.1
+  textlint-rule-preset-ja-technical-writing: 7.0.0_textlint@13.3.2
+  textlint-rule-spellcheck-tech-word: 5.0.0_textlint@13.3.2
   typescript: 4.9.5
 
 packages:
@@ -3350,7 +3350,7 @@ packages:
       debug: 4.3.4
       eslint: 8.30.0
       eslint-plugin-import: 2.26.0_m7ghkhizozzusfngjaqf3jyhiy
-      glob: 7.2.2
+      glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.1
       tsconfig-paths: 3.14.1
@@ -4066,6 +4066,7 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+    dev: false
 
   /glob/7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -4076,7 +4077,6 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
-    dev: true
 
   /global-dirs/0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
@@ -7076,14 +7076,14 @@ packages:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
     hasBin: true
     dependencies:
-      glob: 7.2.2
+      glob: 7.2.3
     dev: false
 
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
     dependencies:
-      glob: 7.2.2
+      glob: 7.2.3
     dev: true
 
   /run-async/2.4.1:
@@ -7885,7 +7885,7 @@ packages:
       textlint-rule-ja-space-between-half-and-full-width: 2.3.0
     dev: true
 
-  /textlint-rule-preset-ja-technical-writing/7.0.0_textlint@13.3.1:
+  /textlint-rule-preset-ja-technical-writing/7.0.0_textlint@13.3.2:
     resolution: {integrity: sha512-zzpMctCALdCOOfz/Gci0dgsb4Vi6sjAkxzNoruMEqMRjZyzp6CdRCi1ofe/ZusTzU5aGw452xCAg0VAD7tZeHA==}
     dependencies:
       '@textlint-rule/textlint-rule-no-invalid-control-character': 2.0.0
@@ -7910,13 +7910,13 @@ packages:
       textlint-rule-no-mix-dearu-desumasu: 5.0.0
       textlint-rule-no-nfd: 1.0.2
       textlint-rule-no-zero-width-spaces: 1.0.1
-      textlint-rule-preset-jtf-style: 2.3.13_textlint@13.3.1
+      textlint-rule-preset-jtf-style: 2.3.13_textlint@13.3.2
       textlint-rule-sentence-length: 3.0.1
     transitivePeerDependencies:
       - textlint
     dev: true
 
-  /textlint-rule-preset-jtf-style/2.3.13_textlint@13.3.1:
+  /textlint-rule-preset-jtf-style/2.3.13_textlint@13.3.2:
     resolution: {integrity: sha512-DH5V00hOCXK1BLG4/MfxXSFGKzruEQ/fzQG396CwiDK8LB0cMS1Z0O8JYRXMFDbmHRtR7LVXL8/3L1OwQ4TunQ==}
     peerDependencies:
       textlint: '>= 5.6.0'
@@ -7928,7 +7928,7 @@ packages:
       regexp.prototype.flags: 1.4.3
       regx: 1.0.4
       sorted-joyo-kanji: 0.2.0
-      textlint: 13.3.1
+      textlint: 13.3.2
       textlint-rule-helper: 2.3.0
       textlint-rule-prh: 5.3.0
     dev: true
@@ -7951,13 +7951,13 @@ packages:
       textlint-util-to-string: 3.3.2
     dev: true
 
-  /textlint-rule-spellcheck-tech-word/5.0.0_textlint@13.3.1:
+  /textlint-rule-spellcheck-tech-word/5.0.0_textlint@13.3.2:
     resolution: {integrity: sha512-BvQiWP5PZzRQQZLpGaai9XzQuQKGmJoP1wIgU8AiIGViEvX+NPoUUK4HLsZd31m0tBpQOU/4+rpy130jUf3Z8A==}
     peerDependencies:
       textlint: '>= 5.6.0'
     dependencies:
       spellcheck-technical-word: 2.0.0
-      textlint: 13.3.1
+      textlint: 13.3.2
       textlint-rule-helper: 1.2.0
     dev: true
 
@@ -7970,8 +7970,8 @@ packages:
       unified: 8.4.2
     dev: true
 
-  /textlint/13.3.1:
-    resolution: {integrity: sha512-lsLOYXPcWITUDmPimjuRqHnp9TcA3xgoaqmpI5CbA/znirDy9St/Y23Aq9wr6eHXnkH3Iw+QKEVw06E1L4oahA==}
+  /textlint/13.3.2:
+    resolution: {integrity: sha512-i14ug8jyC1iNko16dpzp/blSLbvXTONiZbvkNT30N3VzDPCtNn2yV4qSZhiRWFi1hHfgOdG3n/u0DZvllZCHXQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
