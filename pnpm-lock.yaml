@@ -28,7 +28,7 @@ specifiers:
   framer-motion: 8.0.4
   gray-matter: 4.0.3
   husky: 8.0.3
-  lint-staged: 13.1.4
+  lint-staged: 13.2.0
   next: 12.3.4
   next-mdx-remote: 4.2.1
   next-remote-watch: 2.0.0
@@ -90,7 +90,7 @@ devDependencies:
   eslint-config-next: 12.3.4_req3y6wneysbxs6mlxvssjag2i
   eslint-config-prettier: 8.6.0_eslint@8.30.0
   husky: 8.0.3
-  lint-staged: 13.1.4_enquirer@2.3.6
+  lint-staged: 13.2.0_enquirer@2.3.6
   next-sitemap: 2.5.28_next@12.3.4
   ora: 6.1.2
   prettier: 2.8.7
@@ -3022,19 +3022,6 @@ packages:
     dependencies:
       ms: 2.1.2
 
-  /debug/4.3.4_supports-color@9.3.1:
-    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    dependencies:
-      ms: 2.1.2
-      supports-color: 9.3.1
-    dev: true
-
   /decamelize/1.2.0:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
@@ -4985,15 +4972,15 @@ packages:
     resolution: {integrity: sha512-8ZmlJFVK9iCmtLz19HpSsR8HaAMWBT284VMNednLwlIMDP2hJDCIhUp0IZ2xUcZ+Ob6BM0VvCSJwzASDM45NLQ==}
     dev: false
 
-  /lint-staged/13.1.4_enquirer@2.3.6:
-    resolution: {integrity: sha512-pJRmnRA4I4Rcc1k9GZIh9LQJlolCVDHqtJpIgPY7t99XY3uXXmUeDfhRLELYLgUFJPmEsWevTqarex9acSfx2A==}
+  /lint-staged/13.2.0_enquirer@2.3.6:
+    resolution: {integrity: sha512-GbyK5iWinax5Dfw5obm2g2ccUiZXNGtAS4mCbJ0Lv4rq6iEtfBSjOYdcbOtAIFtM114t0vdpViDDetjVTSd8Vw==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
       chalk: 5.2.0
       cli-truncate: 3.1.0
       commander: 10.0.0
-      debug: 4.3.4_supports-color@9.3.1
+      debug: 4.3.4
       execa: 7.0.0
       lilconfig: 2.1.0
       listr2: 5.0.7_enquirer@2.3.6
@@ -5002,10 +4989,10 @@ packages:
       object-inspect: 1.12.3
       pidtree: 0.6.0
       string-argv: 0.3.1
-      supports-color: 9.3.1
       yaml: 2.2.1
     transitivePeerDependencies:
       - enquirer
+      - supports-color
     dev: true
 
   /listify/1.0.3:
@@ -7614,11 +7601,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
-
-  /supports-color/9.3.1:
-    resolution: {integrity: sha512-knBY82pjmnIzK3NifMo3RxEIRD9E0kIzV4BKcyTZ9+9kWgLMxd4PrsTSMoFQUabgRBbF8KOLRDCyKgNV+iK44Q==}
-    engines: {node: '>=12'}
-    dev: true
 
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
