@@ -13,6 +13,6 @@
   "patch": {
     "stabilityDays": 2,
     "automerge": true,
-    "labels": ["automerge: enabled"]
+    "labels": ["dependencies", "automerge: enabled"]
   }
 }
