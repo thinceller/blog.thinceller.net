@@ -35,7 +35,7 @@
     "@types/markdown-it": "12.2.3",
     "@types/mdx": "2.0.4",
     "@types/node": "18.14.6",
-    "@types/react": "18.0.31",
+    "@types/react": "18.0.32",
     "chalk": "5.2.0",
     "date-fns": "2.29.3",
     "enquirer": "2.3.6",
