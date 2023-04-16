@@ -51,6 +51,7 @@
     "textlint-rule-preset-ja-spacing": "2.3.0",
     "textlint-rule-preset-ja-technical-writing": "7.0.0",
     "textlint-rule-spellcheck-tech-word": "5.0.0",
+    "tsx": "3.12.6",
     "typescript": "4.9.5"
   },
   "license": "MIT",
@@ -73,7 +74,8 @@
     "lint": "next lint",
     "lint:post": "textlint _posts/**/*.mdx",
     "prepare": "husky install",
-    "new-post": "node scripts/new-post.mjs"
+    "new:post": "node scripts/new-post.mjs",
+    "new:adr": "tsx scripts/new-adr.mts"
   },
   "nextBundleAnalysis": {
     "budget": 358400,
