@@ -74,8 +74,8 @@
     "lint": "next lint",
     "lint:post": "textlint _posts/**/*.mdx",
     "prepare": "husky install",
-    "new-post": "node scripts/new-post.mjs",
-    "new-adr": "tsx scripts/new-adr.mts"
+    "new:post": "node scripts/new-post.mjs",
+    "new:adr": "tsx scripts/new-adr.mts"
   },
   "nextBundleAnalysis": {
     "budget": 358400,
