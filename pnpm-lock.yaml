@@ -28,7 +28,7 @@ specifiers:
   framer-motion: 8.0.4
   gray-matter: 4.0.3
   husky: 8.0.3
-  lint-staged: 13.2.1
+  lint-staged: 13.2.2
   next: 12.3.4
   next-mdx-remote: 4.2.1
   next-remote-watch: 2.0.0
@@ -91,7 +91,7 @@ devDependencies:
   eslint-config-next: 12.3.4_req3y6wneysbxs6mlxvssjag2i
   eslint-config-prettier: 8.8.0_eslint@8.30.0
   husky: 8.0.3
-  lint-staged: 13.2.1_enquirer@2.3.6
+  lint-staged: 13.2.2_enquirer@2.3.6
   next-sitemap: 2.5.28_next@12.3.4
   ora: 6.3.0
   prettier: 2.8.8
@@ -5227,8 +5227,8 @@ packages:
     resolution: {integrity: sha512-8ZmlJFVK9iCmtLz19HpSsR8HaAMWBT284VMNednLwlIMDP2hJDCIhUp0IZ2xUcZ+Ob6BM0VvCSJwzASDM45NLQ==}
     dev: false
 
-  /lint-staged/13.2.1_enquirer@2.3.6:
-    resolution: {integrity: sha512-8gfzinVXoPfga5Dz/ZOn8I2GOhf81Wvs+KwbEXQn/oWZAvCVS2PivrXfVbFJc93zD16uC0neS47RXHIjXKYZQw==}
+  /lint-staged/13.2.2_enquirer@2.3.6:
+    resolution: {integrity: sha512-71gSwXKy649VrSU09s10uAT0rWCcY3aewhMaHyl2N84oBk4Xs9HgxvUp3AYu+bNsK4NrOYYxvSgg7FyGJ+jGcA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -5244,7 +5244,7 @@ packages:
       object-inspect: 1.12.3
       pidtree: 0.6.0
       string-argv: 0.3.1
-      yaml: 2.2.1
+      yaml: 2.2.2
     transitivePeerDependencies:
       - enquirer
       - supports-color
@@ -6129,7 +6129,7 @@ packages:
       strip-bom: 4.0.0
       validate-npm-package-name: 3.0.0
       webpack-merge: 4.2.2
-      yaml: 2.2.1
+      yaml: 2.2.2
     dev: false
 
   /mrm/3.0.10:
@@ -9010,8 +9010,8 @@ packages:
     engines: {node: '>= 6'}
     dev: false
 
-  /yaml/2.2.1:
-    resolution: {integrity: sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==}
+  /yaml/2.2.2:
+    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
     engines: {node: '>= 14'}
 
   /yargs-parser/15.0.3:
