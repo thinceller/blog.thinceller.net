@@ -33,7 +33,7 @@
     "@textlint/textlint-plugin-markdown": "13.3.2",
     "@types/gtag.js": "0.0.12",
     "@types/markdown-it": "12.2.3",
-    "@types/mdx": "2.0.4",
+    "@types/mdx": "2.0.5",
     "@types/node": "18.15.11",
     "@types/react": "18.0.38",
     "chalk": "5.2.0",
