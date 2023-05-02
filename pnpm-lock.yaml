@@ -46,7 +46,7 @@ specifiers:
   textlint-rule-preset-ja-spacing: 2.3.0
   textlint-rule-preset-ja-technical-writing: 7.0.0
   textlint-rule-spellcheck-tech-word: 5.0.0
-  tsx: 3.12.6
+  tsx: 3.12.7
   typescript: 4.9.5
   zod: 3.20.6
 
@@ -99,7 +99,7 @@ devDependencies:
   textlint-rule-preset-ja-spacing: 2.3.0
   textlint-rule-preset-ja-technical-writing: 7.0.0_textlint@13.3.2
   textlint-rule-spellcheck-tech-word: 5.0.0_textlint@13.3.2
-  tsx: 3.12.6
+  tsx: 3.12.7
   typescript: 4.9.5
 
 packages:
@@ -8379,8 +8379,8 @@ packages:
       typescript: 4.9.5
     dev: true
 
-  /tsx/3.12.6:
-    resolution: {integrity: sha512-q93WgS3lBdHlPgS0h1i+87Pt6n9K/qULIMNYZo07nSeu2z5QE2CellcAZfofVXBo2tQg9av2ZcRMQ2S2i5oadQ==}
+  /tsx/3.12.7:
+    resolution: {integrity: sha512-C2Ip+jPmqKd1GWVQDvz/Eyc6QJbGfE7NrR3fx5BpEHMZsEHoIxHL1j+lKdGobr8ovEyqeNkPLSKp6SCSOt7gmw==}
     hasBin: true
     dependencies:
       '@esbuild-kit/cjs-loader': 2.4.2
