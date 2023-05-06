@@ -6,7 +6,7 @@ export const Header: VFC = () => {
   return (
     <Center as="header" h={20} pt={6}>
       <Heading fontSize="2xl">
-        <Link href="/" passHref prefetch={false}>
+        <Link href="/" passHref prefetch={false} legacyBehavior>
           <CLink style={{ textDecoration: 'none' }}>thinceller blog</CLink>
         </Link>
       </Heading>
