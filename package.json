@@ -26,7 +26,7 @@
     "rehype-autolink-headings": "6.1.1",
     "rehype-code-titles": "1.2.0",
     "rehype-slug": "5.1.0",
-    "zod": "3.20.6"
+    "zod": "3.21.4"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "13.3.4",
