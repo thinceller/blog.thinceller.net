@@ -17,7 +17,7 @@ specifiers:
   '@types/mdx': 2.0.5
   '@types/node': 18.15.11
   '@types/react': 18.2.6
-  '@vercel/analytics': 0.1.11
+  '@vercel/analytics': 1.0.1
   chalk: 5.2.0
   date-fns: 2.30.0
   dayjs: 1.11.7
@@ -60,7 +60,7 @@ dependencies:
   '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
   '@mapbox/rehype-prism': 0.8.0
   '@mdx-js/react': 2.3.0_react@18.2.0
-  '@vercel/analytics': 0.1.11_react@18.2.0
+  '@vercel/analytics': 1.0.1
   dayjs: 1.11.7
   framer-motion: 8.0.4_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
@@ -2274,12 +2274,8 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@vercel/analytics/0.1.11_react@18.2.0:
-    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
-    peerDependencies:
-      react: ^16.8||^17||^18
-    dependencies:
-      react: 18.2.0
+  /@vercel/analytics/1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
     dev: false
 
   /@zag-js/element-size/0.3.2:
