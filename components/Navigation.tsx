@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
 import { FC } from 'react';
-import { Box, HStack, Link as CLink } from '@chakra-ui/react';
+import { Box, HStack, Link } from '@chakra-ui/react';
 
 export const Navigation: FC = () => {
   return (
@@ -14,13 +14,13 @@ export const Navigation: FC = () => {
         spacing={6}
       >
         <Box>
-          <Link href="/" passHref prefetch={false} legacyBehavior>
-            <CLink color="blue.600">Home</CLink>
+          <Link as={NextLink} href="/" prefetch={false} color="blue.600">
+            Home
           </Link>
         </Box>
         <Box>
-          <Link href="/about" passHref prefetch={false} legacyBehavior>
-            <CLink color="blue.600">About</CLink>
+          <Link as={NextLink} href="/about" prefetch={false} color="blue.600">
+            About
           </Link>
         </Box>
       </HStack>

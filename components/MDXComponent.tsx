@@ -32,9 +32,13 @@ export const CustomMDXComponents: MDXComponents = {
 
     if (isInternalLink) {
       return (
-        <NextLink href={href} passHref prefetch={false} legacyBehavior>
-          <Link color="blue.600" {...rest} />
-        </NextLink>
+        <Link
+          as={NextLink}
+          href={href}
+          prefetch={false}
+          color="blue.600"
+          {...rest}
+        />
       );
     }
 

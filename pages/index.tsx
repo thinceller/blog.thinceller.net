@@ -1,9 +1,9 @@
 import type { InferGetStaticPropsType, NextPage } from 'next';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import {
   Box,
   Heading,
-  Link as CLink,
+  Link,
   Stack,
   StackDivider,
   Text,
@@ -31,12 +31,12 @@ const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
         <Box key={post.slug} as="article" my={6}>
           <Heading size="md" sx={{ my: 2 }}>
             <Link
+              as={NextLink}
               href={`/posts/${post.slug}`}
-              passHref
               prefetch={false}
-              legacyBehavior
+              color="blue.600"
             >
-              <CLink color="blue.600">{post.title}</CLink>
+              {post.title}
             </Link>
           </Heading>
           <Box>
