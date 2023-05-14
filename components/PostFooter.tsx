@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-export const PostFooter: React.VFC = () => {
+export const PostFooter: React.FC = () => {
   useEffect(() => {
     window?.twttr?.widgets?.load();
   }, []);

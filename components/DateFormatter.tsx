@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 
 import { formatDate } from '../lib/date';
 
@@ -8,6 +8,6 @@ type Props = {
    */
   date: string;
 };
-export const DateFormatter: VFC<Props> = ({ date }) => {
+export const DateFormatter: FC<Props> = ({ date }) => {
   return <time dateTime={date}>{formatDate(date)}</time>;
 };
