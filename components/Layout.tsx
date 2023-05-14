@@ -1,15 +1,11 @@
-import type { ReactNode, VFC } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { Box, Stack } from '@chakra-ui/react';
 
 import { Header } from '../components/Header';
 import { Footer } from './Footer';
 import { Navigation } from './Navigation';
 
-export type LayoutProps = {
-  children: ReactNode;
-};
-
-export const Layout: VFC<LayoutProps> = ({ children }) => {
+export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <Stack minH="100vh" w="100vw" spacing={0}>
       <Header />

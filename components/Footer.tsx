@@ -1,9 +1,9 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import { Box, Stack, HStack, Text, Link, Icon } from '@chakra-ui/react';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const Footer: VFC = () => {
+export const Footer: FC = () => {
   return (
     <Box as="footer" borderTop="1px" borderTopColor="gray.200">
       <Stack

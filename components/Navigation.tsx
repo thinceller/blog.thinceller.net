@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { VFC } from 'react';
+import { FC } from 'react';
 import { Box, HStack, Link as CLink } from '@chakra-ui/react';
 
-export const Navigation: VFC = () => {
+export const Navigation: FC = () => {
   return (
     <Box>
       <HStack
