@@ -1,4 +1,5 @@
 {
   "textlint.autoFixOnSave": true,
-  "textlint.languages": ["mdx"]
+  "textlint.languages": ["mdx"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
