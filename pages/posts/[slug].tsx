@@ -34,7 +34,10 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 export const getStaticProps = async (ctx: GetStaticPropsContext) => {
-  const slug = ctx.params.slug as string;
+  const slug = ctx.params?.slug;
+  if (!(typeof slug === 'string')) {
+    throw new Error('slug is not string');
+  }
   const post = await getPostBySlug(slug);
 
   return {
@@ -77,7 +80,7 @@ const PostPage: NextPage<PostPageProps> = (props) => {
             publishedTime: props.frontMatter.publishedTime,
             modifiedTime: props.frontMatter.modifiedTime,
             authors: [BLOG_AUTHOR],
-            tags: props.frontMatter.tags,
+            tags: props.frontMatter.tags ?? undefined,
           },
         }}
       />
