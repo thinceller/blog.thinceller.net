@@ -16,7 +16,7 @@
     "dayjs": "1.11.7",
     "framer-motion": "10.12.12",
     "gray-matter": "4.0.3",
-    "next": "13.4.2",
+    "next": "13.4.3",
     "next-mdx-remote": "4.4.1",
     "next-remote-watch": "2.0.0",
     "next-seo": "6.0.0",
@@ -29,7 +29,7 @@
     "zod": "3.21.4"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.4.2",
+    "@next/bundle-analyzer": "13.4.3",
     "@textlint/textlint-plugin-markdown": "13.3.2",
     "@types/gtag.js": "0.0.12",
     "@types/mapbox__rehype-prism": "0.8.0",
@@ -41,7 +41,7 @@
     "date-fns": "2.30.0",
     "enquirer": "2.3.6",
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
+    "eslint-config-next": "13.4.3",
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
