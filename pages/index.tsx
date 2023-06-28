@@ -1,5 +1,3 @@
-import type { InferGetStaticPropsType, NextPage } from 'next';
-import NextLink from 'next/link';
 import {
   Box,
   Heading,
@@ -8,9 +6,11 @@ import {
   StackDivider,
   Text,
 } from '@chakra-ui/react';
+import type { InferGetStaticPropsType, NextPage } from 'next';
+import NextLink from 'next/link';
 
-import { getAllPosts } from '../lib/post';
 import { DateFormatter } from '../components/DateFormatter';
+import { getAllPosts } from '../lib/post';
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts(['title', 'description', 'slug']);

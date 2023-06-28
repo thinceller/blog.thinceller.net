@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { Box, Stack, HStack, Text, Link, Icon } from '@chakra-ui/react';
+import { Box, HStack, Icon, Link, Stack, Text } from '@chakra-ui/react';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 
 export const Footer: FC = () => {
   return (

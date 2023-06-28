@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import { Heading, Text } from '@chakra-ui/react';
+import { FC } from 'react';
 import { formatDate } from '../lib/date';
 
 export const PostTitle: FC<{ title: string; date: string }> = ({

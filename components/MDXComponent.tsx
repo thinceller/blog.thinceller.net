@@ -1,21 +1,21 @@
 /* eslint-disable react/display-name */
-import NextLink from 'next/link';
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertProps,
+  AlertTitle,
+  Box,
+  Divider,
   Heading,
+  Link,
   OrderedList,
   Text,
   UnorderedList,
-  Link,
-  Divider,
   chakra,
-  AlertProps,
-  Alert,
-  AlertTitle,
-  AlertDescription,
-  Box,
-  AlertIcon,
 } from '@chakra-ui/react';
 import { type MDXComponents } from 'mdx/types';
+import NextLink from 'next/link';
 import { Tweet, TweetProps } from 'react-twitter-widgets';
 import { ChakraNextImage, ChakraNextImageProps } from './ChakraNextImage';
 

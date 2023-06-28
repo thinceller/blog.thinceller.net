@@ -1,5 +1,5 @@
-import type { FC, PropsWithChildren } from 'react';
 import { Box, Stack } from '@chakra-ui/react';
+import type { FC, PropsWithChildren } from 'react';
 
 import { Header } from '../components/Header';
 import { Footer } from './Footer';

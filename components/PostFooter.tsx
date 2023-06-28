@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect } from 'react';
-import Script from 'next/script';
 import { HStack } from '@chakra-ui/react';
+import Script from 'next/script';
+import { useEffect } from 'react';
 
 /**
  * @see https://blog.kimizuka.org/entry/2021/06/04/111801
