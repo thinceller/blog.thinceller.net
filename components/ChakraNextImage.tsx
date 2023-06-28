@@ -1,5 +1,5 @@
-import NextImage, { ImageProps } from 'next/image';
 import { chakra, ChakraProps } from '@chakra-ui/react';
+import NextImage, { ImageProps } from 'next/image';
 
 export type ChakraNextImageProps = ImageProps & ChakraProps;
 export const ChakraNextImage = chakra(NextImage, {

@@ -1,22 +1,22 @@
+import { Box } from '@chakra-ui/react';
+import { Global } from '@emotion/react';
 import {
   GetStaticPaths,
   GetStaticPropsContext,
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import { useRouter } from 'next/router';
-import ErrorPage from 'next/error';
-import { NextSeo } from 'next-seo';
 import { MDXRemote } from 'next-mdx-remote';
-import { Box } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
+import { NextSeo } from 'next-seo';
+import ErrorPage from 'next/error';
+import { useRouter } from 'next/router';
+import { CustomMDXComponents } from '../../components/MDXComponent';
+import { PostFooter } from '../../components/PostFooter';
+import { PostTitle } from '../../components/PostTitle';
+import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { getPostBySlug } from '../../lib/mdx';
 import { getAllPosts } from '../../lib/post';
-import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
-import { PostTitle } from '../../components/PostTitle';
 import { prismStyle } from '../../styles/prism';
-import { PostFooter } from '../../components/PostFooter';
-import { CustomMDXComponents } from '../../components/MDXComponent';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts(['slug']);

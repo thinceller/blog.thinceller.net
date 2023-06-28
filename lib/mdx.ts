@@ -1,15 +1,15 @@
 import fs from 'fs';
-import { join } from 'path';
 import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import { join } from 'path';
 
 import { z } from 'zod';
 
-import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from '@mapbox/rehype-prism';
-import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypeSlug from 'rehype-slug';
 
 const frontMatterSchema = z.object({
   title: z.string(),

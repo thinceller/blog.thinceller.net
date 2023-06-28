@@ -1,10 +1,10 @@
+import { Center, Heading, Text, VStack } from '@chakra-ui/react';
 import { NextPage } from 'next';
-import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { Center, Heading, VStack, Text } from '@chakra-ui/react';
+import Head from 'next/head';
+import { ChakraNextImage } from '../components/ChakraNextImage';
 import { BLOG_NAME } from '../lib/constants';
 import AvatarImage from '../public/images/avatar.jpg';
-import { ChakraNextImage } from '../components/ChakraNextImage';
 
 const About: NextPage = () => {
   return (

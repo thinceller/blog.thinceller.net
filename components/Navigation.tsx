@@ -1,6 +1,6 @@
+import { Box, HStack, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FC } from 'react';
-import { Box, HStack, Link } from '@chakra-ui/react';
 
 export const Navigation: FC = () => {
   return (
