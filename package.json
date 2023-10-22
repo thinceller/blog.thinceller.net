@@ -13,7 +13,7 @@
     "@mapbox/rehype-prism": "0.8.0",
     "@mdx-js/react": "2.3.0",
     "@vercel/analytics": "1.0.2",
-    "dayjs": "1.11.9",
+    "dayjs": "1.11.10",
     "framer-motion": "10.12.23",
     "gray-matter": "4.0.3",
     "next": "13.4.19",
