@@ -86,8 +86,8 @@ devDependencies:
     specifier: 13.3.3
     version: 13.3.3
   '@types/gtag.js':
-    specifier: 0.0.17
-    version: 0.0.17
+    specifier: 0.0.18
+    version: 0.0.18
   '@types/mapbox__rehype-prism':
     specifier: 0.8.2
     version: 0.8.2
@@ -2163,8 +2163,8 @@ packages:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
     dev: false
 
-  /@types/gtag.js@0.0.17:
-    resolution: {integrity: sha512-OsSO6Yyuygr3DeeTovOY0ppLiAVHoXg4CSanO9/vzDQCV+e8pkZNE+HR2dVxGJfUbtRe2IqzC97PYuHSNUepJw==}
+  /@types/gtag.js@0.0.18:
+    resolution: {integrity: sha512-GJxnIvuXuVhKaHfsOdzGipoOoXq72y3mdcncc9h6i6E7nlz89zBEj2wrLM7bqO5Xk9Lm2B94MwdQsSwRlaPSWw==}
     dev: true
 
   /@types/hast@2.3.4:
