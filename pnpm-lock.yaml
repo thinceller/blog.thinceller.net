@@ -89,8 +89,8 @@ devDependencies:
     specifier: 0.0.18
     version: 0.0.18
   '@types/mapbox__rehype-prism':
-    specifier: 0.8.2
-    version: 0.8.2
+    specifier: 0.8.3
+    version: 0.8.3
   '@types/markdown-it':
     specifier: 12.2.3
     version: 12.2.3
@@ -2200,8 +2200,8 @@ packages:
     resolution: {integrity: sha512-r22s9tAS7imvBt2lyHC9B8AGwWnXaYb1tY09oyLkXDs4vArpYJzw09nj8MLx5VfciBPGIb+ZwG0ssYnEPJxn/g==}
     dev: false
 
-  /@types/mapbox__rehype-prism@0.8.2:
-    resolution: {integrity: sha512-Ewswms3sp8CSnESjb7ehwk5C1D8Negx0CiNeKBnKXplqRvgFX/plfN7/FVwvzPfDRMn/ktD4av38x4DV7eL3Rg==}
+  /@types/mapbox__rehype-prism@0.8.3:
+    resolution: {integrity: sha512-ayRTSAVHT0XpvKmx5GFN5luxwabuPb3EL06b3hRU0mnv30ETdcGmguk6C20R5EFVv6bWsfG8Jh6OUf+mMIqLdw==}
     dependencies:
       '@types/hast': 2.3.4
       unified: 10.1.2
