@@ -4,7 +4,7 @@
   "author": "thinceller <thinceller@gmail.com>",
   "dependencies": {
     "@chakra-ui/react": "2.7.1",
-    "@emotion/react": "11.11.3",
+    "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.0",
     "@fortawesome/fontawesome-svg-core": "6.5.1",
     "@fortawesome/free-brands-svg-icons": "6.5.1",
