@@ -65,7 +65,7 @@
       "prettier --write"
     ]
   },
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.6.12+sha256.3ed40ffc6cbb00790ab325e9d3ff5517a3ed5b763ec53a411707b1702a411174",
   "scripts": {
     "build": "next build && next-sitemap",
     "build:analyze": "ANALYZE=true next build",
