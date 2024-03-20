@@ -9,6 +9,7 @@ import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
 import { GoogleAnalytics } from '../lib/gtag';
 import { globalStyles } from '../styles/global';
 
+import '@/styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
