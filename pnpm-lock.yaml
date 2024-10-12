@@ -83,8 +83,8 @@ devDependencies:
     specifier: 13.4.19
     version: 13.4.19
   '@textlint/textlint-plugin-markdown':
-    specifier: 13.3.3
-    version: 13.3.3
+    specifier: 14.2.1
+    version: 14.2.1
   '@types/gtag.js':
     specifier: 0.0.19
     version: 0.0.19
@@ -1984,6 +1984,10 @@ packages:
     resolution: {integrity: sha512-KCpJppfX3Km69twa6SmVEJ8mkyAZSrxw3XaaLQSlpc7PWnLUJSCHGPVECI1nSUDhiTd1r6zlRvWuyIAZJiov+A==}
     dev: true
 
+  /@textlint/ast-node-types@14.2.1:
+    resolution: {integrity: sha512-UuYY1ADfU6Nvo3l9JQoJ6XWt1lohSyyvbFE96FVjkJDIwLxEyF8nPeoTNa/gJTmLCzimQfY0C+4jAYrPxVjt/A==}
+    dev: true
+
   /@textlint/ast-node-types@4.4.3:
     resolution: {integrity: sha512-qi2jjgO6Tn3KNPGnm6B7p6QTEPvY95NFsIAaJuwbulur8iJUEenp1OnoUfiDaC/g2WPPEFkcfXpmnu8XEMFo2A==}
     dev: true
@@ -2093,6 +2097,22 @@ packages:
       - supports-color
     dev: true
 
+  /@textlint/markdown-to-ast@14.2.1:
+    resolution: {integrity: sha512-IbxuCiGg2dQMg+PlLrSIvryEAngdvydF1MztRII9AjJNOMKomzYmZaNVRaANlhuFLnOwJbunNg0MV1q7oXz+iw==}
+    dependencies:
+      '@textlint/ast-node-types': 14.2.1
+      debug: 4.3.4
+      mdast-util-gfm-autolink-literal: 0.1.3
+      neotraverse: 0.6.18
+      remark-footnotes: 3.0.0
+      remark-frontmatter: 3.0.0
+      remark-gfm: 1.0.0
+      remark-parse: 9.0.0
+      unified: 9.2.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@textlint/module-interop@12.6.1:
     resolution: {integrity: sha512-COyRctLVh2ktAObmht3aNtqUvP0quoellKu1c2RrXny1po+Mf7PkvEKIxphtArE4JXMAmu01cDxfH6X88+eYIg==}
     dev: true
@@ -2131,6 +2151,14 @@ packages:
     resolution: {integrity: sha512-EhBZ/Q6ZXMVRPDeQbFdFbtc0wE7SC0DWy9lkjKXfcbLKW0ZPTvtjH3JqJtCPBZAYcexB8wKOiHImfwVfQJhJhg==}
     dependencies:
       '@textlint/markdown-to-ast': 13.3.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@textlint/textlint-plugin-markdown@14.2.1:
+    resolution: {integrity: sha512-14ZKJ9xsmTM9fr7S+ybisnhfNwL9CH/qcIU4/yjoP73RL1MMX4ddb/THGDBVt5O/wm4kzSUFP0CiNtDVxFfskQ==}
+    dependencies:
+      '@textlint/markdown-to-ast': 14.2.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6482,6 +6510,11 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
     dev: false
+
+  /neotraverse@0.6.18:
+    resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
+    engines: {node: '>= 10'}
+    dev: true
 
   /next-mdx-remote@4.4.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-1BvyXaIou6xy3XoNF4yaMZUCb6vD2GTAa5ciOa6WoO+gAUTYsb1K4rI/HSC2ogAWLrb/7VSV52skz07vOzmqIQ==}
