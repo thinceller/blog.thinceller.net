@@ -44,7 +44,7 @@
     "lint-staged": "13.3.0",
     "next-sitemap": "2.5.28",
     "ora": "6.3.1",
-    "postcss": "8.4.37",
+    "postcss": "8.4.47",
     "prettier": "2.8.8",
     "prettier-plugin-organize-imports": "3.2.4",
     "tailwindcss": "3.4.1",
