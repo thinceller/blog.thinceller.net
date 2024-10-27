@@ -25,7 +25,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "13.4.19",
+    "@next/bundle-analyzer": "13.5.7",
     "@textlint/textlint-plugin-markdown": "13.3.3",
     "@types/gtag.js": "0.0.20",
     "@types/mapbox__rehype-prism": "0.8.3",
@@ -38,7 +38,7 @@
     "date-fns": "2.30.0",
     "enquirer": "2.4.1",
     "eslint": "8.42.0",
-    "eslint-config-next": "13.4.19",
+    "eslint-config-next": "13.5.7",
     "eslint-config-prettier": "9.1.0",
     "husky": "8.0.3",
     "lint-staged": "13.3.0",
