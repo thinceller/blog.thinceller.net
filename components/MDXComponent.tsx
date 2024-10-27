@@ -27,22 +27,22 @@ export const CustomMDXComponents: MDXComponents = {
   ),
   hr: () => <hr className="my-10" aria-orientation="horizontal" />,
   h1: (p: JSX.IntrinsicElements['h1']) => (
-    <h1 className="mt-12 mb-4 font-bold text-custom-2xl" {...p} />
+    <h1 className="relative mt-12 mb-4 font-bold text-custom-2xl" {...p} />
   ),
   h2: (p: JSX.IntrinsicElements['h2']) => (
-    <h2 className="mt-12 mb-4 font-bold text-custom-xl" {...p} />
+    <h2 className="relative mt-12 mb-4 font-bold text-custom-xl" {...p} />
   ),
   h3: (p: JSX.IntrinsicElements['h3']) => (
-    <h3 className="mt-8 mb-4 font-bold text-custom-lg" {...p} />
+    <h3 className="relative mt-8 mb-4 font-bold text-custom-lg" {...p} />
   ),
   h4: (p: JSX.IntrinsicElements['h4']) => (
-    <h4 className="mb-4 font-bold text-custom-base" {...p} />
+    <h4 className="relative mb-4 font-bold text-custom-base" {...p} />
   ),
   h5: (p: JSX.IntrinsicElements['h5']) => (
-    <h5 className="mb-4 font-bold text-custom-sm" {...p} />
+    <h5 className="relative mb-4 font-bold text-custom-sm" {...p} />
   ),
   h6: (p: JSX.IntrinsicElements['h6']) => (
-    <h6 className="mb-4 font-bold text-custom-xs" {...p} />
+    <h6 className="relative mb-4 font-bold text-custom-xs" {...p} />
   ),
   li: (p: JSX.IntrinsicElements['li']) => (
     <li className="text-custom-base" {...p} />

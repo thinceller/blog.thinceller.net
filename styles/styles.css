@@ -16,6 +16,12 @@
   left: 0;
   transform: translate(-100%, 20%);
   padding-right: 4px;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* tailwind's text-gray-400 */
+  color: rgb(156 163 175);
 }
 
 h1 .header-anchor-link svg,
