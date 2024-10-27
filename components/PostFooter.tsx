@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { HStack } from '@chakra-ui/react';
 import Script from 'next/script';
 import { useEffect } from 'react';
 
@@ -18,7 +17,7 @@ export const PostFooter: React.FC = () => {
   }, []);
 
   return (
-    <HStack>
+    <div className="flex flex-row items-center gap-2">
       <a
         href="https://twitter.com/share?ref_src=twsrc%5Etfw"
         className="twitter-share-button"
@@ -44,6 +43,6 @@ export const PostFooter: React.FC = () => {
       </a>
       <Script src="https://platform.twitter.com/widgets.js" />
       <Script src="https://b.st-hatena.com/js/bookmark_button.js" />
-    </HStack>
+    </div>
   );
 };

@@ -1,15 +1,7 @@
-import {
-  Box,
-  Heading,
-  Link,
-  Stack,
-  StackDivider,
-  Text,
-} from '@chakra-ui/react';
 import type { InferGetStaticPropsType, NextPage } from 'next';
-import NextLink from 'next/link';
 
-import { DateFormatter } from '../components/DateFormatter';
+import { DateFormatter } from '@/components/DateFormatter';
+import Link from 'next/link';
 import { getAllPosts } from '../lib/post';
 
 export const getStaticProps = async () => {
@@ -26,26 +18,22 @@ type IndexPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const Index: NextPage<IndexPageProps> = ({ allPosts }) => {
   return (
-    <Stack divider={<StackDivider />}>
+    <div className="flex flex-col space-y-8 divide-y">
       {allPosts.map((post) => (
-        <Box key={post.slug} as="article" my={6}>
-          <Heading size="md" sx={{ my: 2 }}>
+        <article key={post.slug} className="pt-4">
+          <h2 className="my-2 font-bold text-custom-xl">
             <Link
-              as={NextLink}
               href={`/posts/${post.slug}`}
-              prefetch={false}
-              color="blue.600"
+              className="text-blue-500 hover:underline"
             >
               {post.title}
             </Link>
-          </Heading>
-          <Box>
-            <DateFormatter date={post.publishedTime} />
-          </Box>
-          <Text noOfLines={2}>{post.description}</Text>
-        </Box>
+          </h2>
+          <DateFormatter date={post.publishedTime} />
+          <p className="text-custom-base line-clamp-2">{post.description}</p>
+        </article>
       ))}
-    </Stack>
+    </div>
   );
 };
 

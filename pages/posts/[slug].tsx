@@ -1,5 +1,3 @@
-import { Box } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
 import {
   GetStaticPaths,
   GetStaticPropsContext,
@@ -16,7 +14,6 @@ import { PostTitle } from '../../components/PostTitle';
 import { BLOG_AUTHOR, BLOG_URL, OG_IMAGE_URL } from '../../lib/constants';
 import { getPostBySlug } from '../../lib/mdx';
 import { getAllPosts } from '../../lib/post';
-import { prismStyle } from '../../styles/prism';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts(['slug']);
@@ -84,19 +81,18 @@ const PostPage: NextPage<PostPageProps> = (props) => {
           },
         }}
       />
-      <Global styles={prismStyle} />
-      <Box my={10}>
+      <div className="my-10">
         <PostTitle
           title={props.frontMatter.title}
           date={props.frontMatter.publishedTime}
         />
-      </Box>
-      <Box lineHeight="tall">
-        <MDXRemote {...props.mdxSource} components={CustomMDXComponents} />
-      </Box>
-      <Box mt={10} mb={10}>
+      </div>
+
+      <MDXRemote {...props.mdxSource} components={CustomMDXComponents} />
+
+      <div className="my-10">
         <PostFooter />
-      </Box>
+      </div>
     </>
   );
 };

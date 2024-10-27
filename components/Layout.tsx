@@ -1,4 +1,3 @@
-import { Box, Stack } from '@chakra-ui/react';
 import type { FC, PropsWithChildren } from 'react';
 
 import { Header } from '../components/Header';
@@ -7,15 +6,13 @@ import { Navigation } from './Navigation';
 
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Stack minH="100vh" w="100vw" spacing={0}>
+    <div className="min-h-screen w-screen flex flex-col">
       <Header />
       <Navigation />
-      <Box as="main" flex={1}>
-        <Box maxW="800px" mx="auto" px={6}>
-          {children}
-        </Box>
-      </Box>
+      <main className="flex-1">
+        <div className="max-w-screen-md mx-auto px-6">{children}</div>
+      </main>
       <Footer />
-    </Stack>
+    </div>
   );
 };
