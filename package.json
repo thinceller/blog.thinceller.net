@@ -27,7 +27,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "13.4.19",
     "@textlint/textlint-plugin-markdown": "13.3.3",
-    "@types/gtag.js": "0.0.19",
+    "@types/gtag.js": "0.0.20",
     "@types/mapbox__rehype-prism": "0.8.3",
     "@types/markdown-it": "13.0.8",
     "@types/mdx": "2.0.13",
