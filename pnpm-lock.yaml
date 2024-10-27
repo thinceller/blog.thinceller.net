@@ -119,8 +119,8 @@ devDependencies:
     specifier: 13.3.0
     version: 13.3.0(enquirer@2.4.1)
   next-sitemap:
-    specifier: 2.5.28
-    version: 2.5.28(next@14.2.7)
+    specifier: 4.2.3
+    version: 4.2.3(next@14.2.7)
   ora:
     specifier: 6.3.1
     version: 6.3.1
@@ -206,8 +206,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@corex/deepmerge@2.6.148:
-    resolution: {integrity: sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==}
+  /@corex/deepmerge@4.0.43:
+    resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
     dev: true
 
   /@esbuild/android-arm64@0.18.20:
@@ -600,6 +600,10 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
+    dev: true
+
+  /@next/env@13.5.7:
+    resolution: {integrity: sha512-uVuRqoj28Ys/AI/5gVEgRAISd0KWI0HRjOO1CTpNgmX3ZsHb5mdn14Y59yk0IxizXdo7ZjsI2S7qbWnO+GNBcA==}
     dev: true
 
   /@next/env@14.2.7:
@@ -5013,14 +5017,16 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /next-sitemap@2.5.28(next@14.2.7):
-    resolution: {integrity: sha512-rDMTa7nLE0ikYnu8JDCrwQufIRm4b4Sg8BK11DGdDAmYpXmcmw4Qvm+oVBR8gUL97E6i2ihTM+cRx8mgENDACA==}
+  /next-sitemap@4.2.3(next@14.2.7):
+    resolution: {integrity: sha512-vjdCxeDuWDzldhCnyFCQipw5bfpl4HmZA7uoo3GAaYGjGgfL4Cxb1CiztPuWGmS+auYs7/8OekRS8C2cjdAsjQ==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
       next: '*'
     dependencies:
-      '@corex/deepmerge': 2.6.148
+      '@corex/deepmerge': 4.0.43
+      '@next/env': 13.5.7
+      fast-glob: 3.3.2
       minimist: 1.2.8
       next: 14.2.7(react-dom@18.2.0)(react@18.2.0)
     dev: true
