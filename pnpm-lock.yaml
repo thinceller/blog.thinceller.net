@@ -71,8 +71,8 @@ devDependencies:
     specifier: 13.5.7
     version: 13.5.7
   '@textlint/textlint-plugin-markdown':
-    specifier: 13.3.3
-    version: 13.3.3
+    specifier: 14.2.1
+    version: 14.2.1
   '@types/gtag.js':
     specifier: 0.0.20
     version: 0.0.20
@@ -751,12 +751,12 @@ packages:
       textlint-rule-helper: 2.0.1
     dev: true
 
-  /@textlint/ast-node-types@13.3.3:
-    resolution: {integrity: sha512-KCpJppfX3Km69twa6SmVEJ8mkyAZSrxw3XaaLQSlpc7PWnLUJSCHGPVECI1nSUDhiTd1r6zlRvWuyIAZJiov+A==}
-    dev: true
-
   /@textlint/ast-node-types@13.4.1:
     resolution: {integrity: sha512-qrZyhCh8Ekk6nwArx3BROybm9BnX6vF7VcZbijetV/OM3yfS4rTYhoMWISmhVEP2H2re0CtWEyMl/XF+WdvVLQ==}
+    dev: true
+
+  /@textlint/ast-node-types@14.3.0:
+    resolution: {integrity: sha512-baDgKcA8MeO55I2+LNc9FTAJ/aUKlxN6DgM5B511tT9kDwECXRk+iYi/H+oaP25z5Zq3FqrL6n7mmyfFWDUWkQ==}
     dev: true
 
   /@textlint/ast-node-types@4.4.3:
@@ -851,10 +851,10 @@ packages:
       - supports-color
     dev: true
 
-  /@textlint/markdown-to-ast@13.3.3:
-    resolution: {integrity: sha512-jeqWyChTtJHWxEnH46V6qjr+OCTh6evm45aDqMzdg+b8ocXY+NhudiCMeHcVGoz042UEwc6w4reLn8+Is+SZ+A==}
+  /@textlint/markdown-to-ast@13.4.1:
+    resolution: {integrity: sha512-jUa5bTNmxjEgfCXW4xfn7eSJqzUXyNKiIDWLKtI4MUKRNhT3adEaa/NuQl0Mii3Hu3HraZR7hYhRHLh+eeM43w==}
     dependencies:
-      '@textlint/ast-node-types': 13.3.3
+      '@textlint/ast-node-types': 13.4.1
       debug: 4.3.4
       mdast-util-gfm-autolink-literal: 0.1.3
       remark-footnotes: 3.0.0
@@ -867,17 +867,17 @@ packages:
       - supports-color
     dev: true
 
-  /@textlint/markdown-to-ast@13.4.1:
-    resolution: {integrity: sha512-jUa5bTNmxjEgfCXW4xfn7eSJqzUXyNKiIDWLKtI4MUKRNhT3adEaa/NuQl0Mii3Hu3HraZR7hYhRHLh+eeM43w==}
+  /@textlint/markdown-to-ast@14.3.0:
+    resolution: {integrity: sha512-z4UMKFh3r5KtylPt5OO6su7DScU+fMZ7Qv5LTrJNaOqcmOzFho64Y1I26BJv86f8BC+MUYP0kza5MZGaR2LYQA==}
     dependencies:
-      '@textlint/ast-node-types': 13.4.1
+      '@textlint/ast-node-types': 14.3.0
       debug: 4.3.4
       mdast-util-gfm-autolink-literal: 0.1.3
+      neotraverse: 0.6.18
       remark-footnotes: 3.0.0
       remark-frontmatter: 3.0.0
       remark-gfm: 1.0.0
       remark-parse: 9.0.0
-      traverse: 0.6.7
       unified: 9.2.2
     transitivePeerDependencies:
       - supports-color
@@ -917,18 +917,18 @@ packages:
       '@textlint/ast-node-types': 13.4.1
     dev: true
 
-  /@textlint/textlint-plugin-markdown@13.3.3:
-    resolution: {integrity: sha512-EhBZ/Q6ZXMVRPDeQbFdFbtc0wE7SC0DWy9lkjKXfcbLKW0ZPTvtjH3JqJtCPBZAYcexB8wKOiHImfwVfQJhJhg==}
-    dependencies:
-      '@textlint/markdown-to-ast': 13.3.3
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@textlint/textlint-plugin-markdown@13.4.1:
     resolution: {integrity: sha512-OcLkFKYmbYeGJ0kj2487qcicCYTiE2vJLwfPcUDJrNoMYak5JtvHJfWffck8gON2mEM00DPkHH0UdxZpFjDfeg==}
     dependencies:
       '@textlint/markdown-to-ast': 13.4.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@textlint/textlint-plugin-markdown@14.2.1:
+    resolution: {integrity: sha512-14ZKJ9xsmTM9fr7S+ybisnhfNwL9CH/qcIU4/yjoP73RL1MMX4ddb/THGDBVt5O/wm4kzSUFP0CiNtDVxFfskQ==}
+    dependencies:
+      '@textlint/markdown-to-ast': 14.3.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4940,6 +4940,11 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  /neotraverse@0.6.18:
+    resolution: {integrity: sha512-Z4SmBUweYa09+o6pG+eASabEpP6QkQ70yHj351pQoEXIs8uHbaU2DWVmzBANKgflPa47A50PtB2+NgRpQvr7vA==}
+    engines: {node: '>= 10'}
+    dev: true
+
   /next-mdx-remote@4.4.1(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-1BvyXaIou6xy3XoNF4yaMZUCb6vD2GTAa5ciOa6WoO+gAUTYsb1K4rI/HSC2ogAWLrb/7VSV52skz07vOzmqIQ==}
     engines: {node: '>=14', npm: '>=7'}
@@ -6621,7 +6626,7 @@ packages:
   /textlint-rule-helper@2.3.0:
     resolution: {integrity: sha512-Ug78Saahb/qVImttL0NSFyT5/JJ5wXvOPepR2pYAjNi54BsQAAz/hAyyEgKuYeR0+yjFb0KPhby4f880X5vqHA==}
     dependencies:
-      '@textlint/ast-node-types': 13.3.3
+      '@textlint/ast-node-types': 13.4.1
       structured-source: 4.0.0
       unist-util-visit: 2.0.3
     dev: true
@@ -6923,7 +6928,7 @@ packages:
   /textlint-util-to-string@3.3.2:
     resolution: {integrity: sha512-TCnHX5xGDWIGQpcusLrctodid+n5t5G6ft9+KAVad+GmrOOkk9IiPej8FwH9Vq/uk1j44yTB20YYja0YnQ+z/w==}
     dependencies:
-      '@textlint/ast-node-types': 13.3.3
+      '@textlint/ast-node-types': 13.4.1
       rehype-parse: 6.0.2
       structured-source: 4.0.0
       unified: 8.4.2
