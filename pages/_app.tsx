@@ -1,14 +1,13 @@
-import { ChakraProvider } from '@chakra-ui/react';
-import { Global } from '@emotion/react';
 import { Analytics } from '@vercel/analytics/react';
 import { DefaultSeo } from 'next-seo';
 import type { AppProps } from 'next/app';
 import { Layout } from '../components/Layout';
-import { theme } from '../lib/chakraTheme';
 import { BLOG_NAME, BLOG_URL, OG_IMAGE_URL } from '../lib/constants';
 import { GoogleAnalytics } from '../lib/gtag';
-import { globalStyles } from '../styles/global';
 
+import '@/styles/globals.css';
+import '@/styles/prisma.css';
+import '@/styles/styles.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -36,12 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           ],
         }}
       />
-      <ChakraProvider resetCSS theme={theme}>
-        <Layout>
-          <Global styles={globalStyles} />
-          <Component {...pageProps} />
-        </Layout>
-      </ChakraProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       <GoogleAnalytics />
       <Analytics />
     </>

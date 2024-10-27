@@ -1,29 +1,29 @@
-import { Box, HStack, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { FC } from 'react';
 
 export const Navigation: FC = () => {
   return (
-    <Box>
-      <HStack
-        as="nav"
-        maxW="800px"
-        mx="auto"
-        px={8}
-        justifyContent="flex-end"
-        spacing={6}
-      >
-        <Box>
-          <Link as={NextLink} href="/" prefetch={false} color="blue.600">
+    <nav>
+      <div className="max-w-screen-md mx-auto px-8 flex flex-row items-center justify-end space-x-6">
+        <div>
+          <NextLink
+            href="/"
+            prefetch={false}
+            className="text-blue-500 hover:underline"
+          >
             Home
-          </Link>
-        </Box>
-        <Box>
-          <Link as={NextLink} href="/about" prefetch={false} color="blue.600">
+          </NextLink>
+        </div>
+        <div>
+          <NextLink
+            href="/about"
+            prefetch={false}
+            className="text-blue-500 hover:underline"
+          >
             About
-          </Link>
-        </Box>
-      </HStack>
-    </Box>
+          </NextLink>
+        </div>
+      </div>
+    </nav>
   );
 };
