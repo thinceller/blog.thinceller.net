@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+'use client';
+
 import Script from 'next/script';
 import { useEffect } from 'react';
 
