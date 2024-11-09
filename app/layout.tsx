@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     default: BLOG_NAME,
   },
   description: 'A blog about software development, programming, and life.',
+  metadataBase: new URL(BLOG_URL),
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
