@@ -1,6 +1,6 @@
 import { PostFooter } from '@/components/PostFooter';
 import { PostTitle } from '@/components/PostTitle';
-import { BLOG_AUTHOR } from '@/lib/constants';
+import { BLOG_AUTHOR, BLOG_NAME } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/mdx';
 import { getAllPosts } from '@/lib/post';
 import { Metadata } from 'next';
@@ -31,10 +31,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       url: `/posts/${params.slug}`,
       title: frontmatter.title,
+      description: frontmatter.description,
+      siteName: BLOG_NAME,
+      images: [
+        {
+          url: `/posts/${params.slug}/opengraph-image.png`,
+          alt: 'thinceller blog',
+          width: 1200,
+          height: 630,
+        },
+      ],
       publishedTime: frontmatter.publishedTime,
       modifiedTime: frontmatter.modifiedTime,
       authors: [BLOG_AUTHOR],
       tags: frontmatter.tags ?? undefined,
+    },
+    twitter: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      images: [
+        {
+          url: `/posts/${params.slug}/opengraph-image.png`,
+          alt: 'thinceller blog',
+          width: 1200,
+          height: 630,
+        },
+      ],
     },
   };
 }

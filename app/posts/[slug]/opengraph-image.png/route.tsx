@@ -1,16 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import { getPostBySlug } from '@/lib/post';
+import { getAllPosts, getPostBySlug } from '@/lib/post';
 import { ImageResponse } from 'next/og';
+import { NextRequest } from 'next/server';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-export const alt = 'thinceller blog';
-export const size = {
-  width: 1200,
-  height: 630,
-};
-export const contentType = 'image/png';
+// export const alt = 'thinceller blog';
+// export const size = {
+//   width: 1200,
+//   height: 630,
+// };
+// export const contentType = 'image/png';
+
+// opengraph-image.tsxを使うと、Vercelの環境ではgetPostBySlug内でmdxファイルにアクセスできない。
+// そのため、Route Handlerを使ってビルド時に必要なOGP画像を作成する。
+export const dynamicParams = false;
+export function generateStaticParams() {
+  const posts = getAllPosts(['slug']);
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 const getAvatar = async () => {
   const res = await readFile(
@@ -36,7 +48,10 @@ const getFontRegular = async () => {
   return Uint8Array.from(res).buffer;
 };
 
-export default async function Image({ params }: { params: { slug: string } }) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { slug: string } }
+) {
   const { title } = getPostBySlug(params.slug, ['title']);
   const logoSrc = await getAvatar();
 
@@ -88,6 +103,8 @@ export default async function Image({ params }: { params: { slug: string } }) {
       </div>
     ),
     {
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: 'NOTONOTO',
