@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import { ImageResponse } from 'next/og';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
-export const runtime = 'edge';
 export const alt = 'thinceller blog';
 export const size = {
   width: 1200,
@@ -11,27 +12,27 @@ export const size = {
 export const contentType = 'image/png';
 
 const getAvatar = async () => {
-  const res = await fetch(
-    new URL('../public/images/avatar.jpg', import.meta.url)
+  const res = await readFile(
+    join(process.cwd(), 'public', 'images', 'avatar.jpg')
   );
-  return res.arrayBuffer();
+  return Uint8Array.from(res).buffer;
 };
 
 /**
  * @see {@link https://github.com/yuru7/NOTONOTO}
  */
 const getFontBold = async () => {
-  const res = await fetch(
-    new URL('../public/fonts/NOTONOTO35HS-Bold.ttf', import.meta.url)
+  const res = await readFile(
+    join(process.cwd(), 'public', 'fonts', 'NOTONOTO35HS-Bold.ttf')
   );
-  return res.arrayBuffer();
+  return Uint8Array.from(res).buffer;
 };
 
 const getFontRegular = async () => {
-  const res = await fetch(
-    new URL('../public/fonts/NOTONOTO35HS-Regular.ttf', import.meta.url)
+  const res = await readFile(
+    join(process.cwd(), 'public', 'fonts', 'NOTONOTO35HS-Regular.ttf')
   );
-  return res.arrayBuffer();
+  return Uint8Array.from(res).buffer;
 };
 
 export default async function Image() {
