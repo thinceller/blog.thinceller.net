@@ -40,7 +40,7 @@
     "eslint": "8.57.1",
     "eslint-config-next": "13.5.7",
     "eslint-config-prettier": "9.1.0",
-    "husky": "8.0.3",
+    "husky": "9.1.6",
     "lint-staged": "13.3.0",
     "ora": "6.3.1",
     "postcss": "8.4.47",
@@ -67,7 +67,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:post": "textlint _posts/**/*.mdx",
-    "prepare": "husky install",
+    "prepare": "husky",
     "new:post": "node scripts/new-post.mjs",
     "new:adr": "tsx scripts/new-adr.mts"
   },
