@@ -24,6 +24,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@next/bundle-analyzer": "13.5.7",
     "@textlint/textlint-plugin-markdown": "14.2.1",
     "@types/gtag.js": "0.0.20",
