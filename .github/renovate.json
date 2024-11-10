@@ -1,14 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
-  "schedule": [
-    "every weekend"
-  ],
-  "labels": [
-    "dependencies"
-  ],
+  "extends": ["config:recommended"],
+  "schedule": ["every weekend"],
+  "labels": ["dependencies"],
   "prHourlyLimit": 5,
   "prConcurrentLimit": 20,
   "major": {
@@ -20,9 +14,6 @@
   "patch": {
     "minimumReleaseAge": "2 days",
     "automerge": true,
-    "labels": [
-      "dependencies",
-      "automerge: enabled"
-    ]
+    "labels": ["dependencies", "automerge: enabled"]
   }
 }
