@@ -72,7 +72,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:post": "textlint _posts/**/*.mdx",
-    "prepare": "husky install",
+    "prepare": "husky",
     "new:post": "node scripts/new-post.mjs",
     "new:adr": "tsx scripts/new-adr.mts"
   },
