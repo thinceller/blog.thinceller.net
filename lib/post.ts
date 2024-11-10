@@ -1,6 +1,6 @@
 import fs from 'fs';
-import matter from 'gray-matter';
 import { join } from 'path';
+import matter from 'gray-matter';
 
 const postsDir = join(process.cwd(), '_posts');
 
@@ -56,14 +56,14 @@ export function getPostBySlug<T extends Field>(slug: string, fields: T[] = []) {
 }
 
 export function getAllPosts<T extends Field>(
-  fields: T[] = []
+  fields: T[] = [],
 ): { [key in T | 'publishedTime']: string }[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, [...fields, 'publishedTime']))
     // sort posts by publishedTime in descending order
     .sort((post1, post2) =>
-      post1.publishedTime > post2.publishedTime ? -1 : 1
+      post1.publishedTime > post2.publishedTime ? -1 : 1,
     );
   return posts;
 }

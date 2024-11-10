@@ -24,6 +24,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@next/bundle-analyzer": "13.5.7",
     "@textlint/textlint-plugin-markdown": "14.2.1",
     "@types/gtag.js": "0.0.20",
@@ -43,8 +44,6 @@
     "lint-staged": "13.3.0",
     "ora": "6.3.1",
     "postcss": "8.4.47",
-    "prettier": "2.8.8",
-    "prettier-plugin-organize-imports": "3.2.4",
     "tailwindcss": "3.4.14",
     "textlint": "13.4.1",
     "textlint-rule-preset-ja-spacing": "2.3.1",
@@ -55,12 +54,8 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "**/*.{js,jsx,ts,tsx,json}": [
-      "prettier --write"
-    ]
+    "**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "**/*.{js,jsx,ts,tsx,css,json}": ["biome check --write"]
   },
   "packageManager": "pnpm@8.6.12+sha256.3ed40ffc6cbb00790ab325e9d3ff5517a3ed5b763ec53a411707b1702a411174",
   "scripts": {

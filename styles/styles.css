@@ -1,6 +1,6 @@
 /**
-  * inline code styles
-  */
+ * inline code styles
+ */
 :not(pre) > code {
   background-color: #edf2f7;
   padding: 0.2em 0.4em;
@@ -8,8 +8,8 @@
 }
 
 /**
-  * Headings anchor link
-  */
+ * Headings anchor link
+ */
 .header-anchor-link {
   position: absolute;
   top: 0;

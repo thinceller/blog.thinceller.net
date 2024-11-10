@@ -2,9 +2,9 @@
 
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
-import ora from 'ora';
-import enquirer from 'enquirer';
 import { format, formatISO } from 'date-fns';
+import enquirer from 'enquirer';
+import ora from 'ora';
 
 const postsDirName = '_posts';
 
@@ -60,7 +60,7 @@ enquirer
       await fs
         .writeFile(
           `${postsDirName}/${format(date, 'yyyy-MM-dd')}-${res.slug}.mdx`,
-          postTemplate(res.title, date)
+          postTemplate(res.title, date),
         )
         .then(() => {
           spinner.succeed(`New post ${chalk.bold(res.slug)} created.`);
