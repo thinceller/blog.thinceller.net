@@ -41,7 +41,7 @@
     "eslint-config-next": "13.5.7",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.1.6",
-    "lint-staged": "13.3.0",
+    "lint-staged": "15.2.10",
     "ora": "6.3.1",
     "postcss": "8.4.47",
     "tailwindcss": "3.4.14",
