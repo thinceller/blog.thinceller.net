@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { compileMDX } from 'next-mdx-remote/rsc';
 import { join } from 'path';
+import { compileMDX } from 'next-mdx-remote/rsc';
 import { z } from 'zod';
 
 import { CustomMDXComponents } from '@/components/MDXComponent';
@@ -27,7 +27,7 @@ type MDXPostData = {
 export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {
   const fileContent = fs.readFileSync(
     join(process.cwd(), '_posts', `${slug}.mdx`),
-    'utf8'
+    'utf8',
   );
   const { content, frontmatter } = await compileMDX<frontMatterType>({
     source: fileContent,

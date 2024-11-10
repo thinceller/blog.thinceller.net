@@ -1,6 +1,6 @@
+import fs from 'node:fs/promises';
 import { format } from 'date-fns';
 import enquirer from 'enquirer';
-import fs from 'node:fs/promises';
 
 /**
  * Template for the ADR

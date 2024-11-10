@@ -1,7 +1,10 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": [] },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": ["**/node_modules", "**/.next", "**/*.md", "**/*.mdx"]
+  },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -11,8 +14,7 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "attributePosition": "auto",
-    "bracketSpacing": true,
-    "ignore": ["**/node_modules", "**/.next", "**/*.md", "**/*.mdx"]
+    "bracketSpacing": true
   },
   "organizeImports": { "enabled": true },
   "linter": { "enabled": false },
@@ -21,7 +23,7 @@
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
       "trailingCommas": "all",
-      "semicolons": "asNeeded",
+      "semicolons": "always",
       "arrowParentheses": "always",
       "bracketSameLine": false,
       "quoteStyle": "single",
