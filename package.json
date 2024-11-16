@@ -44,7 +44,7 @@
     "lint-staged": "15.2.10",
     "ora": "6.3.1",
     "postcss": "8.4.49",
-    "tailwindcss": "3.4.14",
+    "tailwindcss": "3.4.15",
     "textlint": "13.4.1",
     "textlint-rule-preset-ja-spacing": "2.3.1",
     "textlint-rule-preset-ja-technical-writing": "7.0.0",
