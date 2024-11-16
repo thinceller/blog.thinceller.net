@@ -29,7 +29,7 @@
     "@textlint/textlint-plugin-markdown": "14.2.1",
     "@types/gtag.js": "0.0.20",
     "@types/mapbox__rehype-prism": "0.8.3",
-    "@types/markdown-it": "13.0.9",
+    "@types/markdown-it": "14.1.2",
     "@types/mdx": "2.0.13",
     "@types/node": "20.17.6",
     "@types/react": "18.3.12",
