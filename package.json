@@ -31,7 +31,7 @@
     "@types/mapbox__rehype-prism": "0.8.3",
     "@types/markdown-it": "13.0.9",
     "@types/mdx": "2.0.13",
-    "@types/node": "20.17.9",
+    "@types/node": "20.17.10",
     "@types/react": "18.3.14",
     "autoprefixer": "10.4.20",
     "eslint": "8.57.1",
