@@ -38,7 +38,7 @@
     "eslint-config-next": "13.5.7",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.1.7",
-    "lint-staged": "15.2.10",
+    "lint-staged": "15.2.11",
     "postcss": "8.4.49",
     "tailwindcss": "3.4.16",
     "textlint": "13.4.1",
