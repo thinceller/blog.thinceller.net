@@ -13,7 +13,7 @@
     "dayjs": "1.11.13",
     "gray-matter": "4.0.3",
     "next": "14.2.21",
-    "next-mdx-remote": "4.4.1",
+    "next-mdx-remote": "5.0.0",
     "next-remote-watch": "2.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
