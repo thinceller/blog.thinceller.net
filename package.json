@@ -43,7 +43,7 @@
     "tailwindcss": "3.4.17",
     "textlint": "13.4.1",
     "textlint-rule-preset-ja-spacing": "2.3.1",
-    "textlint-rule-preset-ja-technical-writing": "7.0.0",
+    "textlint-rule-preset-ja-technical-writing": "10.0.1",
     "textlint-rule-spellcheck-tech-word": "5.0.0",
     "typescript": "5.6.3"
   },
