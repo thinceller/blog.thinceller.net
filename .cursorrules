@@ -1,0 +1,54 @@
+# Cursor AI Rules for blog.thinceller.net
+
+# Project Overview
+This is a personal blog website built with Next.js and TypeScript.
+The codebase includes both source code and blog articles written in Markdown.
+
+# Source Code Rules
+
+## TypeScript/Next.js
+- Follow Next.js App Router best practices
+- Use React Server Components by default for better performance
+- Add 'use client' directive only when client-side features are necessary
+- Suggest modern React patterns and hooks
+- Prefer functional components over class components
+- Use TypeScript's strict mode features
+- Suggest performance optimizations when applicable
+- Follow Next.js best practices and conventions
+- Ensure proper type definitions for all components and functions
+
+## Code Style
+- Follow Biome's formatting rules
+- Maintain consistent code style with existing codebase
+- Use meaningful variable and function names
+- Keep components and functions focused and single-responsibility
+- Suggest code splitting and lazy loading when appropriate
+
+# Blog Article Rules
+
+## Markdown Content
+- Follow standard Markdown syntax
+- Ensure proper heading hierarchy (h1 -> h2 -> h3)
+- Use appropriate code blocks with language specification
+- Include alt text for images
+- Keep line length reasonable for better readability
+
+## Article Quality
+- Follow Textlint rules for content quality
+- Maintain consistent formatting across articles
+- Suggest improvements for technical accuracy
+- Ensure code examples are up-to-date and functional
+- Recommend appropriate tags and categories for articles
+
+## SEO and Metadata
+- Ensure proper meta descriptions
+- Suggest SEO-friendly titles
+- Include appropriate keywords naturally
+- Recommend image optimization when needed
+
+# General Guidelines
+- Prioritize accessibility in both code and content
+- Suggest performance improvements
+- Keep dependencies up-to-date
+- Follow security best practices
+- Maintain clean and organized project structure 
