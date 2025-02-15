@@ -82,8 +82,8 @@ importers:
         specifier: 0.8.3
         version: 0.8.3
       '@types/markdown-it':
-        specifier: 13.0.9
-        version: 13.0.9
+        specifier: 14.1.2
+        version: 14.1.2
       '@types/mdx':
         specifier: 2.0.13
         version: 2.0.13
@@ -512,20 +512,20 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/linkify-it@3.0.2':
-    resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+  '@types/linkify-it@5.0.0':
+    resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
 
   '@types/mapbox__rehype-prism@0.8.3':
     resolution: {integrity: sha512-ayRTSAVHT0XpvKmx5GFN5luxwabuPb3EL06b3hRU0mnv30ETdcGmguk6C20R5EFVv6bWsfG8Jh6OUf+mMIqLdw==}
 
-  '@types/markdown-it@13.0.9':
-    resolution: {integrity: sha512-1XPwR0+MgXLWfTn9gCsZ55AHOKW1WN+P9vr0PaQh5aerR9LLQXUbjfEAFhjmEmyoYFWAyuN2Mqkn40MZ4ukjBw==}
+  '@types/markdown-it@14.1.2':
+    resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
 
   '@types/mdast@3.0.11':
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
 
-  '@types/mdurl@1.0.2':
-    resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
+  '@types/mdurl@2.0.0':
+    resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
 
   '@types/mdx@2.0.13':
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
@@ -4151,23 +4151,23 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/linkify-it@3.0.2': {}
+  '@types/linkify-it@5.0.0': {}
 
   '@types/mapbox__rehype-prism@0.8.3':
     dependencies:
       '@types/hast': 2.3.4
       unified: 10.1.2
 
-  '@types/markdown-it@13.0.9':
+  '@types/markdown-it@14.1.2':
     dependencies:
-      '@types/linkify-it': 3.0.2
-      '@types/mdurl': 1.0.2
+      '@types/linkify-it': 5.0.0
+      '@types/mdurl': 2.0.0
 
   '@types/mdast@3.0.11':
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/mdurl@1.0.2': {}
+  '@types/mdurl@2.0.0': {}
 
   '@types/mdx@2.0.13': {}
 
