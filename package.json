@@ -12,11 +12,11 @@
     "@vercel/analytics": "1.4.1",
     "dayjs": "1.11.13",
     "gray-matter": "4.0.3",
-    "next": "14.2.24",
+    "next": "15.1.7",
     "next-mdx-remote": "4.4.1",
     "next-remote-watch": "2.0.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-twitter-widgets": "1.11.0",
     "rehype-autolink-headings": "7.1.0",
     "rehype-code-titles": "1.2.0",
@@ -25,17 +25,17 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@next/bundle-analyzer": "13.5.8",
+    "@next/bundle-analyzer": "15.1.7",
     "@textlint/textlint-plugin-markdown": "14.4.2",
     "@types/gtag.js": "0.0.20",
     "@types/mapbox__rehype-prism": "0.8.3",
     "@types/markdown-it": "14.1.2",
     "@types/mdx": "2.0.13",
     "@types/node": "20.17.18",
-    "@types/react": "18.3.18",
+    "@types/react": "19.0.8",
     "autoprefixer": "10.4.20",
     "eslint": "8.57.1",
-    "eslint-config-next": "13.5.8",
+    "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "10.0.1",
     "husky": "9.1.7",
     "lint-staged": "15.2.11",
@@ -49,18 +49,14 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "**/*.{js,jsx,ts,tsx,css,json}": [
-      "biome check --write"
-    ]
+    "**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
+    "**/*.{js,jsx,ts,tsx,css,json}": ["biome check --write"]
   },
   "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab",
   "scripts": {
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
-    "dev": "next",
+    "dev": "next dev --turbopack",
     "dev:watch": "next-remote-watch ./_posts",
     "export": "next export",
     "start": "next start",
