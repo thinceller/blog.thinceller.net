@@ -26,7 +26,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@next/bundle-analyzer": "13.5.8",
-    "@textlint/textlint-plugin-markdown": "14.2.1",
+    "@textlint/textlint-plugin-markdown": "14.4.2",
     "@types/gtag.js": "0.0.20",
     "@types/mapbox__rehype-prism": "0.8.3",
     "@types/markdown-it": "13.0.9",
