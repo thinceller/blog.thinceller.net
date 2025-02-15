@@ -50,8 +50,9 @@ const getFontRegular = async () => {
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } },
+  props: { params: Promise<{ slug: string }> },
 ) {
+  const params = await props.params;
   const { title } = getPostBySlug(params.slug, ['title']);
   const logoSrc = await getAvatar();
 

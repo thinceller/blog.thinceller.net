@@ -4,6 +4,8 @@ import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 import { Tweet, TweetProps } from 'react-twitter-widgets';
 
+import type { JSX } from 'react';
+
 export const CustomMDXComponents: MDXComponents = {
   a: (p: JSX.IntrinsicElements['a']) => {
     const { href, ...rest } = p;

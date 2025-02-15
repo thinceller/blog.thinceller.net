@@ -21,7 +21,7 @@ const frontMatterSchema = z.object({
 type frontMatterType = z.infer<typeof frontMatterSchema>;
 
 type MDXPostData = {
-  content: React.ReactElement;
+  content: React.ReactElement<any>;
   frontmatter: frontMatterType;
 };
 export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {
