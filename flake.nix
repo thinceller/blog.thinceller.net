@@ -63,12 +63,8 @@
             settings = {
               src = ./.;
               hooks = {
-                eslint = {
+                biome = {
                   enable = true;
-                  files = "^.*\\.(js|jsx|ts|tsx)$";
-                  settings = {
-                    binPath = "./node_modules/.bin/eslint";
-                  };
                 };
                 treefmt = {
                   enable = true;

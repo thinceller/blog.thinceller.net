@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { join } from 'path';
+import fs from 'node:fs';
+import { join } from 'node:path';
 import matter from 'gray-matter';
 
 const postsDir = join(process.cwd(), '_posts');
@@ -39,7 +39,7 @@ export function getPostBySlug<T extends Field>(slug: string, fields: T[] = []) {
   const items = {} as { [key in T]: string };
 
   // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
+  for (const field of fields) {
     if (field === 'slug') {
       items[field] = realSlug;
     }
@@ -50,7 +50,7 @@ export function getPostBySlug<T extends Field>(slug: string, fields: T[] = []) {
     if (data[field]) {
       items[field] = data[field];
     }
-  });
+  }
 
   return items;
 }

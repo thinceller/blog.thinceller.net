@@ -1,5 +1,5 @@
 import NextLink from 'next/link';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 export const Navigation: FC = () => {
   return (

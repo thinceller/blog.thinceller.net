@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { join } from 'path';
+import fs from 'node:fs';
+import { join } from 'node:path';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import { z } from 'zod';
 
@@ -21,7 +21,7 @@ const frontMatterSchema = z.object({
 type frontMatterType = z.infer<typeof frontMatterSchema>;
 
 type MDXPostData = {
-  content: React.ReactElement<any>;
+  content: React.ReactElement<unknown>;
   frontmatter: frontMatterType;
 };
 export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {

@@ -49,9 +49,9 @@
     "dev": "next dev --turbopack",
     "dev:watch": "next-remote-watch ./_posts",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
-    "format": "nix fmt"
+    "format": "biome format"
   },
   "nextBundleAnalysis": {
     "budget": 358400,

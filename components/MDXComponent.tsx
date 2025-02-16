@@ -1,8 +1,7 @@
-/* eslint-disable react/display-name */
-import { type MDXComponents } from 'mdx/types';
-import Image, { ImageProps } from 'next/image';
+import type { MDXComponents } from 'mdx/types';
+import Image, { type ImageProps } from 'next/image';
 import Link from 'next/link';
-import { Tweet, TweetProps } from 'react-twitter-widgets';
+import { Tweet, type TweetProps } from 'react-twitter-widgets';
 
 import type { JSX } from 'react';
 
