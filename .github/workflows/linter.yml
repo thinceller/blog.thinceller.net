@@ -7,8 +7,8 @@ on:
   pull_request:
 
 jobs:
-  eslint:
-    name: eslint
+  biome:
+    name: biome
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
           node-version-file: '.tool-versions'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - name: run eslint
+      - name: run biome check
         run: pnpm lint
   textlint:
     name: textlint

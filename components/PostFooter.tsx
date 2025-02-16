@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Script from 'next/script';
@@ -9,6 +8,7 @@ import { useEffect } from 'react';
  */
 declare global {
   interface Window {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     twttr: any;
   }
 }
@@ -35,6 +35,7 @@ export const PostFooter: React.FC = () => {
         data-hatena-bookmark-lang="ja"
         title="このエントリーをはてなブックマークに追加"
       >
+        {/* biome-ignore lint/nursery/noImgElement: <explanation> */}
         <img
           src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
           alt="このエントリーをはてなブックマークに追加"

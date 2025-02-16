@@ -3,7 +3,7 @@ import { PostTitle } from '@/components/PostTitle';
 import { BLOG_AUTHOR, BLOG_NAME } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/mdx';
 import { getAllPosts } from '@/lib/post';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const dynamicParams = false;
 

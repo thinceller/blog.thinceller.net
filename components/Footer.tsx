@@ -1,6 +1,6 @@
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 export const Footer: FC = () => {
   return (
@@ -10,7 +10,7 @@ export const Footer: FC = () => {
         <div className="flex flex-row gap-2">
           <a
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
             href="https://twitter.com/thinceller_dev"
             aria-label="Twitter link"
           >
@@ -21,7 +21,7 @@ export const Footer: FC = () => {
           </a>
           <a
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
             href="https://github.com/thinceller"
             aria-label="GitHub link"
           >

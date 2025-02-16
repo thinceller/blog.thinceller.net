@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { formatDate } from '../lib/date';
 
 export const PostTitle: FC<{ title: string; date: string }> = ({

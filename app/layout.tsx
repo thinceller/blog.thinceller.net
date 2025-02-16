@@ -1,7 +1,7 @@
 import { Layout } from '@/components/Layout';
 import { BLOG_NAME, BLOG_URL } from '@/lib/constants';
 import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 import '@/styles/globals.css';
 import '@/styles/prisma.css';

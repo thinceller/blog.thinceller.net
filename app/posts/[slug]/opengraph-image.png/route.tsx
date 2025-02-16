@@ -1,10 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable jsx-a11y/alt-text */
 import { getAllPosts, getPostBySlug } from '@/lib/post';
 import { ImageResponse } from 'next/og';
-import { NextRequest } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 // export const alt = 'thinceller blog';
 // export const size = {
@@ -56,6 +54,7 @@ export async function GET(
   const { title } = getPostBySlug(params.slug, ['title']);
   const logoSrc = await getAvatar();
 
+  /* biome-ignore format: ignoring ts error and lint error */
   return new ImageResponse(
     <div
       style={{
@@ -95,7 +94,7 @@ export async function GET(
           justifyContent: 'space-between',
         }}
       >
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error */} {/* biome-ignore lint/a11y/useAltText: because of internal image */} {/* biome-ignore lint/nursery/noImgElement: <explanation> */}
         <img src={logoSrc} height={140} style={{ borderRadius: '50%' }} />
 
         <div style={{ fontSize: 32, fontWeight: 400 }}>thinceller blog</div>

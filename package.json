@@ -34,9 +34,6 @@
     "@types/node": "20.17.19",
     "@types/react": "19.0.8",
     "autoprefixer": "10.4.20",
-    "eslint": "8.57.1",
-    "eslint-config-next": "15.1.7",
-    "eslint-config-prettier": "10.0.1",
     "postcss": "8.4.49",
     "tailwindcss": "3.4.17",
     "textlint": "13.4.1",
@@ -52,9 +49,9 @@
     "dev": "next dev --turbopack",
     "dev:watch": "next-remote-watch ./_posts",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
-    "format": "nix fmt"
+    "format": "biome format"
   },
   "nextBundleAnalysis": {
     "budget": 358400,
