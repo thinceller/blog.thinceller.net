@@ -49,10 +49,14 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": ["eslint --fix"],
-    "**/*.{js,jsx,ts,tsx,css,json}": ["biome check --write"]
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "**/*.{js,jsx,ts,tsx,css,json}": [
+      "biome check --write"
+    ]
   },
-  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab",
+  "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92",
   "scripts": {
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
