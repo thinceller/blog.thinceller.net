@@ -34,7 +34,7 @@
     "@types/node": "20.17.19",
     "@types/react": "19.0.8",
     "autoprefixer": "10.4.20",
-    "eslint": "8.57.1",
+    "eslint": "9.20.0",
     "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "10.0.1",
     "postcss": "8.4.49",
