@@ -1,0 +1,31 @@
+---
+description: TypeScript/Next.jsのソースコードに関するルールと規約
+globs: app/**/*.{ts,tsx},components/**/*.{ts,tsx},lib/**/*.{ts,tsx}
+---
+
+# Source Code Rules
+
+## TypeScript/Next.js
+- Follow Next.js App Router best practices
+- Use React Server Components by default for better performance
+- Add 'use client' directive only when client-side features are necessary
+- Suggest modern React patterns and hooks
+- Prefer functional components over class components
+- Use TypeScript's strict mode features
+- Suggest performance optimizations when applicable
+- Follow Next.js best practices and conventions
+- Ensure proper type definitions for all components and functions
+
+## Code Style
+- Follow Biome's formatting rules
+- Maintain consistent code style with existing codebase
+- Use meaningful variable and function names
+- Keep components and functions focused and single-responsibility
+- Suggest code splitting and lazy loading when appropriate
+
+## General Guidelines
+- Prioritize accessibility in code
+- Suggest performance improvements
+- Keep dependencies up-to-date
+- Follow security best practices
+- Maintain clean and organized project structure 
