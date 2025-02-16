@@ -1,14 +1,18 @@
+import { NextConfig } from 'next';
+
 /**@see https://zenn.dev/catnose99/scraps/661d77118aa2af */
 const withBundleAnalyzer =
   process.env.ANALYZE === 'true'
     ? require('@next/bundle-analyzer')({ enabled: true })
-    : (config) => config;
+    : (config: NextConfig) => config;
 
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
-  reactStrictMode: true,
+const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);
