@@ -11,10 +11,19 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    git-hooks-nix = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ flake-parts, treefmt-nix, ... }:
+    inputs@{
+      flake-parts,
+      treefmt-nix,
+      git-hooks-nix,
+      ...
+    }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "aarch64-darwin"
@@ -22,6 +31,7 @@
       ];
       imports = [
         treefmt-nix.flakeModule
+        git-hooks-nix.flakeModule
       ];
       perSystem =
         { config, pkgs, ... }:
@@ -40,15 +50,33 @@
                   "*.cts"
                   "*.jsx"
                   "*.tsx"
-                  "*.d.ts"
-                  "*.d.cts"
-                  "*.d.mts"
                   "*.json"
                   "*.jsonc"
                   "*.css"
                 ];
               };
               nixfmt.enable = true;
+            };
+          };
+
+          pre-commit = {
+            settings = {
+              src = ./.;
+              hooks = {
+                eslint = {
+                  enable = true;
+                  files = "^.*\\.(js|jsx|ts|tsx)$";
+                  settings = {
+                    binPath = "./node_modules/.bin/eslint";
+                  };
+                };
+                treefmt = {
+                  enable = true;
+                  settings = {
+                    fail-on-change = false;
+                  };
+                };
+              };
             };
           };
 
@@ -60,6 +88,7 @@
               ];
               inputsFrom = [
                 config.treefmt.build.devShell
+                config.pre-commit.devShell
               ];
             };
           };
