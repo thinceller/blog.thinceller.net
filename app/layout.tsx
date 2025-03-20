@@ -1,6 +1,5 @@
 import { Layout } from '@/components/Layout';
 import { BLOG_NAME, BLOG_URL } from '@/lib/constants';
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 
 import '@/styles/globals.css';
@@ -38,7 +37,6 @@ export default function RootLayout({
     <html lang="ja">
       <body>
         <Layout>{children}</Layout>
-        <Analytics />
       </body>
     </html>
   );
