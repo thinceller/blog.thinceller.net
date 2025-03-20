@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { join } from 'node:path';
 import { compileMDX } from 'next-mdx-remote/rsc';
-import { z } from 'zod';
+import * as v from 'valibot';
 
 import { CustomMDXComponents } from '@/components/MDXComponent';
 import rehypePrism from '@mapbox/rehype-prism';
@@ -9,16 +9,16 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeSlug from 'rehype-slug';
 
-const frontMatterSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  date: z.string(),
-  publishedTime: z.string(),
-  modifiedTime: z.string().optional(),
-  tags: z.array(z.string()).nullable(),
+const frontMatterSchema = v.object({
+  title: v.string(),
+  description: v.string(),
+  date: v.string(),
+  publishedTime: v.string(),
+  modifiedTime: v.optional(v.string()),
+  tags: v.nullable(v.array(v.string())),
 });
 
-type frontMatterType = z.infer<typeof frontMatterSchema>;
+type frontMatterType = v.InferOutput<typeof frontMatterSchema>;
 
 type MDXPostData = {
   content: React.ReactElement<unknown>;
