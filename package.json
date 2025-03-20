@@ -9,7 +9,6 @@
     "@fortawesome/react-fontawesome": "0.2.2",
     "@mapbox/rehype-prism": "0.9.0",
     "@mdx-js/react": "3.1.0",
-    "@vercel/analytics": "1.4.1",
     "dayjs": "1.11.13",
     "gray-matter": "4.0.3",
     "next": "15.1.7",
@@ -26,6 +25,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@next/bundle-analyzer": "15.1.7",
+    "@opennextjs/aws": "3.5.2",
     "@opennextjs/cloudflare": "0.5.12",
     "@textlint/textlint-plugin-markdown": "14.4.2",
     "@types/gtag.js": "0.0.20",
