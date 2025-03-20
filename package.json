@@ -53,7 +53,10 @@
     "start": "next start",
     "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
-    "format": "biome format"
+    "format": "biome format",
+    "preview": "opennextjs-cloudflare && wrangler dev",
+    "deploy": "opennextjs-cloudflare && wrangler deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "nextBundleAnalysis": {
     "budget": 358400,

@@ -36,3 +36,7 @@ next-env.d.ts
 
 .direnv
 .pre-commit-config.yaml
+
+.dev.vars*
+.open-next
+.wrangler
