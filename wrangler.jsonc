@@ -1,0 +1,42 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "blog-thinceller-net",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    // Create a KV binding with the binding name "NEXT_CACHE_WORKERS_KV"
+    // to enable the KV based caching:
+    // {
+    //   "binding": "blog_thinceller_net_kv",
+    //   "id": "96e2493f17aa44dbb98e9688190e3a87"
+    // },
+    {
+      "binding": "NEXT_CACHE_WORKERS_KV",
+      "id": "96e2493f17aa44dbb98e9688190e3a87"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "NEXT_CACHE_D1",
+      "database_id": "214bdfdf-062b-4816-ace4-8348ce6cd058",
+      "database_name": "blog-thinceller-net-cache-d1"
+    }
+  ],
+  "services": [
+    {
+      "binding": "NEXT_CACHE_REVALIDATION_WORKER",
+      "service": "blog-thinceller-net"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "blog-preview.thinceller.net",
+      "custom_domain": true
+    }
+  ]
+}
