@@ -20,8 +20,18 @@ jobs:
       - name: build
         run: pnpm opennextjs-cloudflare
       - uses: cloudflare/wrangler-action@v3
+        id: upload-version
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           command: versions upload
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: Cloudflare Workers Preview
+          message: |
+            ## ☁️ Cloudflare Workers Preview
+
+            preview url: ${{ steps.upload-version.outputs.deployment-url}}
+
