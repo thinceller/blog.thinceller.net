@@ -61,7 +61,7 @@ importers:
         version: 6.0.0
       valibot:
         specifier: 1.0.0
-        version: 1.0.0(typescript@5.6.3)
+        version: 1.0.0(typescript@5.8.2)
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -118,8 +118,8 @@ importers:
         specifier: 5.0.0
         version: 5.0.0(textlint@13.4.1)
       typescript:
-        specifier: 5.6.3
-        version: 5.6.3
+        specifier: 5.8.2
+        version: 5.8.2
       wrangler:
         specifier: 4.2.0
         version: 4.2.0
@@ -4173,8 +4173,8 @@ packages:
     resolution: {integrity: sha512-q7QNVDGTdl702bVFiI5eY4l/HkgCM6at9KhcFbgUAzezHFbOVy4+0O/lCjsABEQwbZPravVfBIiBVGo89yzHFg==}
     engines: {node: '>= 0.4'}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -10024,7 +10024,7 @@ snapshots:
       typed-array-buffer: 1.0.3
       typed-array-byte-offset: 1.0.4
 
-  typescript@5.6.3: {}
+  typescript@5.8.2: {}
 
   ufo@1.5.4: {}
 
@@ -10195,9 +10195,9 @@ snapshots:
       kleur: 4.1.5
       sade: 1.8.1
 
-  valibot@1.0.0(typescript@5.6.3):
+  valibot@1.0.0(typescript@5.8.2):
     optionalDependencies:
-      typescript: 5.6.3
+      typescript: 5.8.2
 
   validate-npm-package-license@3.0.4:
     dependencies:
