@@ -1,6 +1,7 @@
 ---
 description: ブログ記事のMarkdownコンテンツと品質に関するルール
-globs: _posts/**/*.{md,mdx}
+globs: _posts/**/*.mdx
+alwaysApply: false
 ---
 
 # Blog Article Rules

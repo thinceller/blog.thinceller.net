@@ -1,0 +1,128 @@
+---
+title: VercelからCloudflareに移行した
+description: |
+  Next.jsブログのホスティングをVercelからCloudflareに移行しました。OpenNextを使った手順や、詰まったところをまとめます。
+date: '2025-03-30T02:54:00Z'
+publishedTime: '2025-03-30T02:54:00Z'
+tags:
+  - Next.js
+  - OpenNext
+  - Cloudflare
+---
+
+このブログサイトはNext.jsで作成されており、ホスティングは当初からVercelを使っていました。Next.jsをホスティングするにはNext.jsの開発元であるVercelがまず最初の選択肢として挙げられ、私自身もデプロイの設定の手間がほぼなかったり特に難しいことを考えることなくNext.jsを動作させることができる点からVercelを選択しました。
+
+今回、このブログサイトのホスト先をVercelからCloudflareに移行しました。その背景や移行の過程を記事としてまとめます。
+
+## 移行の背景
+
+昨年から仕事の方でNext.jsをECSでセルフホストし、CDNとしてCloudflareを使っているのですが、Edge Computingという領域で多くの意欲的なサービスを展開しているCloudflareに非常に惹かれています。ちょっとした処理はWorkersで手軽さに動かすことができ、wrangler CLIを使えばコマンド1つでWorkersをセットアップできるのも嬉しいです。また、Image OptimizationによってEdgeで画像の最適化を行うこともできますし、KVやD1を活用して本格的なアプリケーションを開発可能です。
+
+また、Next.jsをCloudflare WorkersにデプロイするためのOpenNextによる新たなツールが登場していたこともあり、Vercel以外の環境でNext.jsを動かすことのハードルも（まだまだ制約はありますが）低くなっています。
+
+これを機にCloudflare上でのNext.jsのホスティングを自分のブログで試してみたいと思いました。
+
+## ブログサイトの技術構成
+
+当初このブログサイトはPages Routerで作成されていました（当初はまだApp Routerが出ていなかった）が、すでにApp Routerに移行しています。
+
+いわゆるISRは使っておらず、すべてのページはビルド時に静的に生成されています。App Routerのため、ビルド時の記事データの取得やMDXの変換はServer Components上で実施されます。
+
+## 移行の過程
+
+### OpenNextの導入
+
+CloudflareへNext.jsをデプロイする方法は主にnext-on-pagesとOpenNextの2種類があります。
+
+- [next-on-pages](https://github.com/cloudflare/next-on-pages)
+- [OpenNext](https://opennext.js.org/)
+
+少し調べた限りnext-on-pagesの方が安定しているようですが、OpenNextはCloudflare WorkersのNode.js compatibilityを活用して多くのNext.jsの機能を使えるようになっている点が魅力です。今回はOpenNextを使って移行してみました。
+
+OpenNextの公式サイトの[Getting Started](https://opennext.js.org/cloudflare/get-started)を参考に作業を進めていきます。
+
+まずはOpenNextのCloudflareアダプターおよびwranglerをインストールします。
+
+```bash
+pnpm add -D @opennextjs/cloudflare
+
+# デプロイにwranglerを使うためプロジェクトにインストールしておく
+pnpm add -D wrangler
+```
+
+次にwranglerの設定ファイルである`wrangler.jsonc`を下記のように作成します。
+KVやD1のIDはwrangler CLIかCloudflareのダッシュボードから作成したものを指定します。
+
+```json:wrangler.jsonc
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "blog-thinceller-net",
+  "compatibility_date": "2024-12-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_CACHE_WORKERS_KV",
+      "id": "<KV_ID>"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "NEXT_CACHE_D1",
+      "database_id": "<DB_ID>",
+      "database_name": "<DB_NAME>"
+    }
+  ],
+  "services": [
+    {
+      "binding": "NEXT_CACHE_REVALIDATION_WORKER",
+      "service": "blog-thinceller-net"
+    }
+  ]
+}
+```
+
+次にOpenNextの設定ファイルである`open-next.config.ts`を作成します。
+
+```ts:open-next.config.ts
+import { defineCloudflareConfig } from '@opennextjs/cloudflare/config';
+import d1TagCache from '@opennextjs/cloudflare/d1-tag-cache';
+import kvIncrementalCache from '@opennextjs/cloudflare/kv-cache';
+import memoryQueue from '@opennextjs/cloudflare/memory-queue';
+
+export default defineCloudflareConfig({
+  incrementalCache: kvIncrementalCache,
+  tagCache: d1TagCache,
+  queue: memoryQueue,
+});
+```
+
+あとは`opennextjs-cloudflare && wrangler deploy`を実行するだけでCloudflare Workersにデプロイできます。
+
+## 詰まったところ
+
+### Bindings設定
+
+上記の`wrangler.jsonc`や`open-next.config.ts`を見るとわかるように、OpenNextはCloudflare WorkersのBindings（WorkersとCloudflareの他のサービスを連携する機能）に依存しています。D1やKVを事前に作成した上でBindingsを設定する必要があり、Workers以外のサービスやそれらとの連携方法をある程度把握しておく必要があります。
+
+OpenNextのドキュメントではこのあたりに関しての記述はほとんどなく、Workersへの理解が前提になっている点は注意が必要です。
+
+### Workersのアップロードサイズ制限
+
+最初にOpenNextを使ってデプロイしたところ、Workersのアップロードサイズ制限に引っかかってデプロイに失敗しました。
+
+これに関しては[OpenNextのトラブルシューティングドキュメント](https://opennext.js.org/cloudflare/troubleshooting#your-worker-exceeded-the-size-limit-of-3-mib)にも記載があり、Free Plan（3MiB制限）ではなくPaid Plan（10MiB制限）でのデプロイを行うことが推奨されています。
+
+デプロイ失敗時のログを見るとアップロードを試みたWorkersのスクリプトサイズはギリギリ3MiBに達していた程度であり、サーバー側のバンドルサイズを小さくしていけばFree Planでのデプロイも可能そうでした。
+
+サーバー側にバンドルされているサードパーティライブラリを極力減らすべく使っていないライブラリの削除や利用ライブラリの変更を試してみましたが3MiBを切ることができず、結局Paid Planに変更してデプロイを行いました。
+
+## 移行してみた所感
+
+いくつか詰まるところはありましたが、OpenNextを使うことでNext.jsの機能をほぼそのまま使える状態を維持しながらCloudflare Workersに手軽にデプロイできるようになりました。
+
+これまではVercelがよしなにやってくれていたNext.jsのインフラ面の管理を一部自力で行っていくことで、ビルドやデプロイ、キャッシュの仕組みなどNext.jsの理解をより深めていくことができそうです。
