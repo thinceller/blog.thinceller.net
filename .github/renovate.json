@@ -15,8 +15,5 @@
     "minimumReleaseAge": "2 days",
     "automerge": true,
     "labels": ["dependencies", "automerge: enabled"]
-  },
-  "nix": {
-    "enabled": true
   }
 }
