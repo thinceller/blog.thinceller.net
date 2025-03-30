@@ -34,5 +34,23 @@
       "attributePosition": "auto",
       "bracketSpacing": true
     }
-  }
+  },
+  "overrides": [
+    {
+      "include": [
+        "app/**/opengraph-image.tsx",
+        "app/**/opengraph-image.png/route.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "useAltText": "off"
+          },
+          "nursery": {
+            "noImgElement": "off"
+          }
+        }
+      }
+    }
+  ]
 }
