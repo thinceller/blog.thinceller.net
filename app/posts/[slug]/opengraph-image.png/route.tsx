@@ -76,6 +76,7 @@ export async function GET(
     >
       <div
         style={{
+          width: '100%',
           fontSize: 60,
           fontWeight: 700,
           lineHeight: 1.5,
@@ -94,7 +95,7 @@ export async function GET(
           justifyContent: 'space-between',
         }}
       >
-        {/* @ts-expect-error */} {/* biome-ignore lint/a11y/useAltText: because of internal image */} {/* biome-ignore lint/nursery/noImgElement: <explanation> */}
+        {/* @ts-expect-error */}
         <img src={logoSrc} height={140} style={{ borderRadius: '50%' }} />
 
         <div style={{ fontSize: 32, fontWeight: 400 }}>thinceller blog</div>
