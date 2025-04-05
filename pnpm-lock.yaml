@@ -19,13 +19,13 @@ importers:
         version: 6.7.2
       '@fortawesome/react-fontawesome':
         specifier: 0.2.2
-        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.0.0)
+        version: 0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.0)
       '@mapbox/rehype-prism':
         specifier: 0.9.0
         version: 0.9.0
       '@mdx-js/react':
         specifier: 3.1.0
-        version: 3.1.0(@types/react@19.0.12)(react@19.0.0)
+        version: 3.1.0(@types/react@19.1.0)(react@19.1.0)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -34,22 +34,22 @@ importers:
         version: 4.0.3
       next:
         specifier: 15.1.7
-        version: 15.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 15.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-mdx-remote:
         specifier: 4.4.1
-        version: 4.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 4.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-remote-watch:
         specifier: 2.0.0
-        version: 2.0.0(next@15.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+        version: 2.0.0(next@15.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       react:
-        specifier: 19.0.0
-        version: 19.0.0
+        specifier: 19.1.0
+        version: 19.1.0
       react-dom:
-        specifier: 19.0.0
-        version: 19.0.0(react@19.0.0)
+        specifier: 19.1.0
+        version: 19.1.0(react@19.1.0)
       react-twitter-widgets:
         specifier: 1.11.0
-        version: 1.11.0(react@19.0.0)
+        version: 1.11.0(react@19.1.0)
       rehype-autolink-headings:
         specifier: 7.1.0
         version: 7.1.0
@@ -94,8 +94,8 @@ importers:
         specifier: 20.17.24
         version: 20.17.24
       '@types/react':
-        specifier: 19.0.12
-        version: 19.0.12
+        specifier: 19.1.0
+        version: 19.1.0
       autoprefixer:
         specifier: 10.4.21
         version: 10.4.21(postcss@8.4.49)
@@ -1719,8 +1719,8 @@ packages:
   '@types/node@20.17.24':
     resolution: {integrity: sha512-d7fGCyB96w9BnWQrOsJtpyiSaBcAYYr75bnK6ZRjDbql2cGLj/3GsL5OYmLPNq76l7Gf2q4Rv9J2o6h5CrD9sA==}
 
-  '@types/react@19.0.12':
-    resolution: {integrity: sha512-V6Ar115dBDrjbtXSrS+/Oruobc+qVbbUxDFC1RSbRqLt5SYvxxyIDrSC85RWml54g+jfNeEMZhEj7wW07ONQhA==}
+  '@types/react@19.1.0':
+    resolution: {integrity: sha512-UaicktuQI+9UKyA4njtDOGBD/67t8YEBt2xdfqu8+gP9hqPUPsiXlNPcpS2gVdjmis5GKPG3fCxbQLVgxsQZ8w==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -3628,10 +3628,10 @@ packages:
   rc-config-loader@4.1.3:
     resolution: {integrity: sha512-kD7FqML7l800i6pS6pvLyIE2ncbk9Du8Q0gp/4hMPhJU6ZxApkoLcGD8ZeqgiAlfwZ6BlETq6qqe+12DUL207w==}
 
-  react-dom@19.0.0:
-    resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
+  react-dom@19.1.0:
+    resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
     peerDependencies:
-      react: ^19.0.0
+      react: ^19.1.0
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -3641,8 +3641,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
 
-  react@19.0.0:
-    resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
+  react@19.1.0:
+    resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -3774,8 +3774,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  scheduler@0.25.0:
-    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
+  scheduler@0.26.0:
+    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
 
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -5817,11 +5817,11 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 6.7.2
 
-  '@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.0.0)':
+  '@fortawesome/react-fontawesome@0.2.2(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.0)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.7.2
       prop-types: 15.8.1
-      react: 19.0.0
+      react: 19.1.0
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -5962,17 +5962,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@2.3.0(react@19.0.0)':
+  '@mdx-js/react@2.3.0(react@19.1.0)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.0.12
-      react: 19.0.0
+      '@types/react': 19.1.0
+      react: 19.1.0
 
-  '@mdx-js/react@3.1.0(@types/react@19.0.12)(react@19.0.0)':
+  '@mdx-js/react@3.1.0(@types/react@19.1.0)(react@19.1.0)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.0.12
-      react: 19.0.0
+      '@types/react': 19.1.0
+      react: 19.1.0
 
   '@next/bundle-analyzer@15.1.7':
     dependencies:
@@ -6889,7 +6889,7 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
-  '@types/react@19.0.12':
+  '@types/react@19.1.0':
     dependencies:
       csstype: 3.1.3
 
@@ -8836,28 +8836,28 @@ snapshots:
 
   neotraverse@0.6.18: {}
 
-  next-mdx-remote@4.4.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  next-mdx-remote@4.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@mdx-js/mdx': 2.3.0
-      '@mdx-js/react': 2.3.0(react@19.0.0)
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
+      '@mdx-js/react': 2.3.0(react@19.1.0)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
       vfile: 5.3.7
       vfile-matter: 3.0.1
     transitivePeerDependencies:
       - supports-color
 
-  next-remote-watch@2.0.0(next@15.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)):
+  next-remote-watch@2.0.0(next@15.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)):
     dependencies:
       chalk: 4.1.2
       chokidar: 3.6.0
       commander: 5.1.0
       express: 4.21.2
-      next: 15.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      next: 15.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - supports-color
 
-  next@15.1.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+  next@15.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@next/env': 15.1.7
       '@swc/counter': 0.1.3
@@ -8865,9 +8865,9 @@ snapshots:
       busboy: 1.6.0
       caniuse-lite: 1.0.30001699
       postcss: 8.4.31
-      react: 19.0.0
-      react-dom: 19.0.0(react@19.0.0)
-      styled-jsx: 5.1.6(react@19.0.0)
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
+      styled-jsx: 5.1.6(react@19.1.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.1.7
       '@next/swc-darwin-x64': 15.1.7
@@ -9170,19 +9170,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  react-dom@19.0.0(react@19.0.0):
+  react-dom@19.1.0(react@19.1.0):
     dependencies:
-      react: 19.0.0
-      scheduler: 0.25.0
+      react: 19.1.0
+      scheduler: 0.26.0
 
   react-is@16.13.1: {}
 
-  react-twitter-widgets@1.11.0(react@19.0.0):
+  react-twitter-widgets@1.11.0(react@19.1.0):
     dependencies:
       loadjs: 4.3.0
-      react: 19.0.0
+      react: 19.1.0
 
-  react@19.0.0: {}
+  react@19.1.0: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -9376,7 +9376,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  scheduler@0.25.0: {}
+  scheduler@0.26.0: {}
 
   section-matter@1.0.0:
     dependencies:
@@ -9671,10 +9671,10 @@ snapshots:
     dependencies:
       inline-style-parser: 0.1.1
 
-  styled-jsx@5.1.6(react@19.0.0):
+  styled-jsx@5.1.6(react@19.1.0):
     dependencies:
       client-only: 0.0.1
-      react: 19.0.0
+      react: 19.1.0
 
   sucrase@3.35.0:
     dependencies:
