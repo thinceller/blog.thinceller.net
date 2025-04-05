@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@next/bundle-analyzer": "15.1.7",
+    "@next/bundle-analyzer": "15.2.4",
     "@opennextjs/aws": "3.5.4",
     "@opennextjs/cloudflare": "0.5.12",
     "@textlint/textlint-plugin-markdown": "14.4.2",
