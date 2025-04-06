@@ -20,6 +20,9 @@ export const CustomMDXComponents: MDXComponents = {
       />
     );
   },
+  pre: (p: JSX.IntrinsicElements['pre']) => (
+    <pre className="overflow-x-auto max-w-full p-4 rounded-md" {...p} />
+  ),
   blockquote: (p: JSX.IntrinsicElements['blockquote']) => (
     <blockquote
       className="bg-gray-100 border-l-8 border-l-gray-300 border-solid p-4 mb-6 [&>p]:mb-0"

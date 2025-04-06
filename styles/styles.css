@@ -7,6 +7,25 @@
   border-radius: 4px;
 }
 
+.rehype-code-title {
+  width: fit-content;
+  padding-inline: 0.75em;
+  padding-block: 0.25em;
+  color: #edf2f7;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 1.25;
+  background-color: #2d3748;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+
+.rehype-code-title + pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+}
+
 /**
  * Headings anchor link
  */
