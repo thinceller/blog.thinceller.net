@@ -79,8 +79,8 @@ importers:
         specifier: 3.5.5
         version: 3.5.5
       '@opennextjs/cloudflare':
-        specifier: 0.5.12
-        version: 0.5.12(wrangler@4.2.0)
+        specifier: 0.6.6
+        version: 0.6.6(wrangler@4.2.0)
       '@textlint/textlint-plugin-markdown':
         specifier: 14.4.2
         version: 14.4.2
@@ -139,20 +139,8 @@ packages:
     cpu: [arm64]
     os: [darwin]
 
-  '@ast-grep/napi-darwin-arm64@0.36.2':
-    resolution: {integrity: sha512-0dzW+5SRuUxAlfwgMiUWXSvvyVD3nffzLtH5RhH2a1VXbQxi2UFWZqtfhv6e27iIUTnPfZDnZGNRw8FZgttMfQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [darwin]
-
   '@ast-grep/napi-darwin-x64@0.35.0':
     resolution: {integrity: sha512-pEYiN6JI1HY2uWhMYJ9+3yIMyVYKuYdFzeD+dL7odA3qzK0o9N9AM3/NOt4ynU2EhufaWCJr0P5NoQ636qN6MQ==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [darwin]
-
-  '@ast-grep/napi-darwin-x64@0.36.2':
-    resolution: {integrity: sha512-7TPdnq55OBXGcJLDARObI5BUFbp0AVRMGEzjnIBMWbRSowlDVTH7qBWwNAYk4auCdkwG8EBL40BUIHmagzpoCw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -163,20 +151,8 @@ packages:
     cpu: [arm64]
     os: [linux]
 
-  '@ast-grep/napi-linux-arm64-gnu@0.36.2':
-    resolution: {integrity: sha512-/h51eEnEYCq4bclzhynH+964LQXDKXgNb2Un+Y9TLOU8VRaGNawTkZkFq+iBp8T1hl0CznnsQQsg+9pHDHprHQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-
   '@ast-grep/napi-linux-arm64-musl@0.35.0':
     resolution: {integrity: sha512-1EcvHPwyWpCL/96LuItBYGfeI5FaMTRvL+dHbO/hL5q1npqbb5qn+ppJwtNOjTPz8tayvgggxVk9T4C2O7taYA==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-
-  '@ast-grep/napi-linux-arm64-musl@0.36.2':
-    resolution: {integrity: sha512-RIuk0VaQW2b5uOPJzuYFQBwMZIEVnp6maXPjnatUHxfniirSI172E7LtOU/FIEpCjU9Fpq23A79S43ImFt1KLA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -187,20 +163,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@ast-grep/napi-linux-x64-gnu@0.36.2':
-    resolution: {integrity: sha512-Xmb50HPfRNi+iLtHp+8/dqiTd8tjArYxOdj1tZzjRndpKhFpQDVrcOnPFObDCRgxVeLovdql9A1ad6BMcEL01Q==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-
   '@ast-grep/napi-linux-x64-musl@0.35.0':
     resolution: {integrity: sha512-wlmndjfBafT8u5p4DBnoRQyoCSGNuVSz7rT3TqhvlHcPzUouRWMn95epU9B1LNLyjXvr9xHeRjSktyCN28w57Q==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-
-  '@ast-grep/napi-linux-x64-musl@0.36.2':
-    resolution: {integrity: sha512-RSnqCsl3OBfJWh2rETtv3o7xd4QnbB2YTh6H6oYfFhhX0tlon/V+bUXI77hU2/W73hj9GHqWZsygsF43NXn/Hw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -211,20 +175,8 @@ packages:
     cpu: [arm64]
     os: [win32]
 
-  '@ast-grep/napi-win32-arm64-msvc@0.36.2':
-    resolution: {integrity: sha512-/Q85h8F9K2G8qig0lndZWb+ykCfhfpSN27F3i7Aw5C0Ph7S6vFH76xn3l3dJTZb2CwUSsv4JNoqmFmY4B8DExQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [win32]
-
   '@ast-grep/napi-win32-ia32-msvc@0.35.0':
     resolution: {integrity: sha512-OdUuRa3chHCZ65y+qALfkUjz0W0Eg21YZ9TyPquV5why07M6HAK38mmYGzLxFH6294SvRQhs+FA/rAfbKeH0jA==}
-    engines: {node: '>= 10'}
-    cpu: [ia32]
-    os: [win32]
-
-  '@ast-grep/napi-win32-ia32-msvc@0.36.2':
-    resolution: {integrity: sha512-bDdwErB7zf9DvRx3kNZyMKJb9by5ra24WAXSiVzI8MR387ibZP9UCTzKuGqPrbuZADYWiOgsg3nXMklyPFtmhQ==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
@@ -235,18 +187,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@ast-grep/napi-win32-x64-msvc@0.36.2':
-    resolution: {integrity: sha512-LVZ2DqP9fRfyUceE0BGnlKoPmSx3dYYApSEUdt82Pn7jEVWpFFyTLFmZ9ILiCSaVc6urMJpKWdxAHFqDNNlGfg==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [win32]
-
   '@ast-grep/napi@0.35.0':
     resolution: {integrity: sha512-3ucaaSxV6fxXoqHrE/rxAvP1THnDdY5jNzGlnvx+JvnY9C/dSRKc0jlRMRz59N3El572+/yNRUUpAV1T9aBJug==}
-    engines: {node: '>= 10'}
-
-  '@ast-grep/napi@0.36.2':
-    resolution: {integrity: sha512-ByenQQ0BtqqY0pvlmipvkDv/cKl/9vVjBydS7hloXOdmXPoUF0pHdlilC7ZfrRW97EzPQQZT2jgHl2tu7zg9QA==}
     engines: {node: '>= 10'}
 
   '@aws-crypto/crc32@5.2.0':
@@ -1214,16 +1156,16 @@ packages:
     resolution: {integrity: sha512-vIqCcNxy7vPdC5HQQkCN+AXhxdNvagZ8EYw5XvuYIAP2T1Ci9ai/8m6UXtjgd3L9+aBA8pbWfr2Wr/BNLX5m2Q==}
     hasBin: true
 
-  '@opennextjs/aws@https://pkg.pr.new/@opennextjs/aws@7e23eee':
-    resolution: {tarball: https://pkg.pr.new/@opennextjs/aws@7e23eee}
-    version: 3.5.2
+  '@opennextjs/aws@https://pkg.pr.new/@opennextjs/aws@802':
+    resolution: {tarball: https://pkg.pr.new/@opennextjs/aws@802}
+    version: 3.5.3
     hasBin: true
 
-  '@opennextjs/cloudflare@0.5.12':
-    resolution: {integrity: sha512-FwZeD77C84Qm++8svjHAsOelLRD4E3QBE2Z8g+8yZTjuiRRjBl733A2V8Yll+tmXR1Jo1FL5xjsQllUPWboJHg==}
+  '@opennextjs/cloudflare@0.6.6':
+    resolution: {integrity: sha512-amb1/ATvKmxnvIsmRUiSXXbrsdLxLGq/SApdIf9EOJr9WwyLBUaRyZ8t5xDgLSq9zkNCJuaT4jyqQ0zVR0mF0w==}
     hasBin: true
     peerDependencies:
-      wrangler: ^3.114.1 || ^4.0.0
+      wrangler: ^3.114.1 || ^4.6.0
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -4444,55 +4386,28 @@ snapshots:
   '@ast-grep/napi-darwin-arm64@0.35.0':
     optional: true
 
-  '@ast-grep/napi-darwin-arm64@0.36.2':
-    optional: true
-
   '@ast-grep/napi-darwin-x64@0.35.0':
-    optional: true
-
-  '@ast-grep/napi-darwin-x64@0.36.2':
     optional: true
 
   '@ast-grep/napi-linux-arm64-gnu@0.35.0':
     optional: true
 
-  '@ast-grep/napi-linux-arm64-gnu@0.36.2':
-    optional: true
-
   '@ast-grep/napi-linux-arm64-musl@0.35.0':
-    optional: true
-
-  '@ast-grep/napi-linux-arm64-musl@0.36.2':
     optional: true
 
   '@ast-grep/napi-linux-x64-gnu@0.35.0':
     optional: true
 
-  '@ast-grep/napi-linux-x64-gnu@0.36.2':
-    optional: true
-
   '@ast-grep/napi-linux-x64-musl@0.35.0':
-    optional: true
-
-  '@ast-grep/napi-linux-x64-musl@0.36.2':
     optional: true
 
   '@ast-grep/napi-win32-arm64-msvc@0.35.0':
     optional: true
 
-  '@ast-grep/napi-win32-arm64-msvc@0.36.2':
-    optional: true
-
   '@ast-grep/napi-win32-ia32-msvc@0.35.0':
     optional: true
 
-  '@ast-grep/napi-win32-ia32-msvc@0.36.2':
-    optional: true
-
   '@ast-grep/napi-win32-x64-msvc@0.35.0':
-    optional: true
-
-  '@ast-grep/napi-win32-x64-msvc@0.36.2':
     optional: true
 
   '@ast-grep/napi@0.35.0':
@@ -4506,18 +4421,6 @@ snapshots:
       '@ast-grep/napi-win32-arm64-msvc': 0.35.0
       '@ast-grep/napi-win32-ia32-msvc': 0.35.0
       '@ast-grep/napi-win32-x64-msvc': 0.35.0
-
-  '@ast-grep/napi@0.36.2':
-    optionalDependencies:
-      '@ast-grep/napi-darwin-arm64': 0.36.2
-      '@ast-grep/napi-darwin-x64': 0.36.2
-      '@ast-grep/napi-linux-arm64-gnu': 0.36.2
-      '@ast-grep/napi-linux-arm64-musl': 0.36.2
-      '@ast-grep/napi-linux-x64-gnu': 0.36.2
-      '@ast-grep/napi-linux-x64-musl': 0.36.2
-      '@ast-grep/napi-win32-arm64-msvc': 0.36.2
-      '@ast-grep/napi-win32-ia32-msvc': 0.36.2
-      '@ast-grep/napi-win32-x64-msvc': 0.36.2
 
   '@aws-crypto/crc32@5.2.0':
     dependencies:
@@ -5987,8 +5890,9 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/aws@https://pkg.pr.new/@opennextjs/aws@7e23eee':
+  '@opennextjs/aws@https://pkg.pr.new/@opennextjs/aws@802':
     dependencies:
+      '@ast-grep/napi': 0.35.0
       '@aws-sdk/client-cloudfront': 3.398.0
       '@aws-sdk/client-dynamodb': 3.767.0
       '@aws-sdk/client-lambda': 3.771.0
@@ -6003,19 +5907,18 @@ snapshots:
       express: 5.0.1
       path-to-regexp: 6.3.0
       urlpattern-polyfill: 10.0.0
+      yaml: 2.7.0
     transitivePeerDependencies:
       - aws-crt
       - supports-color
 
-  '@opennextjs/cloudflare@0.5.12(wrangler@4.2.0)':
+  '@opennextjs/cloudflare@0.6.6(wrangler@4.2.0)':
     dependencies:
-      '@ast-grep/napi': 0.36.2
       '@dotenvx/dotenvx': 1.31.0
-      '@opennextjs/aws': https://pkg.pr.new/@opennextjs/aws@7e23eee
+      '@opennextjs/aws': https://pkg.pr.new/@opennextjs/aws@802
       enquirer: 2.4.1
       glob: 11.0.1
       wrangler: 4.2.0
-      yaml: 2.7.0
     transitivePeerDependencies:
       - aws-crt
       - supports-color
