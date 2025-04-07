@@ -76,8 +76,8 @@ importers:
         specifier: 15.1.7
         version: 15.1.7
       '@opennextjs/aws':
-        specifier: 3.5.4
-        version: 3.5.4
+        specifier: 3.5.5
+        version: 3.5.5
       '@opennextjs/cloudflare':
         specifier: 0.5.12
         version: 0.5.12(wrangler@4.2.0)
@@ -1210,8 +1210,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@opennextjs/aws@3.5.4':
-    resolution: {integrity: sha512-QPCTcJ95p0pHUVDjjiB9MGRbOKotaq1Dl9WrmS6/dJt6vb6zdavKFBYdT/WQsTn5wj2RqInim7t6Xc5x+wAO6Q==}
+  '@opennextjs/aws@3.5.5':
+    resolution: {integrity: sha512-vIqCcNxy7vPdC5HQQkCN+AXhxdNvagZ8EYw5XvuYIAP2T1Ci9ai/8m6UXtjgd3L9+aBA8pbWfr2Wr/BNLX5m2Q==}
     hasBin: true
 
   '@opennextjs/aws@https://pkg.pr.new/@opennextjs/aws@7e23eee':
@@ -5965,7 +5965,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
-  '@opennextjs/aws@3.5.4':
+  '@opennextjs/aws@3.5.5':
     dependencies:
       '@ast-grep/napi': 0.35.0
       '@aws-sdk/client-cloudfront': 3.398.0
