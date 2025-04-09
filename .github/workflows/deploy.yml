@@ -20,7 +20,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - name: build
-        run: pnpm opennextjs-cloudflare
+        run: pnpm opennextjs-cloudflare build
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
