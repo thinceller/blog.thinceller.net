@@ -28,7 +28,7 @@
     "@biomejs/biome": "1.9.4",
     "@next/bundle-analyzer": "15.1.7",
     "@opennextjs/aws": "3.5.5",
-    "@opennextjs/cloudflare": "0.5.12",
+    "@opennextjs/cloudflare": "1.0.0-beta.2",
     "@textlint/textlint-plugin-markdown": "14.4.2",
     "@types/gtag.js": "0.0.20",
     "@types/markdown-it": "14.1.2",
@@ -54,8 +54,8 @@
     "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
     "format": "biome format",
-    "preview": "opennextjs-cloudflare && wrangler dev",
-    "deploy": "opennextjs-cloudflare && wrangler deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "nextBundleAnalysis": {
