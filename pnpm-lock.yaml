@@ -76,8 +76,8 @@ importers:
         specifier: 15.1.7
         version: 15.1.7
       '@opennextjs/aws':
-        specifier: 3.5.5
-        version: 3.5.5
+        specifier: 3.5.6
+        version: 3.5.6
       '@opennextjs/cloudflare':
         specifier: 1.0.0-beta.2
         version: 1.0.0-beta.2(wrangler@4.2.0)
@@ -1154,6 +1154,10 @@ packages:
 
   '@opennextjs/aws@3.5.5':
     resolution: {integrity: sha512-vIqCcNxy7vPdC5HQQkCN+AXhxdNvagZ8EYw5XvuYIAP2T1Ci9ai/8m6UXtjgd3L9+aBA8pbWfr2Wr/BNLX5m2Q==}
+    hasBin: true
+
+  '@opennextjs/aws@3.5.6':
+    resolution: {integrity: sha512-hYI3uYLVEK15zoxjlGKLSlzOrSf1GvnFWARCmS2gllL6aYaDspw2HIJ2OP+RS3wn+Npqs9iKVV2Dwiejdt5vxQ==}
     hasBin: true
 
   '@opennextjs/cloudflare@1.0.0-beta.2':
@@ -4445,7 +4449,7 @@ snapshots:
       '@aws-crypto/sha256-js': 3.0.0
       '@aws-crypto/supports-web-crypto': 3.0.0
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.775.0
       '@aws-sdk/util-locate-window': 3.723.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
@@ -4463,7 +4467,7 @@ snapshots:
   '@aws-crypto/sha256-js@3.0.0':
     dependencies:
       '@aws-crypto/util': 3.0.0
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.775.0
       tslib: 1.14.1
 
   '@aws-crypto/sha256-js@5.2.0':
@@ -4482,7 +4486,7 @@ snapshots:
 
   '@aws-crypto/util@3.0.0':
     dependencies:
-      '@aws-sdk/types': 3.398.0
+      '@aws-sdk/types': 3.775.0
       '@aws-sdk/util-utf8-browser': 3.259.0
       tslib: 1.14.1
 
@@ -5882,6 +5886,28 @@ snapshots:
       - aws-crt
       - supports-color
 
+  '@opennextjs/aws@3.5.6':
+    dependencies:
+      '@ast-grep/napi': 0.35.0
+      '@aws-sdk/client-cloudfront': 3.398.0
+      '@aws-sdk/client-dynamodb': 3.782.0
+      '@aws-sdk/client-lambda': 3.782.0
+      '@aws-sdk/client-s3': 3.782.0
+      '@aws-sdk/client-sqs': 3.782.0
+      '@node-minify/core': 8.0.6
+      '@node-minify/terser': 8.0.6
+      '@tsconfig/node18': 1.0.3
+      aws4fetch: 1.0.20
+      chalk: 5.4.1
+      esbuild: 0.19.2
+      express: 5.0.1
+      path-to-regexp: 6.3.0
+      urlpattern-polyfill: 10.0.0
+      yaml: 2.7.1
+    transitivePeerDependencies:
+      - aws-crt
+      - supports-color
+
   '@opennextjs/cloudflare@1.0.0-beta.2(wrangler@4.2.0)':
     dependencies:
       '@dotenvx/dotenvx': 1.31.0
@@ -7233,7 +7259,7 @@ snapshots:
   esast-util-from-js@2.0.1:
     dependencies:
       '@types/estree-jsx': 1.0.5
-      acorn: 8.14.0
+      acorn: 8.14.1
       esast-util-from-estree: 2.0.0
       vfile-message: 4.0.2
 
@@ -9186,7 +9212,7 @@ snapshots:
 
   send@1.2.0:
     dependencies:
-      debug: 4.3.6
+      debug: 4.4.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
