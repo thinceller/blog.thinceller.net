@@ -76,8 +76,8 @@ importers:
         specifier: 15.1.7
         version: 15.1.7
       '@opennextjs/aws':
-        specifier: 3.5.6
-        version: 3.5.6
+        specifier: 3.5.7
+        version: 3.5.7
       '@opennextjs/cloudflare':
         specifier: 1.0.0-beta.2
         version: 1.0.0-beta.2(wrangler@4.2.0)
@@ -1156,8 +1156,8 @@ packages:
     resolution: {integrity: sha512-vIqCcNxy7vPdC5HQQkCN+AXhxdNvagZ8EYw5XvuYIAP2T1Ci9ai/8m6UXtjgd3L9+aBA8pbWfr2Wr/BNLX5m2Q==}
     hasBin: true
 
-  '@opennextjs/aws@3.5.6':
-    resolution: {integrity: sha512-hYI3uYLVEK15zoxjlGKLSlzOrSf1GvnFWARCmS2gllL6aYaDspw2HIJ2OP+RS3wn+Npqs9iKVV2Dwiejdt5vxQ==}
+  '@opennextjs/aws@3.5.7':
+    resolution: {integrity: sha512-YjyHJrkIHI7YwQRCp8GjDOudu86oOc1RiwxvBBpPHrplsS18H4ZmkzGggAKhK6B4myGsJQ/q9kNP2TraoZiNzg==}
     hasBin: true
 
   '@opennextjs/cloudflare@1.0.0-beta.2':
@@ -5886,7 +5886,7 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/aws@3.5.6':
+  '@opennextjs/aws@3.5.7':
     dependencies:
       '@ast-grep/napi': 0.35.0
       '@aws-sdk/client-cloudfront': 3.398.0
