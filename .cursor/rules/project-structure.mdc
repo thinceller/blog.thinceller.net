@@ -1,0 +1,27 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# プロジェクト構造
+
+このプロジェクトは Next.js App Router を使用したブログサイトです。
+
+## ディレクトリ構造
+
+- `app/`: Next.js App Router のメインディレクトリ
+  - `(root)/`: ルートページのコンポーネント
+  - `about/`: アバウトページのコンポーネント
+  - `posts/`: ブログ記事関連のコンポーネント
+- `components/`: 共通コンポーネント
+- `lib/`: ユーティリティ関数や設定
+- `public/`: 静的ファイル
+- `styles/`: スタイル定義
+- `_posts/`: ブログ記事のMarkdownファイル
+
+## 主要ファイル
+
+- [app/layout.tsx](mdc:app/layout.tsx): アプリケーションのルートレイアウト
+- [app/sitemap.ts](mdc:app/sitemap.ts): サイトマップ生成
+- [components/MDXComponent.tsx](mdc:components/MDXComponent.tsx): Markdownレンダリング用コンポーネント
+- [next.config.ts](mdc:next.config.ts): Next.jsの設定ファイル

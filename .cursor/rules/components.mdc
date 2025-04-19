@@ -1,0 +1,27 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# コンポーネント
+
+## 共通コンポーネント
+
+- [components/Layout.tsx](mdc:components/Layout.tsx): ページ全体のレイアウトを定義
+- [components/Header.tsx](mdc:components/Header.tsx): ヘッダーコンポーネント
+- [components/Footer.tsx](mdc:components/Footer.tsx): フッターコンポーネント
+- [components/Navigation.tsx](mdc:components/Navigation.tsx): ナビゲーションメニュー
+
+## ブログ記事関連コンポーネント
+
+- [components/MDXComponent.tsx](mdc:components/MDXComponent.tsx): Markdown記事のレンダリング
+- [components/PostTitle.tsx](mdc:components/PostTitle.tsx): 記事タイトル
+- [components/PostFooter.tsx](mdc:components/PostFooter.tsx): 記事フッター
+- [components/DateFormatter.tsx](mdc:components/DateFormatter.tsx): 日付フォーマット
+
+## コンポーネント作成のガイドライン
+
+1. コンポーネントは機能ごとに分割し、再利用可能な形で作成する
+2. TypeScriptの型定義を適切に行う
+3. Props のインターフェースは明確に定義する
+4. 必要に応じてコメントを追加し、コンポーネントの役割を説明する
