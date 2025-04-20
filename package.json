@@ -27,7 +27,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@next/bundle-analyzer": "15.1.7",
-    "@opennextjs/aws": "3.5.7",
+    "@opennextjs/aws": "3.5.8",
     "@opennextjs/cloudflare": "1.0.0-beta.3",
     "@textlint/textlint-plugin-markdown": "14.4.2",
     "@types/gtag.js": "0.0.20",

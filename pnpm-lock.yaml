@@ -76,8 +76,8 @@ importers:
         specifier: 15.1.7
         version: 15.1.7
       '@opennextjs/aws':
-        specifier: 3.5.7
-        version: 3.5.7
+        specifier: 3.5.8
+        version: 3.5.8
       '@opennextjs/cloudflare':
         specifier: 1.0.0-beta.3
         version: 1.0.0-beta.3(wrangler@4.11.1)
@@ -1154,6 +1154,10 @@ packages:
 
   '@opennextjs/aws@3.5.7':
     resolution: {integrity: sha512-YjyHJrkIHI7YwQRCp8GjDOudu86oOc1RiwxvBBpPHrplsS18H4ZmkzGggAKhK6B4myGsJQ/q9kNP2TraoZiNzg==}
+    hasBin: true
+
+  '@opennextjs/aws@3.5.8':
+    resolution: {integrity: sha512-Fn2FjljG76xWg6GOzMiKBoiDLfx635UJyFv6xt4lgmhJcTsTvj/lv5lGA7oTtwj/dbcEGoGdMHBaenBPcsS0/A==}
     hasBin: true
 
   '@opennextjs/cloudflare@1.0.0-beta.3':
@@ -5854,6 +5858,28 @@ snapshots:
       fastq: 1.19.0
 
   '@opennextjs/aws@3.5.7':
+    dependencies:
+      '@ast-grep/napi': 0.35.0
+      '@aws-sdk/client-cloudfront': 3.398.0
+      '@aws-sdk/client-dynamodb': 3.782.0
+      '@aws-sdk/client-lambda': 3.782.0
+      '@aws-sdk/client-s3': 3.782.0
+      '@aws-sdk/client-sqs': 3.782.0
+      '@node-minify/core': 8.0.6
+      '@node-minify/terser': 8.0.6
+      '@tsconfig/node18': 1.0.3
+      aws4fetch: 1.0.20
+      chalk: 5.4.1
+      esbuild: 0.19.2
+      express: 5.0.1
+      path-to-regexp: 6.3.0
+      urlpattern-polyfill: 10.0.0
+      yaml: 2.7.1
+    transitivePeerDependencies:
+      - aws-crt
+      - supports-color
+
+  '@opennextjs/aws@3.5.8':
     dependencies:
       '@ast-grep/napi': 0.35.0
       '@aws-sdk/client-cloudfront': 3.398.0
