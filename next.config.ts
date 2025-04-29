@@ -8,7 +8,10 @@ const withBundleAnalyzer =
 
 const nextConfig: NextConfig = {
   experimental: {
-    disableOptimizedLoading: true,
+    optimizePackageImports: [
+      '@fortawesome/free-brands-svg-icons',
+      '@fortawesome/free-solid-svg-icons',
+    ],
   },
 };
 
