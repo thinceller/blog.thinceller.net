@@ -54,8 +54,8 @@
     "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
     "format": "biome format",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview -- --minify",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -- --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "nextBundleAnalysis": {
