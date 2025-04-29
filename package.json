@@ -33,7 +33,7 @@
     "@types/gtag.js": "0.0.20",
     "@types/markdown-it": "14.1.2",
     "@types/mdx": "2.0.13",
-    "@types/node": "20.17.24",
+    "@types/node": "22.14.1",
     "@types/react": "19.1.2",
     "autoprefixer": "10.4.21",
     "postcss": "8.4.49",
