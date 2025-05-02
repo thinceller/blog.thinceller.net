@@ -34,7 +34,10 @@ export const CustomMDXComponents: MDXComponents = {
     <h1 className="relative mt-12 mb-4 font-bold text-custom-2xl" {...p} />
   ),
   h2: (p: JSX.IntrinsicElements['h2']) => (
-    <h2 className="relative mt-12 mb-4 font-bold text-custom-xl" {...p} />
+    <h2
+      className="relative mt-12 mb-4 font-bold text-custom-xl border-b border-gray-200 pb-2"
+      {...p}
+    />
   ),
   h3: (p: JSX.IntrinsicElements['h3']) => (
     <h3 className="relative mt-8 mb-4 font-bold text-custom-lg" {...p} />
