@@ -79,8 +79,8 @@ importers:
         specifier: 3.5.8
         version: 3.5.8
       '@opennextjs/cloudflare':
-        specifier: 1.0.0-beta.4
-        version: 1.0.0-beta.4(wrangler@4.11.1)
+        specifier: 1.0.1
+        version: 1.0.1(wrangler@4.11.1)
       '@textlint/textlint-plugin-markdown':
         specifier: 14.4.2
         version: 14.4.2
@@ -1265,19 +1265,19 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@opennextjs/aws@3.5.7':
-    resolution: {integrity: sha512-YjyHJrkIHI7YwQRCp8GjDOudu86oOc1RiwxvBBpPHrplsS18H4ZmkzGggAKhK6B4myGsJQ/q9kNP2TraoZiNzg==}
-    hasBin: true
-
   '@opennextjs/aws@3.5.8':
     resolution: {integrity: sha512-Fn2FjljG76xWg6GOzMiKBoiDLfx635UJyFv6xt4lgmhJcTsTvj/lv5lGA7oTtwj/dbcEGoGdMHBaenBPcsS0/A==}
     hasBin: true
 
-  '@opennextjs/cloudflare@1.0.0-beta.4':
-    resolution: {integrity: sha512-/nEFnjrn8oxfZgW03ZgMzwJvcQ/U/MuXCTIABYvIGnja1+KxFZEc46GFGSxjTwdz4Hmt2eutaEGpQOqC6uRR3w==}
+  '@opennextjs/aws@3.6.1':
+    resolution: {integrity: sha512-RYU9K58vEUPXqc3pZO6kr9vBy1MmJZFQZLe0oXBskC005oGju/m4e3DCCP4eZ/Q/HdYQXCoqNXgSGi8VCAYgew==}
+    hasBin: true
+
+  '@opennextjs/cloudflare@1.0.1':
+    resolution: {integrity: sha512-fcClRf6ktPW+w5XRXjkbGk/WWxbHSv6+DtfDHP4UGQkEQl7LRSR+f0ZSlAj5dHI2KvMrpFtzHr8durEFqgQBYg==}
     hasBin: true
     peerDependencies:
-      wrangler: ^4.7.0
+      wrangler: ^4.14.0
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -6045,28 +6045,6 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.0
 
-  '@opennextjs/aws@3.5.7':
-    dependencies:
-      '@ast-grep/napi': 0.35.0
-      '@aws-sdk/client-cloudfront': 3.398.0
-      '@aws-sdk/client-dynamodb': 3.782.0
-      '@aws-sdk/client-lambda': 3.782.0
-      '@aws-sdk/client-s3': 3.782.0
-      '@aws-sdk/client-sqs': 3.782.0
-      '@node-minify/core': 8.0.6
-      '@node-minify/terser': 8.0.6
-      '@tsconfig/node18': 1.0.3
-      aws4fetch: 1.0.20
-      chalk: 5.4.1
-      esbuild: 0.19.2
-      express: 5.0.1
-      path-to-regexp: 6.3.0
-      urlpattern-polyfill: 10.0.0
-      yaml: 2.7.1
-    transitivePeerDependencies:
-      - aws-crt
-      - supports-color
-
   '@opennextjs/aws@3.5.8':
     dependencies:
       '@ast-grep/napi': 0.35.0
@@ -6089,10 +6067,32 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/cloudflare@1.0.0-beta.4(wrangler@4.11.1)':
+  '@opennextjs/aws@3.6.1':
+    dependencies:
+      '@ast-grep/napi': 0.35.0
+      '@aws-sdk/client-cloudfront': 3.398.0
+      '@aws-sdk/client-dynamodb': 3.782.0
+      '@aws-sdk/client-lambda': 3.782.0
+      '@aws-sdk/client-s3': 3.782.0
+      '@aws-sdk/client-sqs': 3.782.0
+      '@node-minify/core': 8.0.6
+      '@node-minify/terser': 8.0.6
+      '@tsconfig/node18': 1.0.3
+      aws4fetch: 1.0.20
+      chalk: 5.4.1
+      esbuild: 0.19.2
+      express: 5.0.1
+      path-to-regexp: 6.3.0
+      urlpattern-polyfill: 10.0.0
+      yaml: 2.7.1
+    transitivePeerDependencies:
+      - aws-crt
+      - supports-color
+
+  '@opennextjs/cloudflare@1.0.1(wrangler@4.11.1)':
     dependencies:
       '@dotenvx/dotenvx': 1.31.0
-      '@opennextjs/aws': 3.5.7
+      '@opennextjs/aws': 3.6.1
       enquirer: 2.4.1
       glob: 11.0.1
       ts-tqdm: 0.8.6
