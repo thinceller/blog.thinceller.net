@@ -29,7 +29,7 @@
     "@next/bundle-analyzer": "15.3.2",
     "@opennextjs/aws": "3.5.8",
     "@opennextjs/cloudflare": "1.0.4",
-    "@textlint/textlint-plugin-markdown": "14.4.2",
+    "@textlint/textlint-plugin-markdown": "14.7.2",
     "@types/gtag.js": "0.0.20",
     "@types/markdown-it": "14.1.2",
     "@types/mdx": "2.0.13",
