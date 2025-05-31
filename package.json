@@ -53,7 +53,7 @@
     "start": "next start",
     "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
-    "format": "biome format",
+    "format": "biome format --write",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview -- --minify",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -- --minify",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload -- --minify",
@@ -65,9 +65,6 @@
     "showDetails": true
   },
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp",
-      "workerd"
-    ]
+    "onlyBuiltDependencies": ["sharp", "workerd"]
   }
 }
