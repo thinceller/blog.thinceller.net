@@ -79,8 +79,8 @@ importers:
         specifier: 3.6.4
         version: 3.6.4
       '@opennextjs/cloudflare':
-        specifier: 1.0.4
-        version: 1.0.4(wrangler@4.11.1)
+        specifier: 1.1.0
+        version: 1.1.0(wrangler@4.11.1)
       '@textlint/textlint-plugin-markdown':
         specifier: 14.7.2
         version: 14.7.2
@@ -1287,8 +1287,8 @@ packages:
     resolution: {integrity: sha512-/bn9N/6dVu9+sC7AptaGJylKUzyDDgqe3yKfvUxXOpy7whIq/+3Bw+q2/bilyQg6FcskbCWUt9nLvNf1hAVmfA==}
     hasBin: true
 
-  '@opennextjs/cloudflare@1.0.4':
-    resolution: {integrity: sha512-DVudGpOSJ91ruPiBJ0kuFmPhEQbXIXLTbvUjAx1OlbwFskG2gvdNIAmF3ZXV6z1VGDO7Q/u2W2ybMZLf7avlrA==}
+  '@opennextjs/cloudflare@1.1.0':
+    resolution: {integrity: sha512-8DOzpLiewivA1pwRNGVPDXbrF79bzJiHscY+M1tekwvKqEqM26CRYafhrA5IDCeyteNaL9AZD6X4DLuCn/eeYQ==}
     hasBin: true
     peerDependencies:
       wrangler: ^4.14.0
@@ -6090,7 +6090,7 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/cloudflare@1.0.4(wrangler@4.11.1)':
+  '@opennextjs/cloudflare@1.1.0(wrangler@4.11.1)':
     dependencies:
       '@dotenvx/dotenvx': 1.31.0
       '@opennextjs/aws': 3.6.4
