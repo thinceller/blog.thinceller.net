@@ -25,6 +25,16 @@ export const metadata: Metadata = {
     creator: '@thinceller_dev',
     card: 'summary_large_image',
   },
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        { url: '/rss.xml', title: `${BLOG_NAME} RSS Feed` },
+      ],
+      'application/atom+xml': [
+        { url: '/atom.xml', title: `${BLOG_NAME} Atom Feed` },
+      ],
+    },
+  },
 };
 
 export default function RootLayout({
