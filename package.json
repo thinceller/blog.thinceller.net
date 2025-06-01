@@ -13,6 +13,7 @@
     "@shikijs/rehype": "3.4.2",
     "@shikijs/themes": "3.4.2",
     "dayjs": "1.11.13",
+    "feed": "5.1.0",
     "gray-matter": "4.0.3",
     "next": "15.3.3",
     "react": "19.1.0",

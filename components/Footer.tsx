@@ -1,4 +1,5 @@
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faRss } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { FC } from 'react';
 
@@ -29,6 +30,9 @@ export const Footer: FC = () => {
               icon={faGithub}
               className="text-xl text-gray-400"
             />
+          </a>
+          <a href="/rss.xml" aria-label="RSS Feed">
+            <FontAwesomeIcon icon={faRss} className="text-xl text-gray-400" />
           </a>
         </div>
       </div>
