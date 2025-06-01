@@ -1,5 +1,7 @@
 import { generateRSSFeed } from '@/lib/rss';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
   try {
     const feed = generateRSSFeed();
