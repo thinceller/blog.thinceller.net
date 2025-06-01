@@ -2,7 +2,15 @@ import { Feed } from 'feed';
 import { BLOG_AUTHOR, BLOG_NAME, BLOG_URL } from './constants';
 import { getAllPosts } from './post';
 
-function createFeedInstance(posts: ReturnType<typeof getAllPosts>): Feed {
+function createFeedInstance(
+  posts: Array<{
+    title: string;
+    description: string;
+    slug: string;
+    publishedTime: string;
+    modifiedTime: string;
+  }>,
+): Feed {
   const siteURL = BLOG_URL;
   const year = new Date().getFullYear();
 
