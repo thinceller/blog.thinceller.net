@@ -12,7 +12,7 @@ import matter from 'gray-matter';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeSlug from 'rehype-slug';
-import { createHighlighter } from './shiki';
+import { getHighlighter } from './shiki';
 
 const frontMatterSchema = v.object({
   title: v.string(),
@@ -47,7 +47,7 @@ export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {
       rehypeCodeTitles,
       [
         rehypeShikiFromHighlighter,
-        await createHighlighter(),
+        await getHighlighter(),
         {
           theme: 'night-owl',
           transformers: [
