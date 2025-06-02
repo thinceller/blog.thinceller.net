@@ -40,3 +40,6 @@ next-env.d.ts
 .dev.vars*
 .open-next
 .wrangler
+
+.claude/settings.local.json
+CLAUDE.local.md
