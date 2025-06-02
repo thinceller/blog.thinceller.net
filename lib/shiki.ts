@@ -1,8 +1,15 @@
 import { createHighlighterCore } from 'shiki/core';
+import type { HighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 
-export const createHighlighter = async () => {
-  const highlighter = await createHighlighterCore({
+let highlighterInstance: HighlighterCore | null = null;
+
+export const getHighlighter = async () => {
+  if (highlighterInstance) {
+    return highlighterInstance;
+  }
+
+  highlighterInstance = await createHighlighterCore({
     themes: [import('@shikijs/themes/night-owl')],
     langs: [
       import('@shikijs/langs/javascript'),
@@ -20,5 +27,5 @@ export const createHighlighter = async () => {
     engine: createOnigurumaEngine(() => import('shiki/wasm')),
   });
 
-  return highlighter;
+  return highlighterInstance;
 };
