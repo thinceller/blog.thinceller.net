@@ -15,7 +15,7 @@ import type { NextRequest } from 'next/server';
 // そのため、Route Handlerを使ってビルド時に必要なOGP画像を作成する。
 export const dynamicParams = false;
 export function generateStaticParams() {
-  const posts = getAllPosts(['slug']);
+  const posts = getAllPosts();
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -51,7 +51,7 @@ export async function GET(
   props: { params: Promise<{ slug: string }> },
 ) {
   const params = await props.params;
-  const { title } = getPostBySlug(params.slug, ['title']);
+  const post = getPostBySlug(params.slug);
   const logoSrc = await getAvatar();
 
   /* biome-ignore format: ignoring ts error and lint error */
@@ -83,7 +83,7 @@ export async function GET(
           textAlign: 'left',
         }}
       >
-        {title}
+        {post.title}
       </div>
 
       <div

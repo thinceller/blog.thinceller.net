@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import { join } from 'node:path';
 import matter from 'gray-matter';
+import * as v from 'valibot';
+import { type FrontMatter, frontMatterSchema } from './frontmatter';
 
 const postsDir = join(process.cwd(), '_posts');
 
@@ -8,62 +10,74 @@ function getPostSlugs(): string[] {
   return fs.readdirSync(postsDir);
 }
 
-/**
- * post から取得できるデータの種別
- * @todo tags の型の解決ができないので一旦無効化している
- */
-type Field =
-  | 'slug'
-  | 'content'
-  | 'title'
-  | 'description'
-  | 'date'
-  | 'publishedTime'
-  | 'modifiedTime';
-// | 'tags';
+// 投稿データの型
+type PostData = {
+  slug: string;
+  content: string;
+} & FrontMatter;
 
 /**
  * post のデータを取得する
- * 欲しいデータは `fields` で指定することで返り値に含めることができる
  *
  * @param slug - slug of the target post
- * @param fields - Array of keys for the data to be retrieved
+ * @param includeContent - contentを含めるかどうか
  * @returns Object of the post data
  */
-export function getPostBySlug<T extends Field>(slug: string, fields: T[] = []) {
+export function getPostBySlug(slug: string, includeContent = false): PostData {
   const realSlug = slug.replace(/\.mdx$/, '');
   const fullPath = join(postsDir, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
-  const items = {} as { [key in T]: string };
+  // frontmatterをバリデーション
+  const validatedFrontmatter = v.parse(frontMatterSchema, data);
 
-  // Ensure only the minimal needed data is exposed
-  for (const field of fields) {
-    if (field === 'slug') {
-      items[field] = realSlug;
-    }
-    if (field === 'content') {
-      items[field] = content;
-    }
-
-    if (data[field]) {
-      items[field] = data[field];
-    }
-  }
-
-  return items;
+  return {
+    slug: realSlug,
+    content: includeContent ? content : '',
+    ...validatedFrontmatter,
+  };
 }
 
-export function getAllPosts<T extends Field>(
-  fields: T[] = [],
-): { [key in T | 'publishedTime']: string }[] {
+export function getAllPosts(includeContent = false): PostData[] {
   const slugs = getPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, [...fields, 'publishedTime']))
+    .map((slug) => getPostBySlug(slug, includeContent))
     // sort posts by publishedTime in descending order
     .sort((post1, post2) =>
       post1.publishedTime > post2.publishedTime ? -1 : 1,
     );
   return posts;
+}
+
+/**
+ * 指定されたタグを持つ関連記事を取得する
+ * @param tags - 検索対象のタグ
+ * @param currentSlug - 現在の記事のslug（除外するため）
+ * @param limit - 取得する記事数の上限
+ * @returns 関連記事の配列
+ */
+export function getRelatedPosts(
+  tags: string[],
+  currentSlug: string,
+  limit = 3,
+): Pick<PostData, 'slug' | 'title' | 'publishedTime'>[] {
+  if (!tags || tags.length === 0) {
+    return [];
+  }
+
+  const allPosts = getAllPosts();
+
+  // 現在の記事を除外し、タグが一致する記事をフィルタリング
+  const relatedPosts = allPosts
+    .filter((post) => post.slug !== currentSlug)
+    .filter((post) => {
+      const postTags = post.tags;
+      if (!postTags || postTags.length === 0) return false;
+      return postTags.some((tag) => tags.includes(tag));
+    })
+    .slice(0, limit)
+    .map(({ slug, title, publishedTime }) => ({ slug, title, publishedTime }));
+
+  return relatedPosts;
 }

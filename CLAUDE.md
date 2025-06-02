@@ -16,7 +16,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm preview` - Build and preview with OpenNext Cloudflare adapter
 
 ### Code Quality
-Always run `pnpm lint` and `pnpm format` after making code changes. The project uses Biome instead of ESLint/Prettier.
+Always run `pnpm lint`, `pnpm format`, and `pnpm typecheck` after making code changes. The project uses Biome instead of ESLint/Prettier.
+
+### Testing
+When verifying functionality, start the Next.js server and use Playwright MCP to access the application.
 
 ## Architecture Overview
 

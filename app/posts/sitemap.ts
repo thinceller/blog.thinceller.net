@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/post';
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts(['slug', 'modifiedTime']);
+  const posts = getAllPosts();
 
   return posts.map((post) => ({
     url: `${BLOG_URL}/posts/${post.slug}`,

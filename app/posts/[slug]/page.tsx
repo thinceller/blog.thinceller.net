@@ -1,14 +1,15 @@
 import { PostFooter } from '@/components/PostFooter';
 import { PostTitle } from '@/components/PostTitle';
+import { RelatedPosts } from '@/components/RelatedPosts';
 import { BLOG_AUTHOR, BLOG_NAME } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/mdx';
-import { getAllPosts } from '@/lib/post';
+import { getAllPosts, getRelatedPosts } from '@/lib/post';
 import type { Metadata } from 'next';
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  const posts = getAllPosts(['slug']);
+  const posts = getAllPosts();
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -66,6 +67,9 @@ export default async function Page(props: Props) {
   const params = await props.params;
   const { content, frontmatter } = await getPostBySlug(params.slug);
 
+  // 関連記事を取得
+  const relatedPosts = getRelatedPosts(frontmatter.tags || [], params.slug);
+
   return (
     <>
       <div className="my-10 pb-8">
@@ -73,6 +77,8 @@ export default async function Page(props: Props) {
       </div>
 
       {content}
+
+      {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
 
       <div className="my-10">
         <PostFooter />

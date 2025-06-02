@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/post';
 import Link from 'next/link';
 
 export default function Page() {
-  const allPosts = getAllPosts(['title', 'description', 'slug']);
+  const allPosts = getAllPosts();
 
   return (
     <div className="flex flex-col space-y-8 divide-y">

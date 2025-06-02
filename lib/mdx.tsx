@@ -12,22 +12,12 @@ import matter from 'gray-matter';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeSlug from 'rehype-slug';
+import { type FrontMatter, frontMatterSchema } from './frontmatter';
 import { getHighlighter } from './shiki';
-
-const frontMatterSchema = v.object({
-  title: v.string(),
-  description: v.string(),
-  date: v.string(),
-  publishedTime: v.string(),
-  modifiedTime: v.optional(v.string()),
-  tags: v.nullable(v.array(v.string())),
-});
-
-type frontMatterType = v.InferOutput<typeof frontMatterSchema>;
 
 type MDXPostData = {
   content: React.ReactElement;
-  frontmatter: frontMatterType;
+  frontmatter: FrontMatter;
 };
 
 export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {

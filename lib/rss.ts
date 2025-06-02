@@ -8,7 +8,7 @@ function createFeedInstance(
     description: string;
     slug: string;
     publishedTime: string;
-    modifiedTime: string;
+    modifiedTime?: string;
   }>,
 ): Feed {
   const siteURL = BLOG_URL;
@@ -79,26 +79,14 @@ function createFeedInstance(
 }
 
 export function generateRSSFeed(): string {
-  const posts = getAllPosts([
-    'title',
-    'description',
-    'slug',
-    'publishedTime',
-    'modifiedTime',
-  ]);
+  const posts = getAllPosts();
 
   const feed = createFeedInstance(posts);
   return feed.rss2();
 }
 
 export function generateAtomFeed(): string {
-  const posts = getAllPosts([
-    'title',
-    'description',
-    'slug',
-    'publishedTime',
-    'modifiedTime',
-  ]);
+  const posts = getAllPosts();
 
   const feed = createFeedInstance(posts);
   return feed.atom1();
