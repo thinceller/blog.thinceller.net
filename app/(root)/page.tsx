@@ -1,26 +1,23 @@
-import { DateFormatter } from '@/components/DateFormatter';
+import { PostCard } from '@/components/PostCard';
 import { getAllPosts } from '@/lib/post';
-import Link from 'next/link';
 
 export default function Page() {
   const allPosts = getAllPosts();
 
   return (
-    <div className="flex flex-col space-y-8 divide-y">
-      {allPosts.map((post) => (
-        <article key={post.slug} className="pt-4">
-          <h2 className="my-2 font-bold text-custom-xl">
-            <Link
-              href={`/posts/${post.slug}`}
-              className="text-blue-500 hover:underline"
-            >
-              {post.title}
-            </Link>
-          </h2>
-          <DateFormatter date={post.publishedTime} />
-          <p className="text-custom-base line-clamp-2">{post.description}</p>
-        </article>
-      ))}
-    </div>
+    <>
+      <h1 className="sr-only">最新の記事一覧</h1>
+      <section aria-label="記事一覧" className="grid gap-3">
+        {allPosts.map((post) => (
+          <PostCard
+            key={post.slug}
+            slug={post.slug}
+            title={post.title}
+            publishedTime={post.publishedTime}
+            description={post.description}
+          />
+        ))}
+      </section>
+    </>
   );
 }

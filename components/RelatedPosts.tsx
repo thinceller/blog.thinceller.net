@@ -1,5 +1,4 @@
-import { DateFormatter } from '@/components/DateFormatter';
-import Link from 'next/link';
+import { PostCard } from '@/components/PostCard';
 
 type RelatedPost = {
   slug: string;
@@ -24,17 +23,13 @@ export function RelatedPosts({ posts }: Props) {
       </h2>
       <div className="grid gap-3">
         {posts.map((post) => (
-          <article
+          <PostCard
             key={post.slug}
-            className="bg-white border border-gray-100 rounded-md p-4 hover:shadow-md transition-shadow"
-          >
-            <Link href={`/posts/${post.slug}`} className="block">
-              <h3 className="text-base font-semibold mb-1 text-gray-900 hover:text-blue-600 transition-colors">
-                {post.title}
-              </h3>
-              <DateFormatter date={post.publishedTime} />
-            </Link>
-          </article>
+            slug={post.slug}
+            title={post.title}
+            publishedTime={post.publishedTime}
+            titleLevel="h3"
+          />
         ))}
       </div>
     </section>
