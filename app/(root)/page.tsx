@@ -12,7 +12,6 @@ export default function Page() {
           slug={post.slug}
           title={post.title}
           publishedTime={post.publishedTime}
-          description={post.description}
         />
       ))}
     </div>

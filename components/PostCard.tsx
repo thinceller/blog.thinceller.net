@@ -5,7 +5,6 @@ type Props = {
   slug: string;
   title: string;
   publishedTime: string;
-  description?: string;
   titleLevel?: 'h2' | 'h3';
 };
 
@@ -13,7 +12,6 @@ export function PostCard({
   slug,
   title,
   publishedTime,
-  description,
   titleLevel = 'h2',
 }: Props) {
   const TitleTag = titleLevel;
@@ -30,9 +28,6 @@ export function PostCard({
         </Link>
       </TitleTag>
       <DateFormatter date={publishedTime} />
-      {description && (
-        <p className="text-sm text-gray-600 mt-2 line-clamp-2">{description}</p>
-      )}
     </article>
   );
 }
