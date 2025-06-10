@@ -1,0 +1,53 @@
+---
+title: '@opennextjs/cloudflare 1.2.0 でアップロードサイズが大幅に減った'
+description: |
+  @opennextjs/cloudflare 1.2.0 でアップロードサイズが大幅に減った
+date: '2025-06-10T02:00:00Z'
+publishedTime: '2025-06-10T02:00:00Z'
+tags:
+  - OpenNext
+  - Next.js
+  - Cloudflare
+---
+
+2025年6月にリリースされた@opennextjs/cloudflareのバージョン1.2.0の変更内容を見たところ、サーバーのバンドルサイズが大幅に減ったようです。[VercelからCloudflareに移行した](2025-03-30-migrate-from-vercel-to-cloudflare)で記載した通り、このブログサイトではOpenNextを使った際のCloudflare Workersへのアップロードサイズが3MBを超えており、Freeプランではアップロードができない状況でした。
+
+1.2.0にアップグレードしたところ、実際にアップロードサイズが大幅に減りました。
+
+## 1.2.0未満
+
+1.2.0未満のときにはアップロードサイズが3MBを超えていました。create-next-app直後のプロジェクトではFreeプランでも多くの場合アップロードできますが、このブログサイトではできない状況でした。
+
+```txt
+Total Upload: 12532.22 KiB / gzip: 3268.32 KiB
+```
+
+ちなみに実行しているコマンドは`opennextjs-cloudflare deploy -- --minify`です。
+
+## 1.2.0にアップグレード後
+
+1.2.0にアップグレードしたところ、アップロードサイズは2MB弱と大幅に改善していました。ライブラリのアップグレードのみで約40％を削減できました。
+
+```txt
+Total Upload: 6672.96 KiB / gzip: 1994.29 KiB
+```
+
+## 1.2.0の変更内容
+
+@opennextjs/cloudflareの1.2.0の変更内容を見たところ、以下の改善が行われていました。
+
+- [perf: drop `babel` to reduce the server bundle size by vicb · Pull Request #891 · opennextjs/opennextjs-aws](https://github.com/opennextjs/opennextjs-aws/pull/891)
+  - Next.js MiddlewareのコードをBabelで実行時トランスパイルしていた箇所をビルド時にトランスパイルするように変更
+  - これによりBabelの依存を削除でき、バンドルサイズを大幅に削減できた
+- [perf: drop babel to reduce the server bundle size by vicb · Pull Request #710 · opennextjs/opennextjs-cloudflare](https://github.com/opennextjs/opennextjs-cloudflare/pull/710)
+  - @opennextjs/awsの変更をCloudflare側に反映したもの
+
+このようにOpenNextによるNext.jsへのパッチ適用によってサーバーのバンドルサイズを大幅に削減できたようです。
+
+## まとめ
+
+OpenNextは最新のバージョンでNext.jsのサーバーバンドルを削減するパッチを追加しています。一方、Next.jsの開発チームは様々なサーバーレスプラットフォームにおいてNext.jsをより容易にデプロイできるようにする新しいアダプターAPIのRFCを公開しています。
+
+[RFC: Deployment Adapters API · vercel/next.js · Discussion #77740](https://github.com/vercel/next.js/discussions/77740)
+
+Vercelが各種プラットフォームとの協業を経てこのアダプターAPIが安定化するとともに、Next.jsのバンドルサイズの削減も期待したいところです。
