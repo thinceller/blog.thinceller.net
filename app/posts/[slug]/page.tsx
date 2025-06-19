@@ -73,7 +73,11 @@ export default async function Page(props: Props) {
   return (
     <>
       <div className="my-10 pb-8">
-        <PostTitle title={frontmatter.title} date={frontmatter.publishedTime} />
+        <PostTitle
+          title={frontmatter.title}
+          date={frontmatter.publishedTime}
+          tags={frontmatter.tags}
+        />
       </div>
 
       {content}
