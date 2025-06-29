@@ -16,6 +16,15 @@ export const Navigation: FC = () => {
         </div>
         <div>
           <NextLink
+            href="/tags"
+            prefetch={false}
+            className="text-blue-500 hover:underline"
+          >
+            Tags
+          </NextLink>
+        </div>
+        <div>
+          <NextLink
             href="/about"
             prefetch={false}
             className="text-blue-500 hover:underline"

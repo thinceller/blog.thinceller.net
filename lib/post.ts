@@ -81,3 +81,36 @@ export function getRelatedPosts(
 
   return relatedPosts;
 }
+
+/**
+ * すべての投稿から一意なタグとその投稿数を取得する
+ * @returns タグとその投稿数のマップ
+ */
+export function getAllTags(): Map<string, number> {
+  const allPosts = getAllPosts();
+  const tagCounts = new Map<string, number>();
+
+  for (const post of allPosts) {
+    if (post.tags && post.tags.length > 0) {
+      for (const tag of post.tags) {
+        tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+      }
+    }
+  }
+
+  return tagCounts;
+}
+
+/**
+ * 指定されたタグを持つ投稿を取得する
+ * @param tag - 検索対象のタグ
+ * @returns タグを持つ投稿の配列
+ */
+export function getPostsByTag(tag: string): PostData[] {
+  const allPosts = getAllPosts();
+
+  return allPosts.filter((post) => {
+    if (!post.tags || post.tags.length === 0) return false;
+    return post.tags.includes(tag);
+  });
+}
