@@ -46,7 +46,7 @@
     "typescript": "5.8.3",
     "wrangler": "4.17.0"
   },
-  "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92",
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
   "scripts": {
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
@@ -67,6 +67,9 @@
     "showDetails": true
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp", "workerd"]
+    "onlyBuiltDependencies": [
+      "sharp",
+      "workerd"
+    ]
   }
 }
