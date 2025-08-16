@@ -16,7 +16,7 @@ export const PostTags: FC<Props> = ({ tags }) => {
         <Link
           key={tag}
           href={`/tags/${encodeURIComponent(tag)}`}
-          className="inline-block px-3 py-1 text-xs font-medium text-gray-600 border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="inline-block px-3 py-1 text-xs font-medium text-gray-600 border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           #{tag}
         </Link>

@@ -4,7 +4,7 @@ import type { FC } from 'react';
 export const Navigation: FC = () => {
   return (
     <nav>
-      <div className="max-w-screen-md mx-auto px-8 flex flex-row items-center justify-end space-x-6">
+      <div className="max-w-(--breakpoint-md) mx-auto px-8 flex flex-row items-center justify-end space-x-6">
         <div>
           <NextLink
             href="/"
