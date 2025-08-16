@@ -1,6 +1,6 @@
+import type { Metadata } from 'next';
 import { Layout } from '@/components/Layout';
 import { BLOG_NAME, BLOG_URL } from '@/lib/constants';
-import type { Metadata } from 'next';
 
 import '@/styles/globals.css';
 import '@/styles/styles.css';

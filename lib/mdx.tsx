@@ -1,17 +1,16 @@
 import fs from 'node:fs';
 import { join } from 'node:path';
 import { compile, run } from '@mdx-js/mdx';
-import * as runtime from 'react/jsx-runtime';
-import * as v from 'valibot';
-
-import { CustomMDXComponents } from '@/components/MDXComponent';
 import rehypeShikiFromHighlighter, {
   type RehypeShikiCoreOptions,
 } from '@shikijs/rehype/core';
 import matter from 'gray-matter';
+import * as runtime from 'react/jsx-runtime';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeCodeTitles from 'rehype-code-titles';
 import rehypeSlug from 'rehype-slug';
+import * as v from 'valibot';
+import { CustomMDXComponents } from '@/components/MDXComponent';
 import { type FrontMatter, frontMatterSchema } from './frontmatter';
 import { getHighlighter } from './shiki';
 

@@ -1,5 +1,5 @@
-import { DateFormatter } from '@/components/DateFormatter';
 import Link from 'next/link';
+import { DateFormatter } from '@/components/DateFormatter';
 
 type Props = {
   slug: string;

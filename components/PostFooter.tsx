@@ -8,7 +8,7 @@ import { useEffect } from 'react';
  */
 declare global {
   interface Window {
-    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+    // biome-ignore lint/suspicious/noExplicitAny: false positive
     twttr: any;
   }
 }
@@ -35,7 +35,7 @@ export const PostFooter: React.FC = () => {
         data-hatena-bookmark-lang="ja"
         title="このエントリーをはてなブックマークに追加"
       >
-        {/* biome-ignore lint/nursery/noImgElement: <explanation> */}
+        {/* biome-ignore lint/performance/noImgElement: false positive */}
         <img
           src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png"
           alt="このエントリーをはてなブックマークに追加"

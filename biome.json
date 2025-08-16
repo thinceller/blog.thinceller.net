@@ -12,12 +12,13 @@
     "attributePosition": "auto",
     "bracketSpacing": true
   },
-  "organizeImports": { "enabled": true },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
-      "nursery": {
+      "nursery": {},
+      "performance": {
         "noImgElement": "error"
       }
     }
@@ -37,16 +38,17 @@
   },
   "overrides": [
     {
-      "include": [
-        "app/**/opengraph-image.tsx",
-        "app/**/opengraph-image.png/route.tsx"
+      "includes": [
+        "**/app/**/opengraph-image.tsx",
+        "**/app/**/opengraph-image.png/route.tsx"
       ],
       "linter": {
         "rules": {
           "a11y": {
             "useAltText": "off"
           },
-          "nursery": {
+          "nursery": {},
+          "performance": {
             "noImgElement": "off"
           }
         }
