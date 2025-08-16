@@ -11,9 +11,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm build` - Build the application for production
 - `pnpm lint` - Run Biome for code linting/checking
 - `pnpm format` - Format code with Biome (includes --write)
+- `pnpm typecheck` - Run TypeScript type checking
 - `pnpm lint:post` - Run textlint on Japanese blog posts
 - `pnpm run deploy` - Build and deploy to Cloudflare Workers
 - `pnpm preview` - Build and preview with OpenNext Cloudflare adapter
+- `pnpm build:analyze` - Build with bundle analyzer to examine bundle size
+- `pnpm upload` - Build and upload to Cloudflare Workers (without deploy)
+- `pnpm cf-typegen` - Generate Cloudflare environment types
 
 ### Code Quality
 Always run `pnpm lint`, `pnpm format`, and `pnpm typecheck` after making code changes. The project uses Biome instead of ESLint/Prettier.
@@ -70,7 +74,8 @@ The blog has specialized support for Japanese technical writing:
 ### Build Optimization
 - Bundle analyzer integration (`pnpm build:analyze`)
 - Turbopack for faster development builds
-- FontAwesome package imports optimization
+- FontAwesome package imports optimization via experimental.optimizePackageImports
+- Bundle size budget monitoring (358KB budget with 20% increase threshold)
 
 ## Blog Post Structure
 
@@ -87,6 +92,15 @@ Optional: `modifiedTime`, `tags`
 ## Code Style
 
 The project uses **Biome** for consistent code formatting and linting. Always run formatting commands before committing changes.
+
+### Biome Configuration
+- Line width: 80 characters
+- Indent: 2 spaces
+- JSX quotes: double quotes
+- JavaScript quotes: single quotes
+- Trailing commas: always
+- Semicolons: always
+- Performance rules: no img elements (use Next.js Image)
 
 ### Component Design Principles
 - **Reusability**: Create shared components for repeated UI patterns (e.g., PostCard)
