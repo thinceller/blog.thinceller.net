@@ -15,5 +15,11 @@
     "minimumReleaseAge": "2 days",
     "automerge": true,
     "labels": ["dependencies", "automerge: enabled"]
-  }
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": "@opennextjs/*",
+      "groupName": "OpenNext packages"
+    }
+  ]
 }
