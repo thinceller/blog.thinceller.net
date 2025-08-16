@@ -10,7 +10,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
       <Header />
       <Navigation />
       <main className="flex-1">
-        <div className="max-w-screen-md mx-auto px-6 py-8">{children}</div>
+        <div className="max-w-(--breakpoint-md) mx-auto px-6 py-8">
+          {children}
+        </div>
       </main>
       <Footer />
     </div>

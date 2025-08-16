@@ -6,7 +6,7 @@ import type { FC } from 'react';
 export const Footer: FC = () => {
   return (
     <footer className="border-t border-gray-200">
-      <div className="flex flex-row justify-between mx-auto max-w-screen-md p-6">
+      <div className="flex flex-row justify-between mx-auto max-w-(--breakpoint-md) p-6">
         <p>&copy; {new Date().getFullYear()} thinceller</p>
         <div className="flex flex-row gap-2">
           <a

@@ -21,7 +21,7 @@ export function PostCard({
       <TitleTag className="text-base font-semibold mb-1">
         <Link
           href={`/posts/${slug}`}
-          className="text-gray-900 hover:text-blue-600 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded"
+          className="text-gray-900 hover:text-blue-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm"
         >
           {title}
           <span className="absolute inset-0" aria-hidden="true" />

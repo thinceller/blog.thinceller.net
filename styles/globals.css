@@ -1,3 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --text-custom-xs: 0.75rem;
+  --text-custom-xs--line-height: 1.9;
+  --text-custom-sm: 0.875rem;
+  --text-custom-sm--line-height: 1.9;
+  --text-custom-base: 1rem;
+  --text-custom-base--line-height: 1.9;
+  --text-custom-lg: 1.125rem;
+  --text-custom-lg--line-height: 1.5;
+  --text-custom-xl: 1.25rem;
+  --text-custom-xl--line-height: 1.5;
+  --text-custom-2xl: 1.5rem;
+  --text-custom-2xl--line-height: 1.5;
+  --text-custom-3xl: 1.875rem;
+  --text-custom-3xl--line-height: 1.5;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
