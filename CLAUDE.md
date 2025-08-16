@@ -34,13 +34,13 @@ When verifying functionality, start the Next.js server and use Playwright MCP to
 - **MDX-based** blog posts with custom processing pipeline
 
 ### Key Directories
-- `app/` - Next.js App Router pages and layouts
+- `src/app/` - Next.js App Router pages and layouts
 - `_posts/` - MDX blog post files (named `YYYY-MM-DD-slug.mdx`)
-- `components/` - React components for layout and post rendering
+- `src/components/` - React components for layout and post rendering
   - `PostCard` - Shared component for displaying post links with consistent card design
   - `RelatedPosts` - Shows related posts in a dedicated section
   - `Layout` - Main layout wrapper with header, navigation, and footer
-- `lib/` - Utility functions (post processing, date formatting, syntax highlighting)
+- `src/lib/` - Utility functions (post processing, date formatting, syntax highlighting)
 - `docs/adr/` - Architectural Decision Records
 
 ### Content Pipeline
