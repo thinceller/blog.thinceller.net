@@ -20,6 +20,10 @@
     {
       "matchPackageNames": "@opennextjs/*",
       "groupName": "OpenNext packages"
+    },
+    {
+      "matchPackageNames": ["/^textlint/", "@textlint/*"],
+      "groupName": "textlint packages"
     }
   ]
 }
