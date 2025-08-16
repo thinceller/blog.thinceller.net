@@ -39,8 +39,8 @@
   "overrides": [
     {
       "includes": [
-        "**/app/**/opengraph-image.tsx",
-        "**/app/**/opengraph-image.png/route.tsx"
+        "**/src/app/**/opengraph-image.tsx",
+        "**/src/app/**/opengraph-image.png/route.tsx"
       ],
       "linter": {
         "rules": {
