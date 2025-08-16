@@ -1,7 +1,7 @@
+import type { Metadata } from 'next';
 import { PostCard } from '@/components/PostCard';
 import { BLOG_NAME } from '@/lib/constants';
 import { getAllTags, getPostsByTag } from '@/lib/post';
-import type { Metadata } from 'next';
 
 export const dynamicParams = false;
 

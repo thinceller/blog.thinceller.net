@@ -1,7 +1,7 @@
-import { BLOG_NAME } from '@/lib/constants';
-import { getAllTags } from '@/lib/post';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { BLOG_NAME } from '@/lib/constants';
+import { getAllTags } from '@/lib/post';
 
 export const metadata: Metadata = {
   title: `タグ一覧 - ${BLOG_NAME}`,

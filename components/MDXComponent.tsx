@@ -1,9 +1,8 @@
 import type { MDXComponents } from 'mdx/types';
 import Image, { type ImageProps } from 'next/image';
 import Link from 'next/link';
-import { Tweet, type TweetProps } from 'react-twitter-widgets';
-
 import type { JSX } from 'react';
+import { Tweet, type TweetProps } from 'react-twitter-widgets';
 
 export const CustomMDXComponents: MDXComponents = {
   a: (p: JSX.IntrinsicElements['a']) => {

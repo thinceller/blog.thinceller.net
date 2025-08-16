@@ -1,10 +1,10 @@
+import type { Metadata } from 'next';
 import { PostFooter } from '@/components/PostFooter';
 import { PostTitle } from '@/components/PostTitle';
 import { RelatedPosts } from '@/components/RelatedPosts';
 import { BLOG_AUTHOR, BLOG_NAME } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/mdx';
 import { getAllPosts, getRelatedPosts } from '@/lib/post';
-import type { Metadata } from 'next';
 
 export const dynamicParams = false;
 

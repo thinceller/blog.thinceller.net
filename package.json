@@ -26,7 +26,7 @@
     "valibot": "1.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.1.4",
     "@next/bundle-analyzer": "15.4.6",
     "@opennextjs/aws": "3.7.4",
     "@opennextjs/cloudflare": "1.6.5",
@@ -54,7 +54,7 @@
     "start": "next start",
     "lint": "biome check",
     "lint:post": "textlint _posts/**/*.mdx",
-    "format": "biome format --write",
+    "format": "biome check --write",
     "typecheck": "tsc --noEmit",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview -- --minify",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -- --minify",
@@ -67,6 +67,9 @@
     "showDetails": true
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["sharp", "workerd"]
+    "onlyBuiltDependencies": [
+      "sharp",
+      "workerd"
+    ]
   }
 }

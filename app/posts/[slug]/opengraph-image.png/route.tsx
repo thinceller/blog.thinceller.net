@@ -1,8 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { getAllPosts, getPostBySlug } from '@/lib/post';
 import { ImageResponse } from 'next/og';
 import type { NextRequest } from 'next/server';
+import { getAllPosts, getPostBySlug } from '@/lib/post';
 
 // export const alt = 'thinceller blog';
 // export const size = {
@@ -47,7 +47,7 @@ const getFontRegular = async () => {
 };
 
 export async function GET(
-  req: NextRequest,
+  _req: NextRequest,
   props: { params: Promise<{ slug: string }> },
 ) {
   const params = await props.params;

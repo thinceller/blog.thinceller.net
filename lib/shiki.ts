@@ -1,5 +1,5 @@
-import { createHighlighterCore } from 'shiki/core';
 import type { HighlighterCore } from 'shiki/core';
+import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 
 let highlighterInstance: HighlighterCore | null = null;
