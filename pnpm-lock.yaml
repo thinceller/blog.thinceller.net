@@ -100,8 +100,8 @@ importers:
         specifier: 2.0.13
         version: 2.0.13
       '@types/node':
-        specifier: 22.15.32
-        version: 22.15.32
+        specifier: 22.18.5
+        version: 22.18.5
       '@types/react':
         specifier: 19.1.13
         version: 19.1.13
@@ -1816,8 +1816,8 @@ packages:
   '@types/node@18.19.123':
     resolution: {integrity: sha512-K7DIaHnh0mzVxreCR9qwgNxp3MH9dltPNIEddW9MYUlcKAzm+3grKNSTe2vCJHI1FaLpvpL5JGJrz1UZDKYvDg==}
 
-  '@types/node@22.15.32':
-    resolution: {integrity: sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==}
+  '@types/node@22.18.5':
+    resolution: {integrity: sha512-g9BpPfJvxYBXUWI9bV37j6d6LTMNQ88hPwdWWUeYZnMhlo66FIg9gCc1/DZb15QylJSKwOZjwrckvOTWpOiChg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -7002,14 +7002,14 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 22.15.32
+      '@types/node': 22.18.5
       form-data: 4.0.4
 
   '@types/node@18.19.123':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@22.15.32':
+  '@types/node@22.18.5':
     dependencies:
       undici-types: 6.21.0
 
