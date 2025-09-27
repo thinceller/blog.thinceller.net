@@ -65,6 +65,7 @@ export const GoogleAnalytics = () => {
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
             strategy="afterInteractive"
           />
+          {/** biome-ignore lint/correctness/useUniqueElementIds: Will address later in https://github.com/thinceller/blog.thinceller.net/issues/1082 */}
           <Script id="google-analytics" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
