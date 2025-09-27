@@ -68,6 +68,7 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
       "sharp",
       "workerd"
     ]
