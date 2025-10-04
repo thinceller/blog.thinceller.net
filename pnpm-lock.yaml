@@ -25,7 +25,7 @@ importers:
         version: 3.1.1
       '@mdx-js/react':
         specifier: 3.1.1
-        version: 3.1.1(@types/react@19.1.14)(react@19.1.1)
+        version: 3.1.1(@types/react@19.1.17)(react@19.1.1)
       '@shikijs/langs':
         specifier: 3.13.0
         version: 3.13.0
@@ -103,8 +103,8 @@ importers:
         specifier: 22.15.32
         version: 22.15.32
       '@types/react':
-        specifier: 19.1.14
-        version: 19.1.14
+        specifier: 19.1.17
+        version: 19.1.17
       postcss:
         specifier: 8.5.6
         version: 8.5.6
@@ -1819,8 +1819,8 @@ packages:
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
-  '@types/react@19.1.14':
-    resolution: {integrity: sha512-ukd93VGzaNPMAUPy0gRDSC57UuQbnH9Kussp7HBjM06YFi9uZTFhOvMSO2OKqXm1rSgzOE+pVx1k1PYHGwlc8Q==}
+  '@types/react@19.1.17':
+    resolution: {integrity: sha512-Qec1E3mhALmaspIrhWt9jkQMNdw6bReVu64mjvhbhq2NFPftLPVr+l1SZgmw/66WwBNpDh7ao5AT6gF5v41PFA==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -5883,10 +5883,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@3.1.1(@types/react@19.1.14)(react@19.1.1)':
+  '@mdx-js/react@3.1.1(@types/react@19.1.17)(react@19.1.1)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.1.14
+      '@types/react': 19.1.17
       react: 19.1.1
 
   '@modelcontextprotocol/sdk@1.17.3':
@@ -6975,7 +6975,7 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
-  '@types/react@19.1.14':
+  '@types/react@19.1.17':
     dependencies:
       csstype: 3.1.3
 
