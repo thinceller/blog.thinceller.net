@@ -26,7 +26,7 @@
     "valibot": "1.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.5",
+    "@biomejs/biome": "2.2.6",
     "@next/bundle-analyzer": "15.5.4",
     "@opennextjs/aws": "3.7.7",
     "@opennextjs/cloudflare": "1.8.5",
