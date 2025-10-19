@@ -28,8 +28,8 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
     "@next/bundle-analyzer": "15.5.4",
-    "@opennextjs/aws": "3.7.7",
-    "@opennextjs/cloudflare": "1.8.5",
+    "@opennextjs/aws": "3.8.5",
+    "@opennextjs/cloudflare": "1.11.0",
     "@tailwindcss/postcss": "4.1.14",
     "@textlint/textlint-plugin-markdown": "15.2.2",
     "@types/gtag.js": "0.0.20",
