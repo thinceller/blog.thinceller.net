@@ -79,11 +79,11 @@ importers:
         specifier: 15.5.4
         version: 15.5.4
       '@opennextjs/aws':
-        specifier: 3.7.7
-        version: 3.7.7
+        specifier: 3.8.5
+        version: 3.8.5
       '@opennextjs/cloudflare':
-        specifier: 1.8.5
-        version: 1.8.5(wrangler@4.43.0)
+        specifier: 1.11.0
+        version: 1.11.0(wrangler@4.43.0)
       '@tailwindcss/postcss':
         specifier: 4.1.14
         version: 4.1.14
@@ -1163,12 +1163,12 @@ packages:
     resolution: {integrity: sha512-csY4qcR7jUwiZmkreNTJhcypQfts2aY2CK+a+rXgXUImZiZiySh0FvwHjRnlqWKvg+y6ae9lHFzDRjBTmqlTIQ==}
     engines: {node: '>=16.0.0'}
 
-  '@opennextjs/aws@3.7.7':
-    resolution: {integrity: sha512-rkBpNfBsq3XvbBh+VcNI9dvs0UkuuJH5I7SvVdPx12LudiErShL/9RoA7iF9tpkfRizcwGRIhsedrHKmcs9kqw==}
+  '@opennextjs/aws@3.8.5':
+    resolution: {integrity: sha512-elpMb0fJZc0a1VtymedFa7P1lYcyOmt+Pwqyacpq2C/SvbETIeBlW/Xle/vY95ICtccKUxITI8MtonrCo2+2/Q==}
     hasBin: true
 
-  '@opennextjs/cloudflare@1.8.5':
-    resolution: {integrity: sha512-+U2kq5fno7R1v8CUXEjvz/2LZim+JxtGMXG5+i0sSAAD3l1lxh05/DoFrcb+5QAa/f5Lir2Y8wz2H4qsOjzRwA==}
+  '@opennextjs/cloudflare@1.11.0':
+    resolution: {integrity: sha512-2QVZLjCr3hPwkcGEetLarTZvlNIHsGV3j2+i+KNsjFIBgvsnxhmRqJbT0u8J9cVMFKNh19hSOTOmUKs1T3DWig==}
     hasBin: true
     peerDependencies:
       wrangler: ^4.38.0
@@ -1816,6 +1816,9 @@ packages:
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
 
+  '@types/rclone.js@0.6.3':
+    resolution: {integrity: sha512-BssKAAVRY//fxGKso8SatyOwiD7X0toDofNnVxZlIXmN7UHrn2UBTxldNAjgUvWA91qJyeEPfKmeJpZVhLugXg==}
+
   '@types/react@19.1.17':
     resolution: {integrity: sha512-Qec1E3mhALmaspIrhWt9jkQMNdw6bReVu64mjvhbhq2NFPftLPVr+l1SZgmw/66WwBNpDh7ao5AT6gF5v41PFA==}
 
@@ -1861,6 +1864,10 @@ packages:
     resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  adm-zip@0.5.16:
+    resolution: {integrity: sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==}
+    engines: {node: '>=12.0'}
 
   agentkeepalive@4.6.0:
     resolution: {integrity: sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==}
@@ -3291,6 +3298,10 @@ packages:
   morpheme-match@2.0.4:
     resolution: {integrity: sha512-C3U5g2h47dpztGVePLA8w2O1aQEvuJORwIcahWaCG91YPrq+0u7qcPsF9Nqqe8noFvHwgO7b2EEk3iPnYuGTew==}
 
+  mri@1.2.0:
+    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
+    engines: {node: '>=4'}
+
   mrmime@2.0.1:
     resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
     engines: {node: '>=10'}
@@ -3531,6 +3542,13 @@ packages:
 
   rc-config-loader@4.1.3:
     resolution: {integrity: sha512-kD7FqML7l800i6pS6pvLyIE2ncbk9Du8Q0gp/4hMPhJU6ZxApkoLcGD8ZeqgiAlfwZ6BlETq6qqe+12DUL207w==}
+
+  rclone.js@0.6.6:
+    resolution: {integrity: sha512-Dxh34cab/fNjFq5SSm0fYLNkGzG2cQSBy782UW9WwxJCEiVO4cGXkvaXcNlgv817dK8K8PuQ+NHUqSAMMhWujQ==}
+    engines: {node: '>=12'}
+    cpu: [arm, arm64, mips, mipsel, x32, x64]
+    os: [darwin, freebsd, linux, openbsd, sunos, win32]
+    hasBin: true
 
   react-dom@19.1.1:
     resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
@@ -5952,7 +5970,7 @@ snapshots:
     dependencies:
       gzip-size: 6.0.0
 
-  '@opennextjs/aws@3.7.7':
+  '@opennextjs/aws@3.8.5':
     dependencies:
       '@ast-grep/napi': 0.35.0
       '@aws-sdk/client-cloudfront': 3.398.0
@@ -5975,13 +5993,15 @@ snapshots:
       - aws-crt
       - supports-color
 
-  '@opennextjs/cloudflare@1.8.5(wrangler@4.43.0)':
+  '@opennextjs/cloudflare@1.11.0(wrangler@4.43.0)':
     dependencies:
       '@dotenvx/dotenvx': 1.31.0
-      '@opennextjs/aws': 3.7.7
+      '@opennextjs/aws': 3.8.5
+      '@types/rclone.js': 0.6.3
       cloudflare: 4.5.0
       enquirer: 2.4.1
       glob: 11.0.2
+      rclone.js: 0.6.6
       ts-tqdm: 0.8.6
       wrangler: 4.43.0
       yargs: 18.0.0
@@ -6965,6 +6985,10 @@ snapshots:
 
   '@types/normalize-package-data@2.4.4': {}
 
+  '@types/rclone.js@0.6.3':
+    dependencies:
+      '@types/node': 22.18.10
+
   '@types/react@19.1.17':
     dependencies:
       csstype: 3.1.3
@@ -6999,6 +7023,8 @@ snapshots:
   acorn@8.14.0: {}
 
   acorn@8.14.1: {}
+
+  adm-zip@0.5.16: {}
 
   agentkeepalive@4.6.0:
     dependencies:
@@ -8780,6 +8806,8 @@ snapshots:
 
   morpheme-match@2.0.4: {}
 
+  mri@1.2.0: {}
+
   mrmime@2.0.1: {}
 
   ms@2.1.2: {}
@@ -9014,6 +9042,11 @@ snapshots:
       require-from-string: 2.0.2
     transitivePeerDependencies:
       - supports-color
+
+  rclone.js@0.6.6:
+    dependencies:
+      adm-zip: 0.5.16
+      mri: 1.2.0
 
   react-dom@19.1.1(react@19.1.1):
     dependencies:
