@@ -35,7 +35,7 @@
     "@types/gtag.js": "0.0.20",
     "@types/markdown-it": "14.1.2",
     "@types/mdx": "2.0.13",
-    "@types/node": "22.18.10",
+    "@types/node": "22.18.11",
     "@types/react": "19.1.17",
     "postcss": "8.5.6",
     "tailwindcss": "4.1.14",
