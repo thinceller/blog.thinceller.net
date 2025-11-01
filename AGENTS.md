@@ -4,8 +4,8 @@ AI coding agents向けのプロジェクトガイドラインです。このブ�
 
 ## プロジェクト概要
 
-Next.js 15.3.3 (App Router) を使用したMDXベースの技術ブログサイトです。
-Cloudflare Workersにデプロイされ、日本語技術記事に特化した機能を持ちます。
+Next.js 15.5.4 (App Router) を使用したMDXベースの技術ブログサイトです。
+Vercelにデプロイされ、日本語技術記事に特化した機能を持ちます。
 
 ## セットアップコマンド
 
@@ -22,8 +22,8 @@ pnpm dev
 # プロダクションビルド
 pnpm build
 
-# Cloudflareにデプロイ
-pnpm run deploy
+# 本番サーバー起動
+pnpm start
 ```
 
 ### 開発・テストコマンド
@@ -39,9 +39,6 @@ pnpm typecheck
 
 # 日本語記事のlint
 pnpm lint:post
-
-# プレビューサーバー（OpenNext Cloudflare adapter）
-pnpm preview
 
 # バンドルサイズ分析
 pnpm build:analyze
@@ -101,8 +98,15 @@ publishedTime: "YYYY-MM-DDTHH:mm:ssZ"
 
 ### 主要コンポーネント
 - `components/Layout.tsx`: ページ全体レイアウト
+- `components/Header.tsx`: ヘッダーコンポーネント
+- `components/Footer.tsx`: フッターコンポーネント
+- `components/Navigation.tsx`: ナビゲーションメニュー
 - `components/PostCard.tsx`: 記事カード表示（一貫したデザイン）
 - `components/RelatedPosts.tsx`: 関連記事表示
+- `components/DateFormatter.tsx`: 日付フォーマット表示
+- `components/PostFooter.tsx`: 記事フッター
+- `components/PostTags.tsx`: 記事タグ表示
+- `components/PostTitle.tsx`: 記事タイトル表示
 - `components/MDXComponent.tsx`: Markdown記事レンダリング
 
 ### 設計原則
@@ -137,25 +141,44 @@ pnpm build:analyze
 ## アーキテクチャ詳細
 
 ### 技術スタック
-- **Next.js 15.3.3** + App Router
+- **Next.js 15.5.4** + App Router
 - **MDX** + カスタム処理パイプライン
 - **Tailwind CSS** + カスタムタイポグラフィ
 - **Shiki** シンタックスハイライト（Night Owlテーマ）
-- **Cloudflare Workers** + OpenNext adapter
+- **Vercel** ホスティング
 
 ### ディレクトリ構造
 ```
 src/
-├── app/                    # Next.js App Router
-│   ├── (root)/            # ルートページ
-│   ├── about/             # About ページ
-│   ├── posts/[slug]/      # 記事詳細ページ
-│   └── tags/              # タグページ
-├── components/            # 再利用可能コンポーネント
-├── lib/                   # ユーティリティ関数
-└── styles/               # グローバルスタイル
-_posts/                   # MDX記事ファイル
-public/                   # 静的アセット
+├── app/                              # Next.js App Router
+│   ├── (root)/
+│   │   └── page.tsx                  # トップページ
+│   ├── about/
+│   │   └── page.tsx                  # Aboutページ
+│   ├── posts/
+│   │   ├── [slug]/
+│   │   │   ├── page.tsx              # 記事詳細ページ
+│   │   │   └── opengraph-image.png/
+│   │   │       └── route.tsx         # 記事個別OGP画像生成
+│   │   └── sitemap.ts                # 記事サイトマップ
+│   ├── tags/
+│   │   ├── [tag]/
+│   │   │   └── page.tsx              # タグ別記事一覧
+│   │   ├── page.tsx                  # タグ一覧ページ
+│   │   └── sitemap.ts                # タグサイトマップ
+│   ├── atom.xml/
+│   │   └── route.ts                  # Atomフィード生成
+│   ├── rss.xml/
+│   │   └── route.ts                  # RSSフィード生成
+│   ├── layout.tsx                    # ルートレイアウト
+│   ├── opengraph-image.tsx           # サイト全体のOGP画像
+│   ├── robots.ts                     # robots.txt生成
+│   └── sitemap.ts                    # サイトマップ生成
+├── components/                       # 再利用可能コンポーネント
+├── lib/                              # ユーティリティ関数
+└── styles/                           # グローバルスタイル
+_posts/                               # MDX記事ファイル
+public/                               # 静的アセット
 ```
 
 ### Content Pipeline
@@ -165,22 +188,13 @@ public/                   # 静的アセット
 
 ## デプロイメント
 
-### Cloudflare設定
-- 設定ファイル: `wrangler.jsonc`
-- OpenNext設定: `open-next.config.ts`
+### Vercel設定
+- 自動デプロイ: mainブランチへのpush時
+- プレビューデプロイ: プルリクエスト作成時
 - カスタムドメイン: `blog.thinceller.net`
 
-### デプロイコマンド
-```bash
-# ビルド＆デプロイ
-pnpm run deploy
-
-# ビルド＆アップロードのみ
-pnpm upload
-
-# 環境型生成
-pnpm cf-typegen
-```
+### デプロイ方法
+Gitリポジトリへのpushで自動的にデプロイされます。
 
 ### パフォーマンス監視
 - バンドルサイズ予算: 358KB
@@ -208,7 +222,7 @@ pnpm cf-typegen
 ## セキュリティ
 
 - 静的生成によるセキュリティリスク軽減
-- Cloudflare Workers環境での実行
+- Vercel環境での実行
 - 依存関係の定期更新（Renovate）
 
 ## トラブルシューティング
@@ -217,9 +231,9 @@ pnpm cf-typegen
 1. **ビルドエラー**: `pnpm typecheck` で型エラーを確認
 2. **スタイル問題**: Tailwind設定を確認
 3. **MDX解析エラー**: フロントマターの形式を確認
-4. **デプロイ失敗**: `wrangler.jsonc` 設定を確認
+4. **デプロイ失敗**: Vercel Dashboard のビルドログを確認
 
 ### デバッグ
 - `pnpm build:analyze` でバンドルサイズ分析
 - ブラウザ開発者ツールでパフォーマンス確認
-- Cloudflare Workers logsでエラー確認
+- Vercel Dashboard のログでエラー確認
