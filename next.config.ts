@@ -16,8 +16,3 @@ const nextConfig: NextConfig = {
 };
 
 export default withBundleAnalyzer(nextConfig);
-
-// see: https://opennext.js.org/cloudflare/get-started#11-develop-locally
-import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
-
-initOpenNextCloudflareForDev();
