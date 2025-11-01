@@ -16,10 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${BLOG_URL}/tags`,
+      url: `${BLOG_URL}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
   ];
 }

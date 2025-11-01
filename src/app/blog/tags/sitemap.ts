@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapEntries: MetadataRoute.Sitemap = [
     // タグ一覧ページ
     {
-      url: `${BLOG_URL}/tags`,
+      url: `${BLOG_URL}/blog/tags`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 各タグページ
   for (const [tag] of Array.from(allTags.entries())) {
     sitemapEntries.push({
-      url: `${BLOG_URL}/tags/${encodeURIComponent(tag)}`,
+      url: `${BLOG_URL}/blog/tags/${encodeURIComponent(tag)}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
