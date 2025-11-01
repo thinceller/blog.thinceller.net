@@ -16,20 +16,20 @@ export const Navigation: FC = () => {
         </div>
         <div>
           <NextLink
-            href="/tags"
-            prefetch={false}
-            className="text-blue-500 hover:underline"
-          >
-            Tags
-          </NextLink>
-        </div>
-        <div>
-          <NextLink
             href="/about"
             prefetch={false}
             className="text-blue-500 hover:underline"
           >
             About
+          </NextLink>
+        </div>
+        <div>
+          <NextLink
+            href="/blog/"
+            prefetch={false}
+            className="text-blue-500 hover:underline"
+          >
+            Blog
           </NextLink>
         </div>
       </div>

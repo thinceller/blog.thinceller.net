@@ -31,7 +31,7 @@ export const Footer: FC = () => {
               className="text-xl text-gray-400"
             />
           </a>
-          <a href="/rss.xml" aria-label="RSS Feed">
+          <a href="/blog/rss.xml" aria-label="RSS Feed">
             <FontAwesomeIcon icon={faRss} className="text-xl text-gray-400" />
           </a>
         </div>
