@@ -12,7 +12,7 @@
     "@shikijs/langs": "3.13.0",
     "@shikijs/rehype": "3.13.0",
     "@shikijs/themes": "3.13.0",
-    "dayjs": "1.11.18",
+    "dayjs": "1.11.19",
     "feed": "5.1.0",
     "gray-matter": "4.0.3",
     "next": "15.5.6",
