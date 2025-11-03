@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import { SITE_NAME } from '@/lib/constants';
+
 export const metadata: Metadata = {
-  title: 'thinceller.net',
+  title: SITE_NAME,
   description: 'thinceller の個人サイト',
 };
 
@@ -10,7 +12,7 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-custom-3xl font-bold">Welcome to thinceller.net</h1>
+        <h1 className="text-custom-3xl font-bold">Welcome to {SITE_NAME}</h1>
         <p className="text-custom-lg text-gray-600">
           ソフトウェアエンジニアの個人サイトです
         </p>

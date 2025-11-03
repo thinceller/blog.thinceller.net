@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { ImageResponse } from 'next/og';
 import type { NextRequest } from 'next/server';
+import { BLOG_NAME } from '@/lib/constants';
 import { getAllPosts, getPostBySlug } from '@/lib/post';
 
 // export const alt = 'thinceller blog';
@@ -98,7 +99,7 @@ export async function GET(
         {/* @ts-expect-error */}
         <img src={logoSrc} height={140} style={{ borderRadius: '50%' }} />
 
-        <div style={{ fontSize: 32, fontWeight: 400 }}>thinceller blog</div>
+        <div style={{ fontSize: 32, fontWeight: 400 }}>{BLOG_NAME}</div>
       </div>
     </div>,
     {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { PostFooter } from '@/components/PostFooter';
 import { PostTitle } from '@/components/PostTitle';
 import { RelatedPosts } from '@/components/RelatedPosts';
-import { BLOG_AUTHOR, BLOG_NAME } from '@/lib/constants';
+import { BLOG_AUTHOR, SITE_NAME } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/mdx';
 import { getAllPosts, getRelatedPosts } from '@/lib/post';
 
@@ -34,7 +34,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       url: `/blog/${params.slug}`,
       title: frontmatter.title,
       description: frontmatter.description,
-      siteName: BLOG_NAME,
+      siteName: SITE_NAME,
       images: [
         {
           url: `/blog/${params.slug}/opengraph-image.png`,

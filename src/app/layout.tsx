@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Layout } from '@/components/Layout';
-import { BLOG_NAME, BLOG_URL } from '@/lib/constants';
+import { BLOG_NAME, BLOG_URL, SITE_NAME } from '@/lib/constants';
 
 import '@/styles/globals.css';
 import '@/styles/styles.css';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ja_JP',
     url: BLOG_URL,
-    siteName: BLOG_NAME,
+    siteName: SITE_NAME,
     title: BLOG_NAME,
   },
   twitter: {
