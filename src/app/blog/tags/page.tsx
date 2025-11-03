@@ -4,17 +4,17 @@ import { BLOG_NAME } from '@/lib/constants';
 import { getAllTags } from '@/lib/post';
 
 export const metadata: Metadata = {
-  title: `タグ一覧 - ${BLOG_NAME}`,
+  title: 'タグ一覧',
   description: 'すべてのタグの一覧',
   openGraph: {
     type: 'website',
     url: '/tags',
-    title: `タグ一覧 - ${BLOG_NAME}`,
+    title: `タグ一覧 | ${BLOG_NAME}`,
     description: 'すべてのタグの一覧',
     siteName: BLOG_NAME,
   },
   twitter: {
-    title: `タグ一覧 - ${BLOG_NAME}`,
+    title: `タグ一覧 | ${BLOG_NAME}`,
     description: 'すべてのタグの一覧',
   },
 };

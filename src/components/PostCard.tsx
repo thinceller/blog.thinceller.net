@@ -20,7 +20,7 @@ export function PostCard({
     <article className="relative bg-white border border-gray-100 rounded-md p-4 hover:shadow-md transition-shadow">
       <TitleTag className="text-base font-semibold mb-1">
         <Link
-          href={`/posts/${slug}`}
+          href={`/blog/${slug}`}
           className="text-gray-900 hover:text-blue-600 transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm"
         >
           {title}

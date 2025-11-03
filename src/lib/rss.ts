@@ -33,8 +33,8 @@ function createFeedInstance(
       : new Date(posts[0]?.publishedTime || new Date()),
     generator: 'Feed for Node.js',
     feedLinks: {
-      rss2: `${siteURL}/rss.xml`,
-      atom: `${siteURL}/atom.xml`,
+      rss2: `${siteURL}/blog/rss.xml`,
+      atom: `${siteURL}/blog/atom.xml`,
     },
     author: {
       name: BLOG_AUTHOR,
@@ -49,7 +49,7 @@ function createFeedInstance(
       continue;
     }
 
-    const url = `${siteURL}/posts/${post.slug}`;
+    const url = `${siteURL}/blog/${post.slug}`;
     const date = new Date(post.publishedTime);
     const modifiedDate = post.modifiedTime
       ? new Date(post.modifiedTime)

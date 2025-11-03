@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { PostFooter } from '@/components/PostFooter';
 import { PostTitle } from '@/components/PostTitle';
 import { RelatedPosts } from '@/components/RelatedPosts';
-import { BLOG_AUTHOR, BLOG_NAME } from '@/lib/constants';
+import { BLOG_AUTHOR, BLOG_NAME, SITE_NAME } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/mdx';
 import { getAllPosts, getRelatedPosts } from '@/lib/post';
 
@@ -31,14 +31,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     description: frontmatter.description,
     openGraph: {
       type: 'article',
-      url: `/posts/${params.slug}`,
+      url: `/blog/${params.slug}`,
       title: frontmatter.title,
       description: frontmatter.description,
-      siteName: BLOG_NAME,
+      siteName: SITE_NAME,
       images: [
         {
-          url: `/posts/${params.slug}/opengraph-image.png`,
-          alt: 'thinceller blog',
+          url: `/blog/${params.slug}/opengraph-image.png`,
+          alt: BLOG_NAME,
           width: 1200,
           height: 630,
         },
@@ -53,8 +53,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       description: frontmatter.description,
       images: [
         {
-          url: `/posts/${params.slug}/opengraph-image.png`,
-          alt: 'thinceller blog',
+          url: `/blog/${params.slug}/opengraph-image.png`,
+          alt: BLOG_NAME,
           width: 1200,
           height: 630,
         },

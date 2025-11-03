@@ -9,8 +9,8 @@ export default function robots(): MetadataRoute.Robots {
     },
     sitemap: [
       `${BLOG_URL}/sitemap.xml`,
-      `${BLOG_URL}/posts/sitemap.xml`,
-      `${BLOG_URL}/tags/sitemap.xml`,
+      `${BLOG_URL}/blog/sitemap.xml`,
+      `${BLOG_URL}/blog/tags/sitemap.xml`,
     ],
     host: BLOG_URL,
   };
