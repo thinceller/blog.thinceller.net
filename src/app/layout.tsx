@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     url: BLOG_URL,
     siteName: SITE_NAME,
-    title: BLOG_NAME,
+    title: SITE_NAME,
   },
   twitter: {
     site: '@thinceller_dev',

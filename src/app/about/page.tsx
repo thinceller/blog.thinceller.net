@@ -17,6 +17,7 @@ export default function Page() {
           width={120}
           height={120}
           className="rounded-[50%]"
+          loading="eager"
         />
       </div>
       <p className="text-custom-base">thinceller / Kohei Kawakami</p>
