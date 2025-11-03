@@ -24,17 +24,17 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const tag = decodeURIComponent(params.tag);
 
   return {
-    title: `${tag} - ${BLOG_NAME}`,
+    title: tag,
     description: `${tag}に関する記事一覧`,
     openGraph: {
       type: 'website',
-      url: `/tags/${params.tag}`,
-      title: `${tag} - ${BLOG_NAME}`,
+      url: `/blog/tags/${params.tag}`,
+      title: `${tag} | ${BLOG_NAME}`,
       description: `${tag}に関する記事一覧`,
       siteName: BLOG_NAME,
     },
     twitter: {
-      title: `${tag} - ${BLOG_NAME}`,
+      title: `${tag} | ${BLOG_NAME}`,
       description: `${tag}に関する記事一覧`,
     },
   };

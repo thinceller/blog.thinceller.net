@@ -14,7 +14,7 @@ export default function Page() {
       <div className="text-center space-y-4">
         <h1 className="text-custom-3xl font-bold">Welcome to {SITE_NAME}</h1>
         <p className="text-custom-lg text-gray-600">
-          ソフトウェアエンジニアの個人サイトです
+          ソフトウェアエンジニアthincellerの個人サイトです
         </p>
       </div>
 

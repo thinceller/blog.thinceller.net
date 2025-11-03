@@ -8,10 +8,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${BLOG_NAME}`,
-    default: BLOG_NAME,
+    template: `%s | ${SITE_NAME}`,
+    default: SITE_NAME,
   },
-  description: 'A blog about software development, programming, and life.',
+  description: 'ソフトウェアエンジニアthincellerの個人サイトです',
   metadataBase: new URL(BLOG_URL),
   openGraph: {
     type: 'website',
