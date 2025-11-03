@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { ImageResponse } from 'next/og';
 
-export const alt = 'thinceller blog';
+export const alt = 'thinceller.net';
 export const size = {
   width: 1200,
   height: 630,
@@ -57,7 +57,7 @@ export default async function Image() {
     >
       {/* @ts-expect-error */}
       <img src={logoSrc} height={140} style={{ borderRadius: '50%' }} />
-      <div style={{ fontSize: 32, fontWeight: 400 }}>thinceller blog</div>
+      <div style={{ fontSize: 32, fontWeight: 400 }}>thinceller.net</div>
     </div>,
     {
       fonts: [

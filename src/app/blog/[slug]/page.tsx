@@ -31,13 +31,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     description: frontmatter.description,
     openGraph: {
       type: 'article',
-      url: `/posts/${params.slug}`,
+      url: `/blog/${params.slug}`,
       title: frontmatter.title,
       description: frontmatter.description,
       siteName: BLOG_NAME,
       images: [
         {
-          url: `/posts/${params.slug}/opengraph-image.png`,
+          url: `/blog/${params.slug}/opengraph-image.png`,
           alt: 'thinceller blog',
           width: 1200,
           height: 630,
@@ -53,7 +53,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       description: frontmatter.description,
       images: [
         {
-          url: `/posts/${params.slug}/opengraph-image.png`,
+          url: `/blog/${params.slug}/opengraph-image.png`,
           alt: 'thinceller blog',
           width: 1200,
           height: 630,

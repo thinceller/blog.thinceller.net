@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   alternates: {
     types: {
       'application/rss+xml': [
-        { url: '/rss.xml', title: `${BLOG_NAME} RSS Feed` },
+        { url: '/blog/rss.xml', title: `${BLOG_NAME} RSS Feed` },
       ],
       'application/atom+xml': [
-        { url: '/atom.xml', title: `${BLOG_NAME} Atom Feed` },
+        { url: '/blog/atom.xml', title: `${BLOG_NAME} Atom Feed` },
       ],
     },
   },
