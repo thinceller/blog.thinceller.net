@@ -58,13 +58,5 @@ jobs:
             - 日本語の表現や技術用語を適切に保ってください
             - プロジェクトの実態を正確に反映してください
             - 変更がない場合はPRを作成しないでください
-          allowed_tools: |
-            Read
-            Glob
-            Grep
-            Edit
-            Write
-            Bash(git:*)
-            Bash(gh pr:*)
-            Bash(pnpm:*)
-            Bash(date:*)
+          claude_args: |
+            --allowedTools Read,Glob,Grep,Edit,Write,Bash(git:*),Bash(gh pr:*),Bash(pnpm:*),Bash(date:*)
