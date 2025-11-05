@@ -51,16 +51,22 @@ export default async function Page(props: Props) {
         <span className="text-gray-600">#</span>
         {tag}
       </h1>
-      <div className="grid gap-3">
-        {posts.map((post) => (
-          <PostCard
-            key={post.slug}
-            slug={post.slug}
-            title={post.title}
-            publishedTime={post.publishedTime}
-          />
-        ))}
-      </div>
+      {posts.length === 0 ? (
+        <p className="text-gray-600 text-center py-8">
+          このタグに該当する記事はありません。
+        </p>
+      ) : (
+        <div className="grid gap-3">
+          {posts.map((post) => (
+            <PostCard
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              publishedTime={post.publishedTime}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
