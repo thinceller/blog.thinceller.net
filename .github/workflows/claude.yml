@@ -30,19 +30,9 @@ jobs:
           fetch-depth: 1
 
       - name: Run Claude PR Action
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           timeout_minutes: "60"
-          allowed_tools: |
-            Bash(pnpm:*)
-            Bash(gh pr:*)
-            WebSearch
-            WebFetch
-            mcp__playwright__browser_navigate
-            mcp__playwright__browser_wait_for
-            mcp__playwright__browser_click
-            mcp__playwright__browser_close
-            mcp__playwright__browser_take_screenshot
-            mcp__playwright__browser_press_key
-            mcp__playwright__browser_console_messages
+          claude_args: |
+            --allowedTools "Bash(pnpm:*),Bash(gh pr:*),WebSearch,WebFetch,mcp__playwright__browser_navigate,mcp__playwright__browser_wait_for,mcp__playwright__browser_click,mcp__playwright__browser_close,mcp__playwright__browser_take_screenshot,mcp__playwright__browser_press_key,mcp__playwright__browser_console_messages"
