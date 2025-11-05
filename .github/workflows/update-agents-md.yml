@@ -21,9 +21,10 @@ jobs:
           fetch-depth: 0 # 完全な履歴を取得（探索に必要）
 
       - name: Run Claude to update AGENTS.md
-        uses: anthropics/claude-code-action@v1
+        uses: anthropics/claude-code-action@beta
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          timeout_minutes: "60"
           prompt: |
             REPOSITORY: ${{ github.repository }}
             BRANCH: main
@@ -57,7 +58,13 @@ jobs:
             - 日本語の表現や技術用語を適切に保ってください
             - プロジェクトの実態を正確に反映してください
             - 変更がない場合はPRを作成しないでください
-          claude_args: |
-            --max-turns 30
-            --model claude-sonnet-4-5
-            --allowedTools "Read,Glob,Grep,Edit,Write,Bash(git:*),Bash(gh pr:*),Bash(pnpm:*),Bash(date:*)"
+          allowed_tools: |
+            Read
+            Glob
+            Grep
+            Edit
+            Write
+            Bash(git:*)
+            Bash(gh pr:*)
+            Bash(pnpm:*)
+            Bash(date:*)
