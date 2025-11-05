@@ -1,0 +1,62 @@
+name: Weekly AGENTS.md Update
+
+on:
+  schedule:
+    # 毎週月曜日の午前9時(JST)に実行（UTC 0:00）
+    - cron: "0 0 * * 1"
+  workflow_dispatch: # 手動トリガーも可能にする
+
+jobs:
+  update-agents-md:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # 完全な履歴を取得（探索に必要）
+
+      - name: Run Claude to update AGENTS.md
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          timeout_minutes: "60"
+          prompt: |
+            REPOSITORY: ${{ github.repository }}
+            BRANCH: main
+
+            ## タスク
+            このプロジェクトの構成と利用技術を包括的に探索し、AGENTS.mdファイルを最新の状態に更新してください。
+
+            ## 探索項目
+            1. **依存関係**: package.json のバージョン情報（Next.js, React, pnpm等）
+            2. **ディレクトリ構造**: src/ 配下のファイル・ディレクトリ構成
+            3. **設定ファイル**: tsconfig.json, next.config.ts, biome.json等
+            4. **スクリプト**: package.json のscriptsセクション
+            5. **コンポーネント**: components/ ディレクトリ内の主要コンポーネント
+            6. **App Router**: app/ ディレクトリの構成
+
+            ## 実行ルール
+            - AGENTS.mdの内容を現在のプロジェクト状態と比較してください
+            - **変更が必要ない場合**: 何もせず終了してください（コミット不要）
+            - **変更がある場合のみ**:
+              1. AGENTS.mdファイルを更新
+              2. 変更内容を確認
+              3. タイムスタンプ付きの新しいブランチを作成（例: claude/update-agents-md-1234567890）
+              4. 変更をコミット（コミットメッセージ: "docs: update AGENTS.md with latest project configuration"）
+              5. ブランチをpush
+              6. Pull Requestを作成
+              7. PRのタイトル: "docs: update AGENTS.md with latest project configuration"
+              8. PRの説明: 変更された項目の具体的な概要を記載（バージョン変更、新規コンポーネント追加など）
+
+            ## 重要な注意事項
+            - 既存のファイル構造とフォーマットを維持してください
+            - 日本語の表現や技術用語を適切に保ってください
+            - プロジェクトの実態を正確に反映してください
+            - 変更がない場合はPRを作成しないでください
+          claude_args: |
+            --allowedTools Read,Glob,Grep,Edit,Write,Bash(git:*),Bash(gh pr:*),Bash(pnpm:*),Bash(date:*)
