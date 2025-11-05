@@ -4,12 +4,12 @@ AI coding agents向けのプロジェクトガイドラインです。このブ�
 
 ## プロジェクト概要
 
-Next.js 15.5.4 (App Router) を使用した個人サイト（ブログ機能含む）です。
+Next.js 16.0.1 (App Router) を使用した個人サイト（ブログ機能含む）です。
 Vercelにデプロイされ、日本語技術記事に特化した機能を持ちます。
 
 ## セットアップコマンド
 
-**パッケージマネージャー:** pnpm
+**パッケージマネージャー:** pnpm 10.20.0
 
 ### 基本コマンド
 ```bash
@@ -141,36 +141,39 @@ pnpm build:analyze
 ## アーキテクチャ詳細
 
 ### 技術スタック
-- **Next.js 15.5.4** + App Router
-- **MDX** + カスタム処理パイプライン
-- **Tailwind CSS** + カスタムタイポグラフィ
-- **Shiki** シンタックスハイライト（Night Owlテーマ）
+- **Next.js 16.0.1** + App Router
+- **React 19.2.0** + React DOM 19.2.0
+- **MDX 3.1.1** + カスタム処理パイプライン
+- **Tailwind CSS 4.1.16** + カスタムタイポグラフィ
+- **Shiki 3.14.0** シンタックスハイライト（Night Owlテーマ）
+- **Biome 2.2.6** コード品質管理
 - **Vercel** ホスティング
 
 ### ディレクトリ構造
 ```
 src/
 ├── app/                              # Next.js App Router
-│   ├── (root)/
-│   │   └── page.tsx                  # トップページ
 │   ├── about/
 │   │   └── page.tsx                  # Aboutページ
-│   ├── posts/
+│   ├── blog/                         # ブログ機能
 │   │   ├── [slug]/
 │   │   │   ├── page.tsx              # 記事詳細ページ
 │   │   │   └── opengraph-image.png/
 │   │   │       └── route.tsx         # 記事個別OGP画像生成
-│   │   └── sitemap.ts                # 記事サイトマップ
-│   ├── tags/
-│   │   ├── [tag]/
-│   │   │   └── page.tsx              # タグ別記事一覧
-│   │   ├── page.tsx                  # タグ一覧ページ
-│   │   └── sitemap.ts                # タグサイトマップ
-│   ├── atom.xml/
-│   │   └── route.ts                  # Atomフィード生成
-│   ├── rss.xml/
-│   │   └── route.ts                  # RSSフィード生成
+│   │   ├── tags/                     # タグ機能
+│   │   │   ├── [tag]/
+│   │   │   │   └── page.tsx          # タグ別記事一覧
+│   │   │   ├── page.tsx              # タグ一覧ページ
+│   │   │   └── sitemap.ts            # タグサイトマップ
+│   │   ├── atom.xml/
+│   │   │   └── route.ts              # Atomフィード生成
+│   │   ├── rss.xml/
+│   │   │   └── route.ts              # RSSフィード生成
+│   │   ├── layout.tsx                # ブログレイアウト
+│   │   ├── page.tsx                  # ブログトップページ
+│   │   └── sitemap.ts                # ブログサイトマップ
 │   ├── layout.tsx                    # ルートレイアウト
+│   ├── page.tsx                      # サイトトップページ
 │   ├── opengraph-image.tsx           # サイト全体のOGP画像
 │   ├── robots.ts                     # robots.txt生成
 │   └── sitemap.ts                    # サイトマップ生成
