@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0 # 完全な履歴を取得（探索に必要）
 
       - name: Run Claude to update AGENTS.md
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           timeout_minutes: "60"
