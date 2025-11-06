@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { PostCard } from '@/components/PostCard';
 import { BLOG_NAME } from '@/lib/constants';
 import { getAllTags, getPostsByTag } from '@/lib/post';
@@ -51,16 +52,30 @@ export default async function Page(props: Props) {
         <span className="text-gray-600">#</span>
         {tag}
       </h1>
-      <div className="grid gap-3">
-        {posts.map((post) => (
-          <PostCard
-            key={post.slug}
-            slug={post.slug}
-            title={post.title}
-            publishedTime={post.publishedTime}
-          />
-        ))}
-      </div>
+      {posts.length === 0 ? (
+        <div className="border border-gray-200 rounded-lg p-6 text-center">
+          <p className="text-gray-600 mb-4">
+            このタグに該当する記事はまだありません。
+          </p>
+          <Link
+            href="/blog/tags"
+            className="text-blue-600 hover:underline transition-colors"
+          >
+            タグ一覧に戻る
+          </Link>
+        </div>
+      ) : (
+        <div className="grid gap-3">
+          {posts.map((post) => (
+            <PostCard
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              publishedTime={post.publishedTime}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
