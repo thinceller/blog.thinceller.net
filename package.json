@@ -30,7 +30,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.6",
     "@next/bundle-analyzer": "16.0.1",
-    "@tailwindcss/postcss": "4.1.16",
+    "@tailwindcss/postcss": "4.1.17",
     "@textlint/textlint-plugin-markdown": "15.2.3",
     "@types/gtag.js": "0.0.20",
     "@types/markdown-it": "14.1.2",
@@ -38,7 +38,7 @@
     "@types/node": "22.19.0",
     "@types/react": "19.2.2",
     "postcss": "8.5.6",
-    "tailwindcss": "4.1.16",
+    "tailwindcss": "4.1.17",
     "textlint": "15.2.3",
     "textlint-rule-preset-ja-spacing": "2.4.3",
     "textlint-rule-preset-ja-technical-writing": "12.0.2",
