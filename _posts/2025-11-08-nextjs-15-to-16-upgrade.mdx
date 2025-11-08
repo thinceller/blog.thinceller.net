@@ -1,0 +1,89 @@
+---
+title: Next.js DevTools MCPとClaude Codeを使ったNext.js 15から16へのアップグレード
+description: |
+  Next.js DevTools MCPとClaude Codeを使ってこのブログサイトをNext.js 16にアップグレードしました。AIアシストによるアップグレードの手順と所感をまとめます。
+date: '2025-11-08T13:00:00Z'
+publishedTime: '2025-11-08T13:00:00Z'
+tags:
+  - Next.js
+  - Claude Code
+  - MCP
+---
+
+このサイトをNext.js 15から16にアップグレードしました。今回はClaude CodeとNext.js DevTools MCPを使ってアップグレードを進めてみたのでその所感をまとめます。
+
+## Next.js DevTools MCPとは
+
+Next.js 16がリリースされ、TurbopackがstableになったりCache Componentsが導入されたりと大きな変更がありましたが、同時にNext.js DevTools MCPもリリースされています。
+
+Next.js DevTools MCPは以下のようなツールを提供しています。
+- Next.jsのドキュメントを検索するツール（`nextjs_docs`ツール）
+- Next.jsのログやエラーにアクセスするツール（`nextjs_runtime`ツール）
+- Next.js 16へのアップグレードを支援するツール（`upgrade_nextjs_16`ツール）
+- etc.
+
+詳細は[Next.js DevTools MCPのドキュメント](https://nextjs.org/docs/app/guides/mcp)や[next-devtools-mcpのREADME](https://github.com/vercel/next-devtools-mcp#readme)を参照してください。
+
+### `upgrade_nextjs_16`ツールの詳細
+
+GitHub上の`upgrade_nextjs_16`ツールの実装を見てみます。
+
+このツールはNext.js 16へのアップグレード手順を記したプロンプトを返すシンプルなツールになっています。
+
+[https://github.com/vercel/next-devtools-mcp/blob/dfffb7da27676cd614978502f96d943caf53dc90/src/tools/upgrade-nextjs-16.ts](https://github.com/vercel/next-devtools-mcp/blob/dfffb7da27676cd614978502f96d943caf53dc90/src/tools/upgrade-nextjs-16.ts)
+
+プロンプトの詳細は以下のリンク先です。ざっくり内容をまとめると
+- 必要なリソースのロード
+- 事前条件の確認
+- Codemodの実行
+- 手動で修正が必要な箇所の検出および修正
+
+などが記載されており、AIエージェントが自律的にNext.js 16へのアップグレードを実行できるようになっていることがわかります。
+
+[https://github.com/vercel/next-devtools-mcp/blob/dfffb7da27676cd614978502f96d943caf53dc90/src/prompts/upgrade-nextjs-16-prompt.md](https://github.com/vercel/next-devtools-mcp/blob/dfffb7da27676cd614978502f96d943caf53dc90/src/prompts/upgrade-nextjs-16-prompt.md)
+
+## アップグレード手順
+
+Next.js DevTools MCPとClaude Codeを使ってNext.js 16へアップグレードする手順は以下の通りです。
+
+### 1. Next.js DevTools MCPの設定
+
+まずはNext.js DevTools MCPを利用可能にします。
+プロジェクトルートに`.mcp.json`ファイルを作成し、以下のように記載します。
+
+```json:.mcp.json
+{
+  "mcpServers": {
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
+    }
+  }
+}
+```
+
+`claude mcp add`コマンドを使ってプロジェクト/グローバルスコープでMCPサーバーを設定してもよいでしょう。
+
+### 2. Claude Codeへのアップグレード指示
+
+次にClaude Codeを起動し、Next.js DevTools MCPを使うよう明示しつつNext.js 16へのアップグレードを指示します。
+
+公式のマイグレーションガイドでは以下のようなシンプルなプロンプトが例示されていました。今回私もこちらのプロンプトを使ってみました。
+```text
+Next Devtools, help me upgrade my Next.js app to version 16
+```
+
+プロンプトを送信すると、Claude Codeは`upgrade_nextjs_16`ツールを使ってNext.js 16へのアップグレードを実行し始めます。私の場合、実行環境の問題でCodemodが正常に実行できなかったため、本来Codemodが自動で修正してくれる箇所も含めてClaude Codeが手動で修正箇所のチェックおよび修正してくれました。
+
+### 3. 動作確認
+
+アップグレード後は、アプリケーションが正常に動作することを確認します。
+
+今回はChrome DevTools MCPを事前に設定していたため、動作確認もClaude Codeが自律的に実行してくれました。
+
+## アップグレードしてみた所感
+
+これまでのNext.jsのアップグレードは、Codemodによる自動的なマイグレーションとそのほかの手動での変更箇所のチェックが必要でした。マイグレーションガイドをしっかり読んでいればそれほど難しくない作業ではありましたが、コードベースが大きくなるにつれてその作業量は増えていきます。
+
+Next.js DevTools MCPとClaude CodeなどのAIエージェントを使うことで、より自律的にNext.js 16へのアップグレードを実行できるようになりました。Codemodによる決定論的なアップグレードも併用されるため、AIエージェントを使ったアップグレードの信頼性はかなり高いです。今回は小規模なプロジェクトでのアップグレードでしたが、今度は業務で使っている大規模なプロジェクトでのアップグレードも試してみたいです。
+
