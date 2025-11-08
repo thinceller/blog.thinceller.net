@@ -35,6 +35,7 @@ pnpm lint
 pnpm format
 
 # TypeScript型チェック
+# 型チェックを実行する前に必ずpnpm buildを実行すること
 pnpm typecheck
 
 # 日本語記事のlint
