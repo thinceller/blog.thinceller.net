@@ -12,6 +12,8 @@
     "@shikijs/langs": "3.14.0",
     "@shikijs/rehype": "3.14.0",
     "@shikijs/themes": "3.14.0",
+    "@vercel/analytics": "1.5.0",
+    "@vercel/speed-insights": "1.2.0",
     "dayjs": "1.11.19",
     "feed": "5.1.0",
     "gray-matter": "4.0.3",
@@ -62,6 +64,7 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
+      "@vercel/speed-insights",
       "sharp"
     ]
   }
