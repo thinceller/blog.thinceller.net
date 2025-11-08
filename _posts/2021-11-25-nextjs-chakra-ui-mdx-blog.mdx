@@ -6,7 +6,7 @@ description: |
   人に見られる前提の文章を書くことを避けがちな自分を矯正するためにも、まずはハードルの低い個人ブログで記事を書く癖をつけようと思いました。
 date: '2021-11-25T00:49:09+09:00'
 publishedTime: '2021-11-25T00:49:09+09:00'
-modifiedTime: '2021-11-25T00:49:09+09:00'
+modifiedTime: '2025-11-08T21:00:00Z'
 tags:
   - Next.js
   - Chakra UI
@@ -39,7 +39,7 @@ Reactのフレームワークとして今やファーストチョイスになる
 公式が提供している多くのexampleも痒い所に手が届きますし、
 このブログも `with-mdx-remote` のexampleがベースになっています（というのは結果論で、自分で構築していたらexampleとほぼ同じになりました）。
 
-[Examples | Next.js](https://nextjs.org/examples)
+<OgpCard url="https://nextjs.org/examples" />
 
 ### Chakra UI
 
@@ -75,8 +75,9 @@ Next.jsでMDXを利用する方法はいくつかあります。
 - `next-mdx-remote`（hashicorp社製の `@mdx-js/mdx` のラッパー）
 - `mdx-bundler`（esbuildを使ってMDXをコンパイル・バンドルするライブラリ）
 
-これらのライブラリの比較は [Comparison of MDX integration strategies with Next.js - DEV Community 👩‍💻👨‍💻](https://dev.to/tylerlwsmith/quick-comparison-of-mdx-integration-strategies-with-next-js-1kcm)
-などの記事が参考になります。
+これらのライブラリの比較は以下の記事が参考になります。
+
+<OgpCard url="https://dev.to/tylerlwsmith/quick-comparison-of-mdx-integration-strategies-with-next-js-1kcm" />
 
 このうちのいくつかを試してみましたが、最終的に `next-mdx-remote` を利用することにしました。
 

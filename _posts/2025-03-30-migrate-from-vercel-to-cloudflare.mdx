@@ -4,6 +4,7 @@ description: |
   Next.jsブログのホスティングをVercelからCloudflareに移行しました。OpenNextを使った手順や、詰まったところをまとめます。
 date: '2025-03-30T02:54:00Z'
 publishedTime: '2025-03-30T02:54:00Z'
+modifiedTime: '2025-11-08T21:00:00Z'
 tags:
   - Next.js
   - OpenNext
@@ -34,8 +35,8 @@ tags:
 
 CloudflareへNext.jsをデプロイする方法は主にnext-on-pagesとOpenNextの2種類があります。
 
-- [next-on-pages](https://github.com/cloudflare/next-on-pages)
-- [OpenNext](https://opennext.js.org/)
+<OgpCard url="https://github.com/cloudflare/next-on-pages" />
+<OgpCard url="https://opennext.js.org/" />
 
 少し調べた限りnext-on-pagesの方が安定しているようですが、OpenNextはCloudflare WorkersのNode.js compatibilityを活用して多くのNext.jsの機能を使えるようになっている点が魅力です。今回はOpenNextを使って移行してみました。
 
