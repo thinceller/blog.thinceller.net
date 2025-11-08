@@ -5,7 +5,7 @@ description: |
   しかし、実際に利用しているうちに気になる点がありました。
 date: '2021-11-28T04:28:27+09:00'
 publishedTime: '2021-11-28T04:28:27+09:00'
-modifiedTime: '2022-08-11T17:00:00+09:00'
+modifiedTime: '2025-11-08T21:00:00Z'
 tags:
   - Chakra UI
   - CSS
@@ -16,12 +16,12 @@ tags:
 
 2022年3月にリリースされたSafari 15.4にて `focus-visible` 疑似クラスがサポートされるようになりました。
 
-[Safari 15.4 Release Notes | Apple Developer Documentation](https://developer.apple.com/documentation/safari-release-notes/safari-15_4-release-notes)
+<OgpCard url="https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9" />
 
 Chakra UIにおいても、v2.2.0から要素へのフォーカス時のスタイルにデフォルトで `focus-visible` を使うようになっています。
 
-[chakra-ui/CHANGELOG.md at @chakra-ui/react@2.2.0 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/blob/%40chakra-ui/react%402.2.0/packages/react/CHANGELOG.md)
-[refactor: remove annoying focus outline by segunadebayo · Pull Request #6153 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/pull/6153)
+<OgpCard url="https://github.com/chakra-ui/chakra-ui/pull/6153" />
+<OgpCard url="https://github.com/chakra-ui/chakra-ui/pull/6153" />
 
 本記事で紹介しているpolyfillも必要なくなったので、現在はこのブログにおいてもpolyfillを削除しています。
 
@@ -34,7 +34,7 @@ Chakra UIにおいても、v2.2.0から要素へのフォーカス時のスタ�
 
 Chakra UIの `<Link>` コンポーネントはchakraによって拡張されたただの `<a>` タグです。
 
-[Link - Chakra UI](https://chakra-ui.com/docs/navigation/link)
+<OgpCard url="https://v2.chakra-ui.com/docs/components/link/usage" />
 
 Next.jsでのinternalなページ遷移で利用する場合は `next/link` と併用する必要があります。
 以下のコードでは、internalなページのときのみ `next/link` で `<Link>` をラップし、外部のページのときは素の `<Link>` を使用する例です。
@@ -71,7 +71,7 @@ const MyLink = (props: JSX.IntrinsicElements['a']) => {
 
 この問題はChakra UIのIssueとして取り上げられています。
 
-[Blue outline borders around all clickable components ugly · Issue #708 · chakra-ui/chakra-ui](https://github.com/chakra-ui/chakra-ui/issues/708)
+<OgpCard url="https://github.com/chakra-ui/chakra-ui/issues/708" />
 
 コメントによれば、Chakra UIはWAI-ARIA規格に厳密に従うことを目標にしており、focus時のアウトラインをデフォルトで無効にすることはない、ということです。
 デフォルトで有効になっていること自体は納得できるのですが、Tabキーなどのキーボード操作ではないマウスクリックでもアウトラインが表示されるのは少し気になります。
@@ -116,7 +116,7 @@ const theme = extendTheme({
 同Issueで多くリアクションを集めていたのは、`focus-visible` 疑似クラスを用いた回避方法でした。
 以下の記事にまとまっています。
 
-[Accessibility on-demand with Chakra-ui and focus-visible | by Keegan Famouss | Medium](https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9)
+<OgpCard url="https://medium.com/@keeganfamouss/accessibility-on-demand-with-chakra-ui-and-focus-visible-19413b1bc6f9" />
 
 MDNのページには以下のように記載されています。
 
