@@ -5,7 +5,6 @@ type OgpData = {
   title: string;
   description?: string;
   image?: string;
-  siteName?: string;
   favicon?: string;
 };
 
@@ -59,34 +58,6 @@ async function fetchOgpData(url: string): Promise<OgpData> {
       return undefined;
     };
 
-    // Get favicon
-    const getFavicon = (): string | undefined => {
-      const faviconPatterns = [
-        /<link\s+rel=["'](?:icon|shortcut icon)["'].*?href=["']([^"']+)["']/i,
-        /<link\s+href=["']([^"']+)["'].*?rel=["'](?:icon|shortcut icon)["']/i,
-      ];
-
-      for (const pattern of faviconPatterns) {
-        const match = html.match(pattern);
-        if (match?.[1]) {
-          const faviconUrl = match[1];
-          // Handle relative URLs
-          if (faviconUrl.startsWith('http')) {
-            return faviconUrl;
-          }
-          const urlObj = new URL(url);
-          if (faviconUrl.startsWith('/')) {
-            return `${urlObj.origin}${faviconUrl}`;
-          }
-          return `${urlObj.origin}/${faviconUrl}`;
-        }
-      }
-
-      // Default favicon
-      const urlObj = new URL(url);
-      return `${urlObj.origin}/favicon.ico`;
-    };
-
     const title =
       getMetaContent('og:title') ||
       getMetaContent('twitter:title') ||
@@ -100,15 +71,13 @@ async function fetchOgpData(url: string): Promise<OgpData> {
 
     const image = getMetaContent('og:image') || getMetaContent('twitter:image');
 
-    const siteName = getMetaContent('og:site_name');
-
-    const favicon = getFavicon();
+    const urlObj = new URL(url);
+    const favicon = `https://www.google.com/s2/favicons?domain=${urlObj.hostname}`;
 
     return {
       title,
       description,
       image,
-      siteName,
       favicon,
     };
   } catch (error) {
@@ -132,25 +101,14 @@ export async function OgpCard({ url }: Props) {
       rel="noopener noreferrer"
       className="block my-6 bg-white border border-gray-200 rounded-md overflow-hidden hover:shadow-md transition-shadow focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
     >
-      <div className="flex flex-col sm:flex-row">
-        {ogpData.image && (
-          <div className="sm:w-1/3 flex-shrink-0 relative h-48 sm:h-auto bg-gray-100">
-            <Image
-              src={ogpData.image}
-              alt={ogpData.title}
-              fill
-              className="object-cover"
-              unoptimized // External images may require unoptimized mode
-            />
-          </div>
-        )}
+      <div className="flex flex-row h-32">
         <div className="flex-1 p-4 flex flex-col justify-between">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+            <h3 className="font-semibold text-gray-900 mb-1 line-clamp-2">
               {ogpData.title}
             </h3>
             {ogpData.description && (
-              <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+              <p className="text-sm text-gray-600 mb-1 line-clamp-1">
                 {ogpData.description}
               </p>
             )}
@@ -162,13 +120,25 @@ export async function OgpCard({ url }: Props) {
                 alt=""
                 width={16}
                 height={16}
-                className="flex-shrink-0"
+                className="shrink-0"
                 unoptimized
               />
             )}
-            <span className="truncate">{ogpData.siteName || domain}</span>
+            <span className="truncate">{domain}</span>
           </div>
         </div>
+        {ogpData.image && (
+          <div className="h-32 w-32 sm:w-auto sm:max-w-80 bg-gray-100">
+            <Image
+              src={ogpData.image}
+              alt={ogpData.title}
+              width={244}
+              height={128}
+              className="object-cover h-full w-full"
+              unoptimized // External images may require unoptimized mode
+            />
+          </div>
+        )}
       </div>
     </Link>
   );
