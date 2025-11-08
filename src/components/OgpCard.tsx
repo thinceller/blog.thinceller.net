@@ -28,6 +28,22 @@ async function fetchOgpData(url: string): Promise<OgpData> {
 
     const html = await response.text();
 
+    // Decode HTML entities
+    const decodeHtmlEntities = (text: string): string => {
+      const entities: Record<string, string> = {
+        '&amp;': '&',
+        '&lt;': '<',
+        '&gt;': '>',
+        '&quot;': '"',
+        '&#39;': "'",
+        '&apos;': "'",
+      };
+      return text.replace(
+        /&(?:amp|lt|gt|quot|#39|apos);/g,
+        (match) => entities[match] || match,
+      );
+    };
+
     // Parse OGP meta tags
     const getMetaContent = (property: string): string | undefined => {
       const patterns = [
@@ -52,16 +68,17 @@ async function fetchOgpData(url: string): Promise<OgpData> {
       for (const pattern of patterns) {
         const match = html.match(pattern);
         if (match?.[1]) {
-          return match[1];
+          return decodeHtmlEntities(match[1]);
         }
       }
       return undefined;
     };
 
+    const titleMatch = html.match(/<title>([^<]+)<\/title>/i)?.[1];
     const title =
       getMetaContent('og:title') ||
       getMetaContent('twitter:title') ||
-      html.match(/<title>([^<]+)<\/title>/i)?.[1] ||
+      (titleMatch ? decodeHtmlEntities(titleMatch) : undefined) ||
       url;
 
     const description =
@@ -69,9 +86,22 @@ async function fetchOgpData(url: string): Promise<OgpData> {
       getMetaContent('twitter:description') ||
       getMetaContent('description');
 
-    const image = getMetaContent('og:image') || getMetaContent('twitter:image');
-
     const urlObj = new URL(url);
+
+    let image = getMetaContent('og:image') || getMetaContent('twitter:image');
+    // Convert relative image URLs to absolute URLs
+    if (
+      image &&
+      !image.startsWith('http://') &&
+      !image.startsWith('https://')
+    ) {
+      if (image.startsWith('/')) {
+        image = `${urlObj.origin}${image}`;
+      } else {
+        image = `${urlObj.origin}/${image}`;
+      }
+    }
+
     const favicon = `https://www.google.com/s2/favicons?domain=${urlObj.hostname}`;
 
     return {
