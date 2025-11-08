@@ -90,9 +90,6 @@ importers:
       '@textlint/textlint-plugin-markdown':
         specifier: 15.2.3
         version: 15.2.3
-      '@types/gtag.js':
-        specifier: 0.0.20
-        version: 0.0.20
       '@types/markdown-it':
         specifier: 14.1.2
         version: 14.1.2
@@ -726,9 +723,6 @@ packages:
 
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
-
-  '@types/gtag.js@0.0.20':
-    resolution: {integrity: sha512-wwAbk3SA2QeU67unN7zPxjEHmPmlXwZXZvQEpbEUQuMCRGgKyE1m6XDuTUA9b6pCGb/GqJmdfMOY5LuDjJSbbg==}
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
@@ -3642,8 +3636,6 @@ snapshots:
       '@types/estree': 1.0.7
 
   '@types/estree@1.0.7': {}
-
-  '@types/gtag.js@0.0.20': {}
 
   '@types/hast@3.0.4':
     dependencies:
