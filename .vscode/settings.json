@@ -21,5 +21,8 @@
   },
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
+  },
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "/Users/thinceller/.local/share/mise/shims/node"
   }
 }
