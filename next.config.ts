@@ -6,6 +6,8 @@ const withBundleAnalyzer =
     ? require('@next/bundle-analyzer')({ enabled: true })
     : (config: NextConfig) => config;
 
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  reactCompiler: true,
+};
 
 export default withBundleAnalyzer(nextConfig);
