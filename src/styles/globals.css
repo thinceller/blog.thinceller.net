@@ -1,6 +1,9 @@
 /** biome-ignore-all lint/suspicious/noUnknownAtRules: Tailwind CSS専用のat-rule（@theme）はbiome lintで認識されないため、ファイル全体で無効化 */
 @import "tailwindcss";
 
+/* ダークモード用カスタムバリアント */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   --text-custom-xs: 0.75rem;
   --text-custom-xs--line-height: 1.9;
@@ -33,5 +36,14 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* ダークモード時のボーダー色 */
+  [data-theme="dark"] *,
+  [data-theme="dark"] ::after,
+  [data-theme="dark"] ::before,
+  [data-theme="dark"] ::backdrop,
+  [data-theme="dark"] ::file-selector-button {
+    border-color: var(--color-gray-700, currentcolor);
   }
 }

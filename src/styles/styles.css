@@ -7,6 +7,10 @@
   border-radius: 4px;
 }
 
+[data-theme="dark"] :not(pre) > code {
+  background-color: #374151;
+}
+
 .rehype-code-title {
   width: fit-content;
   padding-inline: 0.75em;

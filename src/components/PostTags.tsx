@@ -16,7 +16,7 @@ export const PostTags: FC<Props> = ({ tags }) => {
         <Link
           key={tag}
           href={`/blog/tags/${encodeURIComponent(tag)}`}
-          className="inline-block px-3 py-1 text-xs font-medium text-gray-600 border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="inline-block px-3 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           #{tag}
         </Link>

@@ -6,13 +6,6 @@ const withBundleAnalyzer =
     ? require('@next/bundle-analyzer')({ enabled: true })
     : (config: NextConfig) => config;
 
-const nextConfig: NextConfig = {
-  experimental: {
-    optimizePackageImports: [
-      '@fortawesome/free-brands-svg-icons',
-      '@fortawesome/free-solid-svg-icons',
-    ],
-  },
-};
+const nextConfig: NextConfig = {};
 
 export default withBundleAnalyzer(nextConfig);

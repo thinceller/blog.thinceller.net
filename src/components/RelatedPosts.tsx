@@ -16,7 +16,7 @@ export function RelatedPosts({ posts }: Props) {
   }
 
   return (
-    <section className="my-16 bg-gray-50 border border-gray-200 rounded-lg p-6">
+    <section className="my-16 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
       <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
         <span className="text-2xl">📚</span>
         <span>関連記事</span>
