@@ -109,6 +109,7 @@ publishedTime: "YYYY-MM-DDTHH:mm:ssZ"
 - `components/PostTags.tsx`: 記事タグ表示
 - `components/PostTitle.tsx`: 記事タイトル表示
 - `components/MDXComponent.tsx`: Markdown記事レンダリング
+- `components/OgpCard.tsx`: OGPカード表示（外部リンクプレビュー）
 
 ### 設計原則
 1. **再利用性**: 機能ごとに分割、共有可能な設計
@@ -145,8 +146,8 @@ pnpm build:analyze
 - **Next.js 16.0.1** + App Router
 - **React 19.2.0** + React DOM 19.2.0
 - **MDX 3.1.1** + カスタム処理パイプライン
-- **Tailwind CSS 4.1.16** + カスタムタイポグラフィ
-- **Shiki 3.14.0** シンタックスハイライト（Night Owlテーマ）
+- **Tailwind CSS 4.1.17** + カスタムタイポグラフィ
+- **Shiki 3.15.0** シンタックスハイライト（Night Owlテーマ）
 - **Biome 2.2.6** コード品質管理
 - **Vercel** ホスティング
 
