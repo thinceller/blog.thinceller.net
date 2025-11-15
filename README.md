@@ -1,1 +1,1 @@
-# blog.thinceller.net
+# thinceller.net
