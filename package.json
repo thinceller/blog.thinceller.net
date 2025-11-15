@@ -33,6 +33,7 @@
     "@types/mdx": "2.0.13",
     "@types/node": "22.19.1",
     "@types/react": "19.2.4",
+    "babel-plugin-react-compiler": "1.0.0",
     "postcss": "8.5.6",
     "tailwindcss": "4.1.17",
     "textlint": "15.3.0",
