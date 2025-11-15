@@ -13,7 +13,7 @@ export default function Page() {
     <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-custom-3xl font-bold">Welcome to {SITE_NAME}</h1>
-        <p className="text-custom-lg text-gray-600">
+        <p className="text-custom-lg text-gray-600 dark:text-gray-400">
           ソフトウェアエンジニアthincellerの個人サイトです
         </p>
       </div>
@@ -21,7 +21,7 @@ export default function Page() {
       <div className="flex gap-6">
         <Link
           href="/about"
-          className="min-w-32 px-6 py-3 text-custom-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="min-w-32 px-6 py-3 text-custom-base font-medium text-center text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           About
         </Link>

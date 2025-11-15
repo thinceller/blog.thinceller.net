@@ -26,8 +26,10 @@ const NavLink: FC<{
 }> = ({ href, label, isActive: active, onClick }) => {
   const baseClasses =
     'px-3 py-2 rounded-md font-semibold transition-colors duration-200';
-  const activeClasses = 'bg-blue-100 text-blue-700';
-  const inactiveClasses = 'text-blue-500 hover:bg-blue-50 hover:text-blue-700';
+  const activeClasses =
+    'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300';
+  const inactiveClasses =
+    'text-blue-500 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300';
 
   return (
     <NextLink
@@ -63,7 +65,7 @@ export const Navigation: FC = () => {
       {/* Mobile Menu Button */}
       <button
         type="button"
-        className="md:hidden p-2 rounded-md hover:bg-gray-200 transition-colors duration-200"
+        className="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
         aria-label="Toggle navigation menu"
@@ -87,7 +89,7 @@ export const Navigation: FC = () => {
 
       {/* Mobile Navigation Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 right-0 md:hidden bg-white border-b border-gray-200">
+        <div className="absolute top-16 left-0 right-0 md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
           <div className="px-4 py-2 space-y-1">
             {navItems.map((item) => (
               <NavLink

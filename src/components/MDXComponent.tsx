@@ -14,7 +14,7 @@ export const CustomMDXComponents: MDXComponents = {
 
     return (
       <Link
-        className="text-blue-500 hover:underline"
+        className="text-blue-500 dark:text-blue-400 hover:underline"
         href={href ?? '#'}
         {...rest}
       />
@@ -25,7 +25,7 @@ export const CustomMDXComponents: MDXComponents = {
   ),
   blockquote: (p: JSX.IntrinsicElements['blockquote']) => (
     <blockquote
-      className="bg-gray-100 border-l-8 border-l-gray-300 border-solid p-4 mb-6 [&>p]:mb-0"
+      className="bg-gray-100 dark:bg-gray-800 border-l-8 border-l-gray-300 dark:border-l-gray-600 border-solid p-4 mb-6 [&>p]:mb-0"
       {...p}
     />
   ),
@@ -35,7 +35,7 @@ export const CustomMDXComponents: MDXComponents = {
   ),
   h2: (p: JSX.IntrinsicElements['h2']) => (
     <h2
-      className="relative mt-12 mb-4 font-bold text-custom-xl border-b border-gray-200 pb-2"
+      className="relative mt-12 mb-4 font-bold text-custom-xl border-b border-gray-200 dark:border-gray-700 pb-2"
       {...p}
     />
   ),

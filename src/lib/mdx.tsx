@@ -47,6 +47,9 @@ export const getPostBySlug = async (slug: string): Promise<MDXPostData> => {
                   'rounded-md',
                   'p-4',
                   'mb-6',
+                  'border',
+                  'border-gray-700',
+                  'dark:border-gray-600',
                 ]);
               },
             },
