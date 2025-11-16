@@ -33,6 +33,15 @@
 /**
  * Headings anchor link
  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
 .header-anchor-link {
   position: absolute;
   top: 0;
