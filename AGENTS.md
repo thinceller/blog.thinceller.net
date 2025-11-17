@@ -4,12 +4,12 @@ AI coding agents向けのプロジェクトガイドラインです。このブ�
 
 ## プロジェクト概要
 
-Next.js 16.0.1 (App Router) を使用した個人サイト（ブログ機能含む）です。
+Next.js 16.0.3 (App Router) を使用した個人サイト（ブログ機能含む）です。
 Vercelにデプロイされ、日本語技術記事に特化した機能を持ちます。
 
 ## セットアップコマンド
 
-**パッケージマネージャー:** pnpm 10.20.0
+**パッケージマネージャー:** pnpm 10.21.0
 
 ### 基本コマンド
 ```bash
@@ -102,6 +102,7 @@ publishedTime: "YYYY-MM-DDTHH:mm:ssZ"
 - `components/Header.tsx`: ヘッダーコンポーネント
 - `components/Footer.tsx`: フッターコンポーネント
 - `components/Navigation.tsx`: ナビゲーションメニュー
+- `components/ThemeToggle.tsx`: ダークモード切り替えコンポーネント
 - `components/PostCard.tsx`: 記事カード表示（一貫したデザイン）
 - `components/RelatedPosts.tsx`: 関連記事表示
 - `components/DateFormatter.tsx`: 日付フォーマット表示
@@ -143,12 +144,12 @@ pnpm build:analyze
 ## アーキテクチャ詳細
 
 ### 技術スタック
-- **Next.js 16.0.1** + App Router
+- **Next.js 16.0.3** + App Router
 - **React 19.2.0** + React DOM 19.2.0
 - **MDX 3.1.1** + カスタム処理パイプライン
 - **Tailwind CSS 4.1.17** + カスタムタイポグラフィ
 - **Shiki 3.15.0** シンタックスハイライト（Night Owlテーマ）
-- **Biome 2.2.6** コード品質管理
+- **Biome 2.3.5** コード品質管理
 - **Vercel** ホスティング
 
 ### ディレクトリ構造
